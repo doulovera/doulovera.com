@@ -1,0 +1,76 @@
+.main__aboutme {
+    padding: 15px 0 0;
+    margin: 90px auto 0;
+    min-width: 280px;
+    width: 65%;
+    height: 360px;
+    text-align: center;
+    background-color: var(--dark-primary);
+    border-radius: 10px;
+}
+
+.main__aboutme__picture {
+    height: 160px;
+    width: 160px;
+    background: rgb(106,152,230);
+    background: linear-gradient(90deg, rgba(106,152,230,1) 42%, rgba(60,106,131,1) 95%);
+    border-radius: 50%;
+}
+
+.main__aboutme__title {
+    margin: 5px 0;
+    font-size: 3.6rem;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+.main__aboutme__body {
+    margin: 0 auto;
+    min-width: 220px;
+    max-width: 280px;
+    line-height: 16px;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.main__aboutme__contact {
+    border-top: 1px solid var(--dark-font);
+    width: 160px;
+    padding: 6px 0 0;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main__aboutme__contact .icon {
+    width: 30px;
+    height: 30px;
+    padding: 5px 0;
+}
+
+.main__aboutme__contact i {
+    font-size: 2.4rem;
+    color: var(--dark-font);
+}
+
+.main__aboutme__contact .icon:hover {
+    border-bottom: 5px solid var(--color-anchor);
+}
+
+@media (min-width: 768px) {
+    .main__aboutme {
+        display: flex;
+        height: 280px;
+        padding: 0 25px;
+    }
+
+    .main__aboutme > * {
+        margin: auto;
+    }
+
+    .main__aboutme__picture {
+        height: 200px;
+        width: 200px;
+    }
+
+}
