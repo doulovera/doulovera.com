@@ -10,6 +10,7 @@ export default function Footer() {
                     <li><a href="https://discord.gg/Pc7CtmgUk2" target="_blank" rel="noreferrer">Discord</a></li>
                     <li><a href="https://github.com/doulovera" target="_blank" rel="noreferrer">Github</a></li>
                     <li><a href="https://twitter.com/doulovera" target="_blank" rel="noreferrer">Twitter</a></li>
+                    <li><a href="https://github.com/doulovera/doulovera.github.io" target="_blank" rel="noreferrer">Source</a></li>
                 </ul>
             </section>
             <section className="footer__resume">

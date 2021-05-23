@@ -1,53 +1,57 @@
 footer {
-    padding: 25px 0 0;
-    height: 180px;
-    min-width: 320px;
-    background-color: var(--dark-primary);
-    display: grid;
-    grid-template-areas: 
-        'links resume'
-        'copyright copyright';
-    }
-    
-footer a {
-    color: var(--color-anchor);
+  padding: 25px 0 0;
+  height: 200px;
+  min-width: 320px;
+  background-color: var(--dark-primary);
+  display: grid;
+  grid-template-areas:
+    "links resume"
+    "copyright copyright";
 }
-    
+
+footer a {
+  color: var(--color-anchor);
+}
+
 .footer__links {
-    grid-area: links;
-    margin: 0 auto;
-    font-size: 1.4rem;
+  grid-area: links;
+  margin: 0 auto;
+  font-size: 1.4rem;
 }
 .footer__links li {
-    padding: 3px 0;
-    list-style: none;
+  padding: 3px 0;
+  list-style: none;
 }
 
 .footer__resume {
-    grid-area: resume;
-    margin: auto auto;
-    font-size: 1.4rem;
+  grid-area: resume;
+  margin: auto auto;
+  font-size: 1.4rem;
 }
 .footer__resume a {
-    padding: 10px 25px;
-    border-radius: 3px;
-    text-decoration: none;
-    background: rgb(106,152,230);
-    background: linear-gradient(90deg, rgba(106,152,230,1) 42%, rgba(60,106,131,1) 95%);
-    color: #000;
+  padding: 10px 25px;
+  border-radius: 3px;
+  text-decoration: none;
+  background: rgb(106, 152, 230);
+  background: linear-gradient(
+    90deg,
+    rgba(106, 152, 230, 1) 42%,
+    rgba(60, 106, 131, 1) 95%
+  );
+  color: #000;
 }
 
 .footer__copyright {
-    grid-area: copyright;
-    margin: 30px auto;
-    font-size: 1.6rem;
+  grid-area: copyright;
+  margin: 30px auto;
+  font-size: 1.6rem;
 }
 
-@media (min-width:930px) {
-    .footer__links ul {
-        display: flex;
-    }
-    .footer__links li {
-        padding: 0 10px;
-    }
+@media (min-width: 930px) {
+  .footer__links ul {
+    display: flex;
+  }
+  .footer__links li {
+    padding: 0 10px;
+  }
 }
