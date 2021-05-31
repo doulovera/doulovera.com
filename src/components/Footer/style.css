@@ -23,6 +23,14 @@ footer a {
   list-style: none;
 }
 
+.footer__links a {
+  text-decoration: underline;
+}
+
+.footer__links a:hover {
+  text-decoration: none;
+}
+
 .footer__resume {
   grid-area: resume;
   margin: auto auto;
