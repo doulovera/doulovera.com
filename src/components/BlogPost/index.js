@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Tags from "./Tags";
 import "./style.css";
 
 export default function BlogPost() {
@@ -16,8 +17,8 @@ export default function BlogPost() {
           published_at,
           positive_reactions_count,
           cover_image,
-          tags,
-        } = res[1];
+          tag_list,
+        } = res[0];
         setDevto({
           title,
           url,
@@ -25,7 +26,7 @@ export default function BlogPost() {
           published_at,
           positive_reactions_count,
           cover_image,
-          tags,
+          tag_list,
         });
         setIsLoaded(true);
       })
@@ -56,10 +57,15 @@ export default function BlogPost() {
         </p>
         <p className="main__blogpost__last-description">{devto.description}</p>
         <p className="main__blogpost__last-tags">
-          <i className="fas fa-hashtag"></i> {devto.tags}
+          <Tags tags={devto.tag_list} isLoaded={isLoaded} />
         </p>
-        <a className="main__blogpost__last-url" href={devto.url}>
-          Ver Artículo en dev.to
+        <a
+          className="main__blogpost__last-url"
+          target="_blank"
+          rel="noreferrer"
+          href={devto.url}
+        >
+          Ver artículo en dev.to
         </a>
       </article>
     </section>
