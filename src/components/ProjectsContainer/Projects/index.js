@@ -18,7 +18,11 @@ export default function Projects({
   return (
     <article className="main__projects__item">
       <div className="main__projects__image">
-        <img src={preview && preview} alt={name} />
+        <img
+          src={preview && preview}
+          alt={name}
+          className="main__projects__image-preview"
+        />
       </div>
       <div className="main__projects__body">
         <h5>{name}</h5>

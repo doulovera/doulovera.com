@@ -1,0 +1,78 @@
+.main__blogpost {
+  height: auto;
+  min-width: 320px;
+  max-width: 900px;
+  margin: 60px auto 60px;
+  padding: 0 20px;
+}
+
+.main__blogpost h4 {
+  margin: 25px 0 15px;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.main__blogpost__last {
+  position: relative;
+  max-width: 540px;
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 20px 30px 30px;
+  background-color: var(--dark-primary);
+  border-radius: 8px;
+}
+
+.main__blogpost__last-devto-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 4rem;
+  padding: 0px 4px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+}
+
+.main__blogpost__last-image {
+  max-width: 100%;
+  padding-bottom: 10px;
+  border-radius: 4px;
+}
+
+.main__blogpost__last-title {
+  max-width: 8700px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--dark-font);
+  overflow: hidden;
+}
+
+.main__blogpost__last-published-date {
+  padding-top: 5px;
+  font-size: 1.2rem;
+}
+
+.main__blogpost__last-description {
+  padding: 20px 0;
+  font-size: 1.4rem;
+}
+
+.main__blogpost__last-tags {
+  padding-bottom: 60px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.main__blogpost__last-url {
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  padding: 10px;
+  background-color: var(--dark-font);
+  border-radius: 4px;
+  color: var(--dark-primary);
+  font-size: 1.8rem;
+  text-decoration: none;
+}

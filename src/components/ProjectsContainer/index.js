@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import Projects from "./Projects";
 
-export default function index({ projectList }) {
+export default function ProjectsContainer({ projectList }) {
   return (
     <section className="main__projects" id="projects">
       <h4>Projects</h4>

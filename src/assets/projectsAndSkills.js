@@ -21,10 +21,21 @@ const ProjectList = [
       html: true,
       css: true,
       js: true,
-      discordjs: true,
     },
     demoUrl: "https://oneonebot.ml/",
     // repoUrl: "https://github.com/doulovera/oneone-web",
+  },
+  {
+    name: "OneOne - BOT",
+    preview:
+      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1624838827/Portfolio%20images/oneone_ycjvxt_jjyolg.jpg",
+    languages: {
+      js: true,
+      discordjs: true,
+    },
+    demoUrl:
+      "https://discord.com/oauth2/authorize?client_id=675130426943209484&scope=bot&permissions=8",
+    // repoUrl: "https://github.com/doulovera/oneone",
   },
   {
     name: "Github Profile Finder",
