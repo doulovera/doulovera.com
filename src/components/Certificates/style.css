@@ -1,0 +1,54 @@
+.main__certificates {
+  height: auto;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.main__certificates h4 {
+  margin: 25px 0 15px;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.main__certificates__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main__certificates__item {
+  position: relative;
+  height: 65px;
+  width: 100%;
+  padding: 15px 20px;
+  margin: 5px;
+  background-color: var(--dark-primary);
+  border-radius: 5px;
+}
+
+.main__certificates__item h5 {
+  font-size: 1.6rem;
+}
+
+.main__certificates__item p {
+  font-size: 1.2rem;
+}
+
+.main__certificates__item-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.main__certificates__item-buttons a {
+  margin: 0 10px;
+  font-size: 2rem;
+  color: var(--color-anchor);
+  transition: 0.3s;
+}
+
+.main__certificates__item-buttons a:hover {
+  color: var(--dark-font);
+}
