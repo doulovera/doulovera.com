@@ -10,7 +10,7 @@ export default function AboutMe() {
                 <div className="main__aboutme__container">
                     <h2 className="main__aboutme__title">Hi!</h2>
                     <p className="main__aboutme__body">
-                        I am a Douglas, a <b>Frontend</b> developer, entering the world of Backend and Full Stack. I am studing Systems Engineering. I love creating things and learn every day.
+                        I am a Douglas, a <b>Frontend</b> developer, entering the world of Backend and Full Stack. I am studying Systems Engineering. I love creating things and learn every day.
                     </p>
                 </div>
                 <div className="main__aboutme__contact">
