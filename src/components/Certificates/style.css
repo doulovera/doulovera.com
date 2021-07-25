@@ -21,14 +21,19 @@
 .main__certificates__item {
   position: relative;
   height: 65px;
-  width: 100%;
+  width: 90%;
   padding: 15px 20px;
-  margin: 5px;
+  margin: 5px auto;
   background-color: var(--dark-primary);
   border-radius: 5px;
 }
 
 .main__certificates__item h5 {
+  height: 20px;
+  width: 65%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 1.6rem;
 }
 
@@ -38,7 +43,7 @@
 
 .main__certificates__item-buttons {
   position: absolute;
-  top: 20px;
+  top: calc(50% - 12px);
   right: 20px;
 }
 
@@ -51,4 +56,9 @@
 
 .main__certificates__item-buttons a:hover {
   color: var(--dark-font);
+}
+
+/* Custom colors */
+.Platzi {
+  color: #98cb3f;
 }

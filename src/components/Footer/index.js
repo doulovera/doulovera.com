@@ -53,7 +53,7 @@ export default function Footer() {
         {/* <a href="#3">My Resume <i className="fas fa-download"></i></a> */}
       </section>
       <section className="footer__copyright">
-        <p>&copy; Made by Douglas Lovera - 2021</p>
+        <p>&copy; Douglas Lovera - 2021</p>
       </section>
     </footer>
   );
