@@ -50,7 +50,7 @@ export default function Footer() {
         </ul>
       </section>
       <section className="footer__resume">
-        {/* <a href="#3">My Resume <i className="fas fa-download"></i></a> */}
+        <a href="https://drive.google.com/file/d/1qB362_yhEdcQjsDQy8i6TdSWucj-QrJp/view?usp=sharing">My Resume <i className="fas fa-download"></i></a>
       </section>
       <section className="footer__copyright">
         <p>&copy; Douglas Lovera - 2021</p>
