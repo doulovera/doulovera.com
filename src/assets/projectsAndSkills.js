@@ -1,3 +1,5 @@
+/****** I'LL MAKE THIS WITH OOP SOON, I'M LEARNING IT :) ******/
+
 /*
 
 Languages:
