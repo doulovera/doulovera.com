@@ -4,7 +4,7 @@ import "./style.css";
 export default function Skills({ skill }) {
   return (
     <section className="main__skills" id="skills">
-      <h4>Skills</h4>
+      <h4 className="section_title">Skills</h4>
       <section className="main__skills__container">
         {skill.map((item, index) => (
           <article

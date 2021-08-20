@@ -1,23 +1,7 @@
-#skills::before {
-  content: "";
-  display: block;
-  height: 50px;
-  margin: -30px 0 0;
-}
-
 .main__skills {
   height: auto;
   min-width: 320px;
   max-width: 600px;
-  margin: 0 auto;
-}
-
-.main__skills h4 {
-  margin: 25px 0 15px;
-  text-align: center;
-  font-family: "Merriweather", serif;
-  font-size: 2.2rem;
-  font-weight: bold;
 }
 
 .main__skills__container {

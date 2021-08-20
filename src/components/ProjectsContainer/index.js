@@ -5,8 +5,8 @@ import Projects from "./Projects";
 export default function ProjectsContainer({ projectList }) {
   return (
     <section className="main__projects" id="projects">
-      <h4>Projects</h4>
-      <section className="main__projects__container">
+      <h4 className="section_title">Projects</h4>
+      <div className="main__projects__container">
         {projectList.map((project, index) => (
           <Projects
             preview={project.preview}
@@ -17,7 +17,7 @@ export default function ProjectsContainer({ projectList }) {
             key={index}
           />
         ))}
-      </section>
+      </div>
     </section>
   );
 }

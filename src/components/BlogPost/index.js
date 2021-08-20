@@ -18,7 +18,7 @@ export default function BlogPost() {
           positive_reactions_count,
           cover_image,
           tag_list,
-        } = res[0];
+        } = res[1];
         setDevto({
           title,
           url,
@@ -35,15 +35,11 @@ export default function BlogPost() {
 
   return (
     <section className="main__blogpost">
-      <h4>Last Blog Post</h4>
+      <h4 className="section_title">
+        Last Blog Post <i className="fab fa-dev"></i>
+      </h4>
       {!isLoaded && <h3>Cargando...</h3>}
       <article className="main__blogpost__last">
-        <p
-          className="main__blogpost__last-devto-logo"
-          title="Extraído con la API de dev.to"
-        >
-          <i className="fab fa-dev"></i>
-        </p>
         {devto.cover_image && (
           <img
             src={devto.cover_image}

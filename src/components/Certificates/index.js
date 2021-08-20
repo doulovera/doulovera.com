@@ -4,7 +4,7 @@ import "./style.css";
 export default function Certificates({ certificatesList }) {
   return (
     <section className="main__certificates">
-      <h4>Certificates</h4>
+      <h4 className="section_title">Certificates</h4>
       <div className="main__certificates__container">
         {certificatesList.map(
           ({ name, companyName, pdfUrl, credentialUrl }, index) => (

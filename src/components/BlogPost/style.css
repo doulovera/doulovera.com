@@ -2,16 +2,7 @@
   height: auto;
   min-width: 320px;
   max-width: 900px;
-  margin: 60px auto 60px;
   padding: 0 20px;
-}
-
-.main__blogpost h4 {
-  margin: 25px 0 15px;
-  text-align: center;
-  font-family: "Merriweather", serif;
-  font-size: 2.2rem;
-  font-weight: bold;
 }
 
 .main__blogpost__last {
@@ -77,16 +68,15 @@
   display: block;
   margin-top: 30px;
   padding: 10px;
-  background-color: var(--dark-font);
   border-radius: 4px;
-  color: var(--dark-primary);
+  border: 1px solid var(--dark-font);
+  color: var(--dark-font);
   font-size: 1.8rem;
   text-decoration: none;
   text-align: center;
-  transition: 0.3s;
+  transition: background-color 0.3s ease-in;
 }
 
 .main__blogpost__last-url:hover {
   background-color: #292929;
-  color: #fff;
 }
