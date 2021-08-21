@@ -9,15 +9,8 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 2;
-}
-
-.headerIsNotActive {
   backdrop-filter: blur(10px);
   background-color: var(--dark-navbar);
-}
-
-.headerIsActive {
-  background-color: var(--dark-primary);
 }
 
 .header__title {
@@ -81,10 +74,4 @@ header {
 .close-icon {
   display: block;
   border-radius: 3px;
-}
-
-@media (min-width: 768px) {
-  .header__nav {
-    display: none;
-  }
 }

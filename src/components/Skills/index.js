@@ -1,11 +1,11 @@
 import React from "react";
+import Section from "../Section";
 import "./style.css";
 
 export default function Skills({ skill }) {
   return (
-    <section className="main__skills" id="skills">
-      <h4 className="section_title">Skills</h4>
-      <section className="main__skills__container">
+    <Section title="Skills">
+      <div className="main__skills__container">
         {skill.map((item, index) => (
           <article
             className="skills"
@@ -18,7 +18,7 @@ export default function Skills({ skill }) {
             {item.name}
           </article>
         ))}
-      </section>
-    </section>
+      </div>
+    </Section>
   );
 }

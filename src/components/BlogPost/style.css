@@ -1,10 +1,3 @@
-.main__blogpost {
-  height: auto;
-  min-width: 320px;
-  max-width: 900px;
-  padding: 0 20px;
-}
-
 .main__blogpost__last {
   position: relative;
   max-width: 540px;

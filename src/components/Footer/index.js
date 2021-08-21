@@ -1,10 +1,11 @@
 import React from "react";
+import CVButton from "../CVButton";
 import "./style.css";
 
 export default function Footer() {
   return (
     <footer>
-      <section className="footer__links">
+      <div className="footer__links">
         <ul>
           <li>
             <a href="https://dev.to/doulovera" target="_blank" rel="noreferrer">
@@ -48,15 +49,11 @@ export default function Footer() {
             </a>
           </li>
         </ul>
-      </section>
-      <section className="footer__resume">
-        <a href="https://drive.google.com/file/d/1qB362_yhEdcQjsDQy8i6TdSWucj-QrJp/view?usp=sharing">
-          My Resume [ES] <i className="fas fa-download"></i>
-        </a>
-      </section>
-      <section className="footer__copyright">
+      </div>
+      <CVButton />
+      <div className="footer__copyright">
         <p>&copy; Douglas Lovera - 2021</p>
-      </section>
+      </div>
     </footer>
   );
 }

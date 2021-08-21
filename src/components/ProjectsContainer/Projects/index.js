@@ -18,14 +18,26 @@ export default function Projects({
   return (
     <article className="main__projects__item">
       <div className="main__projects__image">
-        <img
-          src={preview && preview}
-          alt={name}
-          className="main__projects__image-preview"
-        />
+        <a href={demoUrl} target="_blank" rel="noreferrer">
+          <img
+            src={preview && preview}
+            alt={name}
+            className="main__projects__image-preview"
+            loading="lazy"
+          />
+        </a>
       </div>
       <div className="main__projects__body">
-        <h5>{name}</h5>
+        <h5>
+          <a
+            href={demoUrl}
+            className="main__projects__title"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {name}
+          </a>
+        </h5>
         <div className="main__projects__body-languages">
           {languages.html && <img src={HTML} alt="HTML 5" title="HTML5" />}
           {languages.css && <img src={CSS} alt="CSS 3" title="CSS3" />}
@@ -49,7 +61,7 @@ export default function Projects({
             rel="noreferrer"
           >
             <span>
-              <i className="fas fa-link"></i>
+              <i className="fas fa-external-link-square-alt"></i>
             </span>
             Demo
           </a>

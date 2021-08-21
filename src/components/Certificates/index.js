@@ -1,10 +1,10 @@
 import React from "react";
+import Section from "../Section";
 import "./style.css";
 
 export default function Certificates({ certificatesList }) {
   return (
-    <section className="main__certificates">
-      <h4 className="section_title">Certificates</h4>
+    <Section title="Certificates">
       <div className="main__certificates__container">
         {certificatesList.map(
           ({ name, companyName, pdfUrl, credentialUrl }, index) => (
@@ -35,6 +35,6 @@ export default function Certificates({ certificatesList }) {
           )
         )}
       </div>
-    </section>
+    </Section>
   );
 }

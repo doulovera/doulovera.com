@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Section from "../Section";
 import Tags from "./Tags";
 import "./style.css";
 
@@ -34,10 +35,13 @@ export default function BlogPost() {
   }, []);
 
   return (
-    <section className="main__blogpost">
-      <h4 className="section_title">
-        Last Blog Post <i className="fab fa-dev"></i>
-      </h4>
+    <Section
+      title={
+        <>
+          Last Blog Post <i className="fab fa-dev"></i>
+        </>
+      }
+    >
       {!isLoaded && <h3>Cargando...</h3>}
       <article className="main__blogpost__last">
         {devto.cover_image && (
@@ -64,6 +68,6 @@ export default function BlogPost() {
           Ver artículo en dev.to
         </a>
       </article>
-    </section>
+    </Section>
   );
 }

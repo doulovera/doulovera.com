@@ -16,12 +16,12 @@ export default function AboutMe() {
         </h2>
         <div className="main__aboutme__contact">
           <a
-            href="https://twitter.com/doulovera/"
+            href="https://linkedin.com/in/douglaslovera/"
             target="_blank"
             rel="noreferrer"
             className="icon"
           >
-            <i className="fab fa-twitter"></i>
+            <i className="fab fa-linkedin"></i>
           </a>
           <a
             href="https://github.com/doulovera/"
@@ -32,12 +32,12 @@ export default function AboutMe() {
             <i className="fab fa-github"></i>
           </a>
           <a
-            href="https://linkedin.com/in/douglaslovera/"
+            href="https://twitter.com/doulovera/"
             target="_blank"
             rel="noreferrer"
             className="icon"
           >
-            <i className="fab fa-linkedin"></i>
+            <i className="fab fa-twitter"></i>
           </a>
           <a
             href="https://dev.to/doulovera/"

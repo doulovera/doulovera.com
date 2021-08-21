@@ -1,12 +1,6 @@
-.main__certificates {
-  height: auto;
-  min-width: 320px;
-  max-width: 640px;
-}
-
 .main__certificates__container {
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 640px;
+  margin: auto;
 }
 
 .main__certificates__item {

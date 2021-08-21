@@ -1,0 +1,23 @@
+.resume__button {
+  grid-area: resume;
+  margin: auto auto;
+  font-size: 1.4rem;
+}
+.resume__button a {
+  padding: 10px 25px;
+  border-radius: 3px;
+  text-decoration: none;
+  background: rgb(106, 152, 230);
+  background: linear-gradient(
+    90deg,
+    rgba(106, 152, 230, 1) 42%,
+    rgba(60, 106, 131, 1) 95%
+  );
+  color: #000;
+}
+
+@media (max-width: 460px) {
+  .resume__text {
+    display: none;
+  }
+}

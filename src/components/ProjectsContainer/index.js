@@ -1,11 +1,11 @@
 import React from "react";
-import "./style.css";
+import Section from "../Section";
 import Projects from "./Projects";
+import "./style.css";
 
 export default function ProjectsContainer({ projectList }) {
   return (
-    <section className="main__projects" id="projects">
-      <h4 className="section_title">Projects</h4>
+    <Section title="Projects">
       <div className="main__projects__container">
         {projectList.map((project, index) => (
           <Projects
@@ -18,6 +18,6 @@ export default function ProjectsContainer({ projectList }) {
           />
         ))}
       </div>
-    </section>
+    </Section>
   );
 }
