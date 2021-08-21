@@ -28,30 +28,6 @@ const ProjectList = [
     // repoUrl: "https://github.com/doulovera/oneone-web",
   },
   {
-    name: "OneOne - BOT",
-    preview:
-      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1624838827/Portfolio%20images/oneone_ycjvxt_jjyolg.jpg",
-    languages: {
-      js: true,
-      discordjs: true,
-    },
-    demoUrl:
-      "https://discord.com/oauth2/authorize?client_id=675130426943209484&scope=bot&permissions=8",
-    // repoUrl: "https://github.com/doulovera/oneone",
-  },
-  {
-    name: "Github Profile Finder",
-    preview:
-      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1621379376/Portfolio%20images/ghprofile_ovz5x7_1_wuinkh.png",
-    languages: {
-      html: true,
-      css: true,
-      js: true,
-    },
-    demoUrl: "https://gh-profile-finder.netlify.app/",
-    repoUrl: "https://github.com/doulovera/github-profile-finder",
-  },
-  {
     name: "Publifelix",
     preview:
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1621379376/Portfolio%20images/publifelix_dw5fbm_1_mafdyp.png",
@@ -63,6 +39,20 @@ const ProjectList = [
     },
     demoUrl: "https://publifelix-demo.netlify.app/",
     repoUrl: "https://github.com/doulovera/publifelix-demo",
+  },
+  {
+    name: "Im-a-gen",
+    preview:
+      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1629578532/Portfolio%20images/imagen_wprul8.png",
+    languages: {
+      html: true,
+      css: true,
+      js: true,
+      react: true,
+      ts: true,
+    },
+    demoUrl: "https://im-a-gen.netlify.app/",
+    repoUrl: "https://github.com/doulovera/im-a-gen",
   },
 ];
 
