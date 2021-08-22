@@ -12,9 +12,6 @@
   border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-}
-
 .main__aboutme__picture {
   margin: auto;
   text-align: center;
@@ -23,11 +20,11 @@
 .main__aboutme__img {
   height: 160px;
   width: 160px;
-  background: rgb(106, 152, 230);
+  background: rgb(57, 74, 153);
   background: linear-gradient(
     90deg,
-    rgba(106, 152, 230, 1) 42%,
-    rgba(60, 106, 131, 1) 95%
+    rgba(57, 74, 153, 1) 29%,
+    rgba(31, 41, 82, 1) 82%
   );
   border-radius: 50%;
 }

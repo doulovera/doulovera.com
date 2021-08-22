@@ -39,14 +39,6 @@ export default function AboutMe() {
           >
             <i className="fab fa-twitter"></i>
           </a>
-          <a
-            href="https://dev.to/doulovera/"
-            target="_blank"
-            rel="noreferrer"
-            className="icon"
-          >
-            <i className="fab fa-dev"></i>
-          </a>
         </div>
       </div>
     </section>

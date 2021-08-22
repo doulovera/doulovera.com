@@ -7,13 +7,14 @@
   padding: 10px 25px;
   border-radius: 3px;
   text-decoration: none;
-  background: rgb(106, 152, 230);
+  background: rgb(57, 74, 153);
   background: linear-gradient(
     90deg,
-    rgba(106, 152, 230, 1) 42%,
-    rgba(60, 106, 131, 1) 95%
+    rgba(57, 74, 153, 1) 29%,
+    rgba(31, 41, 82, 1) 82%
   );
-  color: #000;
+  color: #fff;
+  font-weight: bold;
 }
 
 @media (max-width: 460px) {

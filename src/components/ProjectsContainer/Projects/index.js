@@ -42,10 +42,10 @@ export default function Projects({
           {languages.html && <img src={HTML} alt="HTML 5" title="HTML5" />}
           {languages.css && <img src={CSS} alt="CSS 3" title="CSS3" />}
           {languages.js && <img src={JS} alt="JavaScript" title="JavaScript" />}
+          {languages.ts && <img src={TS} alt="TypeScript" title="TypeScript" />}
           {languages.react && (
             <img src={ReactIcon} alt="React" title="React.js" />
           )}
-          {languages.ts && <img src={TS} alt="TypeScript" title="TypeScript" />}
           {languages.bootstrap && (
             <img src={BootstrapIcon} alt="Bootstrap 5" title="Bootstrap 5" />
           )}

@@ -47,7 +47,6 @@ const ProjectList = [
     languages: {
       html: true,
       css: true,
-      js: true,
       react: true,
       ts: true,
     },

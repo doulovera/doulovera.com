@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Section from "../Section";
 import Tags from "./Tags";
+import { getLastPost } from "../../services/getLastPost";
 import "./style.css";
 
 export default function BlogPost() {
@@ -8,30 +9,27 @@ export default function BlogPost() {
   const [devto, setDevto] = useState({});
 
   useEffect(() => {
-    fetch("https://dev.to/api/articles?username=doulovera")
-      .then((res) => res.json())
-      .then((res) => {
-        const {
-          title,
-          url,
-          description,
-          published_at,
-          positive_reactions_count,
-          cover_image,
-          tag_list,
-        } = res[1];
-        setDevto({
-          title,
-          url,
-          description,
-          published_at,
-          positive_reactions_count,
-          cover_image,
-          tag_list,
-        });
-        setIsLoaded(true);
-      })
-      .catch((err) => console.log(err));
+    getLastPost().then((data) => {
+      const {
+        title,
+        url,
+        description,
+        published_at,
+        positive_reactions_count,
+        cover_image,
+        tag_list,
+      } = data[1];
+      setDevto({
+        title,
+        url,
+        description,
+        published_at,
+        positive_reactions_count,
+        cover_image,
+        tag_list,
+      });
+      setIsLoaded(true);
+    });
   }, []);
 
   return (

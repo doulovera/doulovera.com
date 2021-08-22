@@ -4,13 +4,19 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  padding: 0 6%;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background-color: var(--dark-navbar);
+}
+
+header div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
-  backdrop-filter: blur(10px);
-  background-color: var(--dark-navbar);
+  height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .header__title {

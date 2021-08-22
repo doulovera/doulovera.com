@@ -1,13 +1,17 @@
 footer {
   margin-top: 90px;
   padding: 25px 0 0;
-  height: 200px;
+  height: 150px;
   min-width: 320px;
   background-color: var(--dark-primary);
-  display: grid;
-  grid-template-areas:
-    "links resume"
-    "copyright copyright";
+}
+
+footer .footer_container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 footer a {
@@ -15,12 +19,17 @@ footer a {
 }
 
 .footer__links {
-  grid-area: links;
   margin: 0 auto;
   font-size: 1.4rem;
 }
+
+.footer__links ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .footer__links li {
-  padding: 3px 0;
+  padding: 3px 10px;
   list-style: none;
 }
 
@@ -33,16 +42,14 @@ footer a {
 }
 
 .footer__copyright {
-  grid-area: copyright;
   margin: 30px auto;
+  text-align: center;
   font-size: 1.6rem;
 }
 
-@media (min-width: 930px) {
+@media (max-width: 550px) {
   .footer__links ul {
     display: flex;
-  }
-  .footer__links li {
-    padding: 0 10px;
+    flex-direction: column;
   }
 }
