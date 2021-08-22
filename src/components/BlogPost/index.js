@@ -47,6 +47,7 @@ export default function BlogPost() {
             src={devto.cover_image}
             className="main__blogpost__last-image"
             alt="Article's cover"
+            loading="lazy"
           />
         )}
         <h5 className="main__blogpost__last-title">{devto.title}</h5>

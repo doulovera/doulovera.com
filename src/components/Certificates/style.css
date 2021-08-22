@@ -36,7 +36,7 @@
   margin: 0 10px;
   font-size: 2rem;
   color: var(--color-anchor);
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 .main__certificates__item-buttons a:hover {

@@ -16,6 +16,19 @@ discordjs
 
 const ProjectList = [
   {
+    name: "Im-a-gen",
+    preview:
+      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1629578532/Portfolio%20images/imagen_wprul8.png",
+    languages: {
+      html: true,
+      css: true,
+      react: true,
+      ts: true,
+    },
+    demoUrl: "https://im-a-gen.netlify.app/",
+    repoUrl: "https://github.com/doulovera/im-a-gen",
+  },
+  {
     name: "OneOne - Web",
     preview:
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1621379375/Portfolio%20images/oneone_preview_fvrqdd_1_aq8mcw.png",
@@ -39,19 +52,6 @@ const ProjectList = [
     },
     demoUrl: "https://publifelix-demo.netlify.app/",
     repoUrl: "https://github.com/doulovera/publifelix-demo",
-  },
-  {
-    name: "Im-a-gen",
-    preview:
-      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1629578532/Portfolio%20images/imagen_wprul8.png",
-    languages: {
-      html: true,
-      css: true,
-      react: true,
-      ts: true,
-    },
-    demoUrl: "https://im-a-gen.netlify.app/",
-    repoUrl: "https://github.com/doulovera/im-a-gen",
   },
 ];
 
