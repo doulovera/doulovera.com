@@ -38,6 +38,7 @@ export default function Projects({
               src={lang.url}
               alt={lang.name}
               title={lang.name}
+              draggable="false"
             />
           ))}
         </div>

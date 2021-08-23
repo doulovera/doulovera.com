@@ -36,7 +36,7 @@ export default function BlogPost() {
     <Section
       title={
         <>
-          Last Blog Post <i className="fab fa-dev"></i>
+          Última publicación <i className="fab fa-dev"></i>
         </>
       }
     >
@@ -57,11 +57,9 @@ export default function BlogPost() {
           </a>
         </h5>
         <p className="main__blogpost__last-published-date">
-          {!isLoaded ? (
-            <h3>Cargando...</h3>
-          ) : (
-            `🕒 ${new Date(devto.published_at).toLocaleString()}`
-          )}
+          {!isLoaded
+            ? "Cargando..."
+            : `🕒 ${new Date(devto.published_at).toLocaleString()}`}
         </p>
         <p className="main__blogpost__last-description">{devto.description}</p>
         <p className="main__blogpost__last-tags">
@@ -73,7 +71,7 @@ export default function BlogPost() {
           rel="noreferrer"
           href={devto.url}
         >
-          {!isLoaded ? <h3>Cargando...</h3> : "Ver artículo en dev.to"}
+          {!isLoaded ? "Cargando..." : "Ver artículo en dev.to"}
         </a>
       </article>
     </Section>

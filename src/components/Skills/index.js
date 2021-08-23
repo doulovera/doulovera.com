@@ -4,7 +4,7 @@ import "./style.css";
 
 export default function Skills({ skill }) {
   return (
-    <Section title="Skills">
+    <Section title="Habilidades">
       <div className="main__skills__container">
         {skill.map((item, index) => (
           <article

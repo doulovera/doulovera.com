@@ -5,7 +5,7 @@ import "./style.css";
 
 export default function ProjectsContainer({ projectList }) {
   return (
-    <Section title="Projects">
+    <Section title="Proyectos">
       <div className="main__projects__container">
         {projectList.map((project, index) => (
           <Projects
