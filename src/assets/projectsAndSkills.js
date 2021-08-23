@@ -1,30 +1,43 @@
 /****** I'LL MAKE THIS WITH OOP SOON, I'M LEARNING IT :) ******/
 
-/*
+import HTML from "./icons/langs/html.png";
+import CSS from "./icons/langs/css.png";
+import JS from "./icons/langs/js.png";
+import REACT from "./icons/langs/react.png";
+import TS from "./icons/langs/ts.png";
+import BOOTSTRAP from "./icons/langs/bootstrap.png";
 
-Languages:
+const html = {
+  name: "HTML 5",
+  url: HTML,
+};
+const css = {
+  name: "CSS 3",
+  url: CSS,
+};
+const js = {
+  name: "JavaScript",
+  url: JS,
+};
+const ts = {
+  name: "TypeScript",
+  url: TS,
+};
+const react = {
+  name: "React",
+  url: REACT,
+};
+const bootstrap = {
+  name: "Bootstrap",
+  url: BOOTSTRAP,
+};
 
-html
-css
-js
-react
-ts
-bootstrap
-discordjs
-
-*/
-
-const ProjectList = [
+export const ProjectList = [
   {
     name: "Im-a-gen",
     preview:
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1629578532/Portfolio%20images/imagen_wprul8.png",
-    languages: {
-      html: true,
-      css: true,
-      react: true,
-      ts: true,
-    },
+    languages: [html, css, ts, react],
     demoUrl: "https://im-a-gen.netlify.app/",
     repoUrl: "https://github.com/doulovera/im-a-gen",
   },
@@ -32,30 +45,20 @@ const ProjectList = [
     name: "OneOne - Web",
     preview:
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1621379375/Portfolio%20images/oneone_preview_fvrqdd_1_aq8mcw.png",
-    languages: {
-      html: true,
-      css: true,
-      js: true,
-    },
+    languages: [html, css, js],
     demoUrl: "https://oneonebot.ml/",
-    // repoUrl: "https://github.com/doulovera/oneone-web",
   },
   {
     name: "Publifelix",
     preview:
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1621379376/Portfolio%20images/publifelix_dw5fbm_1_mafdyp.png",
-    languages: {
-      html: true,
-      css: true,
-      js: true,
-      bootstrap: true,
-    },
+    languages: [html, css, js, bootstrap],
     demoUrl: "https://publifelix-demo.netlify.app/",
     repoUrl: "https://github.com/doulovera/publifelix-demo",
   },
 ];
 
-const SkillsList = [
+export const SkillsList = [
   {
     name: "HTML5",
     background: "#f06529",
@@ -87,13 +90,7 @@ const SkillsList = [
     background: "#f34f29",
   },
   {
-    name: "Node.js (Basic)",
+    name: "Node.js",
     background: "#3C873A",
   },
-  {
-    name: "Figma (Basic)",
-    background: "#8B37FF",
-  },
 ];
-
-export { ProjectList, SkillsList };
