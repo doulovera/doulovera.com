@@ -1,6 +1,6 @@
 .main__blogpost__last {
   position: relative;
-  max-width: 540px;
+  max-width: 500px;
   min-width: 280px;
   margin: 0 auto;
   padding: 20px 30px 30px;
@@ -27,14 +27,18 @@
 
 .main__blogpost__last-title {
   max-width: 8700px;
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: var(--dark-font);
   overflow: hidden;
 }
 
+.main__blogpost__last-title a {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--dark-font);
+}
+
 .main__blogpost__last-published-date {
-  padding-top: 5px;
+  padding-top: 10px;
   font-size: 1.2rem;
 }
 

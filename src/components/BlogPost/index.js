@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Section from "../Section";
 import Tags from "./Tags";
-import { getLastPost } from "../../services/getLastPost";
+import { getAllPosts } from "../../services/getAllPosts";
 import "./style.css";
 
 export default function BlogPost() {
@@ -9,7 +9,7 @@ export default function BlogPost() {
   const [devto, setDevto] = useState({});
 
   useEffect(() => {
-    getLastPost().then((data) => {
+    getAllPosts().then((data) => {
       const {
         title,
         url,
@@ -40,19 +40,28 @@ export default function BlogPost() {
         </>
       }
     >
-      {!isLoaded && <h3>Cargando...</h3>}
       <article className="main__blogpost__last">
         {devto.cover_image && (
-          <img
-            src={devto.cover_image}
-            className="main__blogpost__last-image"
-            alt="Article's cover"
-            loading="lazy"
-          />
+          <a href={devto.url} target="_blank" rel="noreferrer">
+            <img
+              src={devto.cover_image}
+              className="main__blogpost__last-image"
+              alt="Article's cover"
+              loading="lazy"
+            />
+          </a>
         )}
-        <h5 className="main__blogpost__last-title">{devto.title}</h5>
+        <h5 className="main__blogpost__last-title">
+          <a href={devto.url} target="_blank" rel="noreferrer">
+            {devto.title}
+          </a>
+        </h5>
         <p className="main__blogpost__last-published-date">
-          🕒 {new Date(devto.published_at).toLocaleString()}
+          {!isLoaded ? (
+            <h3>Cargando...</h3>
+          ) : (
+            `🕒 ${new Date(devto.published_at).toLocaleString()}`
+          )}
         </p>
         <p className="main__blogpost__last-description">{devto.description}</p>
         <p className="main__blogpost__last-tags">
@@ -64,7 +73,7 @@ export default function BlogPost() {
           rel="noreferrer"
           href={devto.url}
         >
-          Ver artículo en dev.to
+          {!isLoaded ? <h3>Cargando...</h3> : "Ver artículo en dev.to"}
         </a>
       </article>
     </Section>

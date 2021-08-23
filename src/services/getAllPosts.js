@@ -1,4 +1,4 @@
-export const getLastPost = async () => {
+export const getAllPosts = async () => {
   return fetch("https://dev.to/api/articles?username=doulovera")
     .then((res) => res.json())
     .then((res) => {
