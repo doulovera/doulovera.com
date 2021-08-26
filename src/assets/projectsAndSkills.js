@@ -42,7 +42,7 @@ export const ProjectList = [
     repoUrl: "https://github.com/doulovera/im-a-gen",
   },
   {
-    name: "OneOne - Web",
+    name: "OneOne Discord Bot",
     preview:
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1621379375/Portfolio%20images/oneone_preview_fvrqdd_1_aq8mcw.png",
     languages: [html, css, js],
