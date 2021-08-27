@@ -56,6 +56,14 @@ export const ProjectList = [
     demoUrl: "https://publifelix-demo.netlify.app/",
     repoUrl: "https://github.com/doulovera/publifelix-demo",
   },
+  {
+    name: "Github Profile Finder",
+    preview:
+      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1630099864/Portfolio%20images/gh-png_y6paiw.png",
+    languages: [html, css, js],
+    demoUrl: "https://gh-profile-finder.netlify.app/",
+    repoUrl: "https://github.com/doulovera/github-profile-finder",
+  },
 ];
 
 export const SkillsList = [
