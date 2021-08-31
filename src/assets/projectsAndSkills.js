@@ -95,8 +95,8 @@ export const SkillsList = [
   },
   {
     name: "Next.js",
-    background: "#000",
-    color: "#fff"
+    background: "#fff",
+    color: "#000"
   },
   {
     name: "Git/Github",
