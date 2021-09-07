@@ -34,6 +34,14 @@ const bootstrap = {
 
 export const ProjectList = [
   {
+    name: "Numrify",
+    preview: 
+      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1631054511/Portfolio%20images/numrify_k2qzkb.png",
+    languages: [html, css, js, react],
+    demoUrl: "https://numrify.netlify.app/",
+    reporUrl: "https://github.com/doulovera/numrify",
+  },
+  {
     name: "Im-a-gen",
     preview:
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1629578532/Portfolio%20images/imagen_wprul8.png",
