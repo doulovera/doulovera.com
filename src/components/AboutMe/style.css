@@ -13,6 +13,7 @@
 }
 
 .main__aboutme__picture {
+  position: relative;
   margin: auto;
   text-align: center;
 }
@@ -27,6 +28,36 @@
     rgba(31, 41, 82, 1) 82%
   );
   border-radius: 50%;
+}
+
+.main__aboutme__picture-hireable {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  height: 35px;
+  width: 35px;
+  padding: 3px;
+  border: 2px dashed #000;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: #5d72d1;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  transition: width 0.1s ease-in-out;
+  cursor: default;
+}
+.main__aboutme__picture-hireable span {
+  display: none;
+}
+.main__aboutme__picture-hireable:hover {
+  width: 150px;
+
+}
+.main__aboutme__picture-hireable:hover > span,
+.main__aboutme__picture-hireable:focus > span
+{
+  display: inline;
 }
 
 .main__aboutme__text {
