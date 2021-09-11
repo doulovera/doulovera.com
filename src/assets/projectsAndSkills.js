@@ -55,6 +55,7 @@ export const ProjectList = [
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1621379375/Portfolio%20images/oneone_preview_fvrqdd_1_aq8mcw.png",
     languages: [html, css, js],
     demoUrl: "https://oneonebot.ml/",
+    repoUrl: " https://github.com/doulovera/oneone-web",
   },
   {
     name: "Publifelix",
