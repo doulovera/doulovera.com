@@ -39,7 +39,7 @@ export const ProjectList = [
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1631054511/Portfolio%20images/numrify_k2qzkb.png",
     languages: [html, css, js, react],
     demoUrl: "https://numrify.netlify.app/",
-    reporUrl: "https://github.com/doulovera/numrify",
+    repoUrl: "https://github.com/doulovera/numrify",
   },
   {
     name: "Im-a-gen",
