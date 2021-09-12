@@ -52,8 +52,8 @@ export const ProjectList = [
   {
     name: "OneOne Discord Bot",
     preview:
-      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1621379375/Portfolio%20images/oneone_preview_fvrqdd_1_aq8mcw.png",
-    languages: [html, css, js],
+      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1631415377/Portfolio%20images/2021-09-11_21-55_k81v4f.png",
+    languages: [html, css, ts],
     demoUrl: "https://oneonebot.ml/",
     repoUrl: " https://github.com/doulovera/oneone-web",
   },
