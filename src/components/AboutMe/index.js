@@ -7,9 +7,11 @@ export default function AboutMe() {
     <section className="main__aboutme" id="contact">
       <div className="main__aboutme__picture">
         <img src={Photo} alt="" className="main__aboutme__img" />
+        {/*
         <div className="main__aboutme__picture-hireable">
           <span className="hireable__text">Hireable!</span> ✨️
         </div>
+        */}
       </div>
       <div className="main__aboutme__text">
         <h2 className="main__aboutme__title">
