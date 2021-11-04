@@ -34,6 +34,14 @@ const bootstrap = {
 
 export const ProjectList = [
   {
+    name: "ToDo App",
+    preview: 
+      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1636001219/Portfolio%20images/todo_app.png",
+    languages: [html, css, js, react],
+    demoUrl: "https://dl-note-taker.vercel.app/",
+    repoUrl: "https://github.com/doulovera/todo-app_react",
+  },
+  {
     name: "Numrify",
     preview: 
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1631054511/Portfolio%20images/numrify_k2qzkb.png",
