@@ -21,6 +21,9 @@ header {
 .header-cv {
   padding: 5px 10px;
   font-size: 1.4rem;
+}
+
+.header-cv .curriculum {
   background-color: var(--bg-gradient);
   border-radius: 8px;
 }
@@ -36,6 +39,10 @@ header a {
   gap: 20px;
 }
 
+.header-action_buttons {
+  width: 30px;
+}
+
 .header-open_nav {
   display: none;
 }
@@ -45,13 +52,25 @@ header a {
   width: 45px;
   color: var(--font-primary);
   font-size: 2rem;
+  font-weight: bold;
   background-color: var(--bg-primary);
   border: 0;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.header-action_buttons #toggle-theme{
+  background: none;
+  border: 0;
+
 }
   
 @media screen and (max-width: 600px) {
   .header-container {
+    display: none;
+  }
+  
+  .header-container .header-nav-logo {
     display: none;
   }
 
@@ -59,11 +78,48 @@ header a {
     display: block;
   }
 
-  .header-container.header-open {
-    position: absolute;
-    top: 100px;
-    display: block;
+  .header-nav {
+    flex-direction: column;
+    width: 100%;
   }
 
+  .header-nav a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .header-cv {
+    width: 100%;
+    padding: 0 4rem;
+    text-align: center;
+  }
 
+  .header-cv .curriculum {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .header-container.header-open {
+    position: absolute;
+    top: 90px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    width: 230px;
+    padding: 2rem 0 3rem;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+  }
+
+  .header-nav-logo::after {
+    content: '>';
+    position: absolute;
+    bottom: 8px;
+    transform: rotate(270deg);
+  }
+
+  .header-container.header-open ~ .header-nav-logo::after {
+    transform: rotate(90deg);
+  }
 }
