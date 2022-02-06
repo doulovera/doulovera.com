@@ -1,15 +1,15 @@
 :root {
   --app-min-width: 320px;
 
-  /* colors */
-  --bg-primary: #302b27;
-  --bg-secondary: #363636;
+  --bg-gradient: linear-gradient(90deg, rgba(57,74,153,1) 35%, rgba(90,108,193,1) 100%);
+
+  /* theme */
+  --bg-primary: #292929;
+  --bg-secondary: #171717;
   --font-primary: #c5cddb;
   --font-secondary: #ffffff;
 
-  --bg-blur: #363636e0;
-
-  --bg-gradient: salmon;
+  --bg-blur: #171717f0;
 }
 
 body.light-theme {
@@ -22,6 +22,8 @@ body.light-theme {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -32,10 +34,13 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin-top: 10rem;
   min-width: var(--app-min-width);
   background-color: var(--bg-primary);
   color: var(--font-primary);
   line-height: 1.5;
+}
+
+main {
+  padding: 0 2rem;
 }

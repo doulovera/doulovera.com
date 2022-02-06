@@ -19,14 +19,14 @@ header {
 }
 
 .header-cv {
-  padding: 5px 10px;
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 .header-cv .curriculum {
   display: block;
-  padding: 1rem 2rem;
-  background-color: var(--bg-gradient);
+  padding: .5rem 1.6rem;
+  color: #fff;
+  background: var(--bg-gradient);
   border-radius: 8px;
 }
 
@@ -58,18 +58,18 @@ header a {
   background-color: var(--bg-primary);
   border: 0;
   border-radius: 50%;
-  cursor: pointer;
 }
 
-.header-action_buttons #toggle-theme{
+.header-action_buttons #toggle-theme {
   background: none;
   border: 0;
-
+  cursor: pointer;
 }
   
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .header-container {
     display: none;
+    /* border: 1px solid #fff; */
   }
   
   .header-container .header-nav-logo {
@@ -99,7 +99,6 @@ header a {
   .header-cv .curriculum {
     display: block;
     width: 100%;
-    padding: 1rem 0;
   }
 
   .header-container.header-open {
@@ -110,7 +109,7 @@ header a {
     gap: 2rem;
     width: 230px;
     padding: 2rem 0 3rem;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-blur);
     border-radius: 10px;
   }
 
