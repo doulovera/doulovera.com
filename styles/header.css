@@ -41,6 +41,10 @@ header a {
   gap: 20px;
 }
 
+.header-nav a:hover {
+  color: var(--font-primary);
+}
+
 .header-action_buttons {
   width: 30px;
 }
@@ -69,7 +73,7 @@ header a {
 @media screen and (max-width: 640px) {
   .header-container {
     display: none;
-    /* border: 1px solid #fff; */
+    border: 2px solid var(--font-secondary);
   }
   
   .header-container .header-nav-logo {

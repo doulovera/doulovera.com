@@ -9,7 +9,7 @@
   --font-primary: #c5cddb;
   --font-secondary: #ffffff;
 
-  --bg-blur: #171717f0;
+  --bg-blur: #171717fa;
 }
 
 body.light-theme {
@@ -18,7 +18,7 @@ body.light-theme {
   --font-primary: #3d3d3d;
   --font-secondary: #202020;
 
-  --bg-blur: #ffffffe0;
+  --bg-blur: #fffffffa;
 }
 
 * {
@@ -39,6 +39,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--font-primary);
   line-height: 1.5;
+  transition: background-color 0.2s;
 }
 
 main {
