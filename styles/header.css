@@ -24,6 +24,8 @@ header {
 }
 
 .header-cv .curriculum {
+  display: block;
+  padding: 1rem 2rem;
   background-color: var(--bg-gradient);
   border-radius: 8px;
 }
