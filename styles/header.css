@@ -105,6 +105,11 @@ header a {
     width: 100%;
   }
 
+  .header-container {
+    background-color: var(--bg-secondary);
+    opacity: .96;
+  }
+
   .header-container.header-open {
     position: absolute;
     top: 90px;
@@ -113,7 +118,6 @@ header a {
     gap: 2rem;
     width: 230px;
     padding: 2rem 0 3rem;
-    background-color: var(--bg-blur);
     border-radius: 10px;
   }
 
