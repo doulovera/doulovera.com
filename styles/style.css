@@ -45,3 +45,14 @@ body {
 main {
   padding: 0 2rem;
 }
+
+.section-content {
+  max-width: 340px;
+  margin: 8rem auto;
+}
+
+.section-content h2 {
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: 3rem;
+}
