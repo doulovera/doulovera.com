@@ -15,8 +15,8 @@
 body.light-theme {
   --bg-primary: #dcdaca;
   --bg-secondary: #ffffff;
-  --font-primary: #3d3d3d;
-  --font-secondary: #202020;
+  --font-primary: #202020;
+  --font-secondary: #3d3d3d;
 
   --bg-blur: #fffffffa;
 }

@@ -42,7 +42,7 @@
 }
 
 body.light-theme .main-card__contact img {
-  filter: invert(1);
+  filter: invert(1); /* BUG */
 }
 
 @media screen and (min-width: 641px) {
