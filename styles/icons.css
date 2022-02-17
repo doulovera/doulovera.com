@@ -1,0 +1,54 @@
+span.icon {
+  height: 3rem;
+  width: 3rem;
+  /* background-color: #ffffffaa; */
+  border-radius: 12px;
+}
+
+span.icon-html {
+  display: inline-block;
+  background-image: url('/assets/icons/html.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+span.icon-css {
+  display: inline-block;
+  background-image: url('/assets/icons/css.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+span.icon-js {
+  display: inline-block;
+  background-image: url('/assets/icons/js.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+span.icon-ts {
+  display: inline-block;
+  background-image: url('/assets/icons/ts.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+span.icon-react {
+  display: inline-block;
+  background-image: url('/assets/icons/react.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+span.icon-bootstrap {
+  display: inline-block;
+  background-image: url('/assets/icons/bootstrap.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

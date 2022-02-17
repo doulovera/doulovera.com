@@ -1,4 +1,5 @@
 import './styles/style.css';
+import './styles/icons.css';
 import './styles/header.css';
 import './styles/main-card.css';
 import './styles/about-me.css';
