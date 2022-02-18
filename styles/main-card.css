@@ -41,8 +41,8 @@
   border-top: 2px solid var(--font-primary);
 }
 
-body.light-theme .main-card__contact img {
-  filter: invert(1); /* BUG */
+body.light-theme .main-card__contact .icon {
+  filter: invert(1);
 }
 
 @media screen and (min-width: 641px) {

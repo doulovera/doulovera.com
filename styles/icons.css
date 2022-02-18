@@ -1,8 +1,31 @@
 span.icon {
   height: 3rem;
   width: 3rem;
-  /* background-color: #ffffffaa; */
   border-radius: 12px;
+}
+
+span.icon-github {
+  display: inline-block;
+  background-image: url('/assets/icons/github.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+span.icon-linkedin {
+  display: inline-block;
+  background-image: url('/assets/icons/linkedin.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+span.icon-twitter {
+  display: inline-block;
+  background-image: url('/assets/icons/twitter.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 span.icon-html {
