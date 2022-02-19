@@ -4,6 +4,7 @@ import './styles/header.css';
 import './styles/main-card.css';
 import './styles/about-me.css';
 import './styles/projects.css';
+import './styles/certificates.css';
 
 const app = document.querySelector('#app');
 
