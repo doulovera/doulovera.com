@@ -20,6 +20,7 @@ header {
 }
 
 .header-cv {
+  min-width: 70px;
   font-size: 2rem;
 }
 
