@@ -6,8 +6,7 @@ import './styles/about-me.css';
 import './styles/projects.css';
 import './styles/certificates.css';
 import './styles/experience.css';
-
-const app = document.querySelector('#app');
+import './styles/footer.css';
 
 // toggle dark/light mode
 const toggleThemeBtn = document.getElementById('toggle-theme');
