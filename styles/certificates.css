@@ -15,11 +15,12 @@
 }
 
 .certificate-title h4 {
-  max-width: 17ch;
+  max-width: 19ch;
   font-size: 2rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-weight: normal;
 }
 
 .certificate-title p a {
@@ -29,15 +30,12 @@
 
 .certificate-title p {
   font-size: 1.6rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 body.light-theme .certificate-buttons a {
   filter: invert(1);
 }
-
-
-
 
 .certificate-c__platzi a {
   color: #98ca3f !important;

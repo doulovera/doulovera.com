@@ -10,10 +10,17 @@
   color: var(--font-secondary);
 }
 
+.about-me__container p {
+  max-width: 40ch;
+  margin: 0 auto;
+}
+
 .about-me__skills {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  max-width: 40ch;
+  margin: 0 auto;
   padding-top: 2rem;
   border-top: 2px solid var(--font-primary);
 }
@@ -37,8 +44,9 @@
 
   .about-me__skills {
     align-content: center;
+    justify-content: flex-end;
     min-width: 50%;
-    padding: 0 0 0 2rem;
+    padding: 0 2rem 0 2rem;
     border-top: 0;
     border-right: 2px solid var(--font-primary);
   }
