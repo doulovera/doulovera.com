@@ -17,6 +17,10 @@
   text-align: center;
 }
 
+.project-content h4 {
+  color: var(--font-secondary);
+}
+
 .project-image__container img {
   max-height: 160px;
   width: 100%;

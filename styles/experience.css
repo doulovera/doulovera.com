@@ -1,0 +1,31 @@
+.experience-container {
+  display: grid;
+  grid-template-columns: 140px 340px;
+  justify-content: center;
+  gap: 0 4rem;
+  font-size: 1.6rem;
+}
+
+.experience-container h4 {
+  margin-bottom: .4rem;
+  font-size: 2rem;
+}
+
+.experience-content h4 {
+  color: var(--font-secondary);
+}
+
+.experience-content ul {
+  padding-left: 2rem;
+  list-style-type: "\1F449";
+}
+
+.experience-content li {
+  margin-top: 0.8rem;
+}
+
+@media screen and (max-width: 640px) {
+  .experience-container {
+    grid-template-columns: 260px;
+  }
+}

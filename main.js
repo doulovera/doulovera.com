@@ -5,6 +5,7 @@ import './styles/main-card.css';
 import './styles/about-me.css';
 import './styles/projects.css';
 import './styles/certificates.css';
+import './styles/experience.css';
 
 const app = document.querySelector('#app');
 
@@ -16,8 +17,6 @@ toggleClass(toggleThemeBtn, document.body, 'light-theme');
 const openHeaderBtn = document.querySelector('.header-open_nav');
 const header = document.querySelector('.header-container');
 toggleClass(openHeaderBtn, header, 'header-open');
-
-
 
 function toggleClass (element, toggledElement, className) {
   return element.addEventListener('click', () => {
