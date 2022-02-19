@@ -13,6 +13,7 @@
 .about-me__container p {
   max-width: 40ch;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
 .about-me__skills {
@@ -45,7 +46,7 @@
   .about-me__skills {
     align-content: center;
     justify-content: flex-end;
-    min-width: 50%;
+    min-width: 40%;
     padding: 0 2rem 0 2rem;
     border-top: 0;
     border-right: 2px solid var(--font-primary);
