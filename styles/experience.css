@@ -6,12 +6,12 @@
   font-size: 1.6rem;
 }
 
-.experience-container h4 {
+.experience-container h3 {
   margin-bottom: .4rem;
   font-size: 2rem;
 }
 
-.experience-content h4 {
+.experience-content h3 {
   color: var(--font-secondary);
 }
 

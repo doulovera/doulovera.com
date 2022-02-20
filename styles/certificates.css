@@ -14,7 +14,7 @@
   background-color: var(--bg-secondary);
 }
 
-.certificate-title h4 {
+.certificate-title h3 {
   max-width: 19ch;
   font-size: 2rem;
   overflow: hidden;
