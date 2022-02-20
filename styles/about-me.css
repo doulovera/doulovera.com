@@ -1,0 +1,54 @@
+.about-me__container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 30px;
+  padding: 0 .6rem;
+  font-size: 1.6rem;
+}
+
+.about-me__container {
+  color: var(--font-secondary);
+}
+
+.about-me__container p {
+  max-width: 40ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-me__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 40ch;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 2px solid var(--font-primary);
+}
+
+.about-me__skills article:before {
+  content: '#';
+  padding-right: 1px;
+  font-size: 1.2rem;
+}
+
+
+@media screen and (min-width: 641px) {
+
+  .about-me {
+    max-width: 600px;
+  }
+
+  .about-me__container {
+    flex-direction: row;
+  }
+
+  .about-me__skills {
+    align-content: center;
+    justify-content: flex-end;
+    min-width: 40%;
+    padding: 0 2rem 0 2rem;
+    border-top: 0;
+    border-right: 2px solid var(--font-primary);
+  }
+}

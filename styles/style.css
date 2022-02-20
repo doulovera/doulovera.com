@@ -1,0 +1,58 @@
+:root {
+  --app-min-width: 320px;
+
+  --bg-gradient: linear-gradient(90deg, rgba(57,74,153,1) 35%, rgba(90,108,193,1) 100%);
+
+  /* theme */
+  --bg-primary: #292929;
+  --bg-secondary: #171717;
+  --font-primary: #c5cddb;
+  --font-secondary: #ffffff;
+
+  --bg-blur: #171717ae;
+}
+
+body.light-theme {
+  --bg-primary: #dcdaca;
+  --bg-secondary: #ffffff;
+  --font-primary: #202020;
+  --font-secondary: #3d3d3d;
+
+  --bg-blur: #ffffffae;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-top: 10rem;
+  min-width: var(--app-min-width);
+  background-color: var(--bg-primary);
+  color: var(--font-primary);
+  line-height: 1.5;
+  transition: background-color 0.2s;
+}
+
+main {
+  padding: 0 2rem;
+}
+
+.section-content {
+  max-width: 640px;
+  margin: 8rem auto;
+}
+
+.section-content h2 {
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: 3rem;
+}

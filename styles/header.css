@@ -1,0 +1,140 @@
+header {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  font-size: 2rem;
+  background-color: var(--bg-blur);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 999999;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.header-cv {
+  min-width: 70px;
+  font-size: 2rem;
+}
+
+.header-cv .curriculum {
+  display: block;
+  padding: .5rem 1.6rem;
+  color: #fff;
+  background: var(--bg-gradient);
+  border-radius: 8px;
+}
+
+header a {
+  color: var(--font-secondary);
+  text-decoration: none;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-nav a:hover {
+  color: var(--font-primary);
+}
+
+.header-action_buttons {
+  width: 30px;
+}
+
+.header-open_nav {
+  display: none;
+}
+
+.header-nav-logo {
+  height: 45px;
+  width: 45px;
+  color: var(--font-primary);
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--bg-primary);
+  border: 0;
+  border-radius: 50%;
+}
+
+.header-action_buttons #toggle-theme {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+  
+@media screen and (max-width: 640px) {
+  .header-container {
+    display: none;
+    border-top: 2px solid var(--font-primary);
+    border-radius: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  }
+  
+  .header-container .header-nav-logo {
+    display: none;
+  }
+
+  .header-open_nav {
+    display: block;
+  }
+
+  .header-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header-nav a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .header-cv {
+    width: 100%;
+    padding: 0 4rem;
+    text-align: center;
+  }
+
+  .header-cv .curriculum {
+    display: block;
+    width: 100%;
+  }
+
+  .header-container {
+    background-color: var(--bg-secondary);
+    opacity: .96;
+  }
+
+  .header-container.header-open {
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    width: 100vw;
+    padding: 2rem 0 3rem;
+  }
+
+  .header-nav-logo::after {
+    content: url('/assets/icons/menu.svg');
+    position: absolute;
+    bottom: 8px;
+  }
+
+  body.light-theme .header-nav-logo::after {
+    filter: invert(1);
+  }
+
+  .header-container.header-open ~ .header-nav-logo::after {
+    content: url('/assets/icons/close.svg');
+  }
+}
