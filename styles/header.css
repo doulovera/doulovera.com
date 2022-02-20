@@ -75,7 +75,9 @@ header a {
 @media screen and (max-width: 640px) {
   .header-container {
     display: none;
-    border: 2px solid var(--font-secondary);
+    border-top: 2px solid var(--font-primary);
+    border-radius: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
   }
   
   .header-container .header-nav-logo {
@@ -114,13 +116,12 @@ header a {
 
   .header-container.header-open {
     position: absolute;
-    top: 90px;
+    top: 80px;
     display: flex;
     flex-direction: column-reverse;
     gap: 2rem;
-    width: 230px;
+    width: 100vw;
     padding: 2rem 0 3rem;
-    border-radius: 10px;
   }
 
   .header-nav-logo::after {
