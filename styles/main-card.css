@@ -37,8 +37,19 @@
   gap: 20px;
   width: 140px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem 0 1rem;
   border-top: 2px solid var(--font-primary);
+}
+
+.main-card__resume-btn {
+  display: block;
+  width: 140px;
+  margin: 0 auto;
+  padding: 6px 0;
+  color: #fff;
+  text-decoration: none;
+  background: var(--bg-gradient);
+  border-radius: 8px;
 }
 
 body.light-theme .main-card__contact .icon {
