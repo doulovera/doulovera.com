@@ -1,0 +1,56 @@
+---
+import Navbar from "./Navbar.astro";
+
+---
+
+<header>
+  <div class="header__container">
+    <div>
+      <div class="header__logo">
+        DL
+      </div>
+    </div>
+
+    <Navbar />
+  </div>
+</header>
+
+<style>
+  header {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    height: 8rem;
+    width: 100%;
+    font-size: 2rem;
+    background-color: var(--bg-blur);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 998;
+  }
+
+  .header__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  
+  .header__logo {
+    display: grid;
+    place-items: center;
+    height: 42px;
+    width: 42px;
+    color: var(--font-primary);
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--bg-primary);
+    border: 0;
+    border-radius: 10px;
+  }
+</style>
