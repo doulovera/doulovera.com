@@ -1,12 +1,15 @@
 {
-  "name": "portfolio",
-  "version": "0.0.0",
+  "name": "doulovera-portfolio",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
-    "vite": "^2.7.2"
+    "astro": "^1.0.0-rc.7"
   }
 }
