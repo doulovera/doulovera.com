@@ -1,6 +1,6 @@
 {
   "name": "doulovera-portfolio",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -10,6 +10,6 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^1.0.0-rc.7"
+    "astro": "1.0.6"
   }
 }

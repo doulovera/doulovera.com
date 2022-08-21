@@ -1,0 +1,42 @@
+---
+const { ariaLabel, href, outlined } = Astro.props;
+
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noreferrer"
+  aria-label={ariaLabel}
+  class={`link--gradient ${outlined ? 'link--gradient-outlined' : 'brand-background'}`}
+>
+  <slot />
+</a>
+
+<style is:global>
+  .link--gradient {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    min-width: 5rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 6px 0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+
+  .link--gradient-outlined {
+    background-color: none;
+    border: 2px solid var(--bg-brand);
+    box-shadow: none;
+  }
+  
+  .link--gradient:hover {
+		box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.1);
+  }
+</style>

@@ -11,7 +11,8 @@
 		<slot />
 	</body>
 </html>
-<style>
+
+<style is:global>
 	:root {
 		--app-min-width: 320px;
 
@@ -22,8 +23,9 @@
 		--bg-secondary: #171717;
 		--font-primary: #c5cddb;
 		--font-secondary: #ffffff;
+		--bg-brand: #5a3fd1;
 
-		--bg-blur: #171717ae;
+		--bg-blur: #171717ee;
 	}
 
 	* {
@@ -32,14 +34,12 @@
     box-sizing: border-box;
 	}
 
-	body.light-theme {
-		--bg-primary: #dcdaca;
-		--bg-secondary: #ffffff;
-		--font-primary: #202020;
-		--font-secondary: #3d3d3d;
-
-		--bg-blur: #ffffffae;
+	.brand-background {
+    background-color: var(--bg-brand);
 	}
+</style>
+
+<style>
 
 	html {
 		font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', 'Segoe UI', 'Helvetica Neue', sans-serif;

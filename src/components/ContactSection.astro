@@ -1,0 +1,63 @@
+---
+import AnchorButton from "./AnchorButton.astro"
+
+const SOCIAL_LINKS = [
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com/in/douglaslovera/",
+    icon: "ph-linkedin-logo",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/doulovera/",
+    icon: "ph-github-logo",
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/doulovera/",
+    icon: "ph-twitter-logo",
+  }
+]
+---
+
+<div class="main-card__contact">
+  <div class="main-card__contact__resume">
+    <AnchorButton
+      ariaLabel="Resume"
+      href="https://drive.google.com/file/d/1JJa8mEUIi1XpmFf64KtoWlmBvb0ZoHDv/view?usp=sharing"
+    >
+      Resume
+    </AnchorButton>
+  </div>
+
+  {
+    SOCIAL_LINKS.map((link) => (
+      <div class="main-card__contact__icon">
+        <AnchorButton
+          ariaLabel={link.name}
+          href={link.url}
+          outlined={true}
+        >
+          <i class={link.icon}></i>
+        </AnchorButton>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+.main-card__contact {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.main-card__contact__resume {
+  flex: 1;
+}
+
+.main-card__contact__icon {
+  font-size: 2rem;
+}
+</style>
