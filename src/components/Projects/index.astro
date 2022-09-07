@@ -1,27 +1,32 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
+import ProjectList from "./project-list";
+import HomeSection from "../../layouts/HomeSection.astro";
 
 ---
 
-<section>
-  <h2>Projects</h2>
-  <section>
+<HomeSection title="Projects" icon="ph-kanban">
+  <div class="projects__container">
     {
-      [''].map(() => (
-        <ProjectCard
-          image="https://res.cloudinary.com/dyonw3lkf/image/upload/v1659116121/portfolio_images/msedge_7XfaNqGY5x_d42o0a.png"
-          title="Chat-App"
-          repository="https://github.com/doulovera/chat-app"
-          demo="https://chat-app-2022.vercel.app/"
-          technologies={['TypeScript', 'React.js', 'Next.js']}
-        />
+      ProjectList.map(({ image, title, repository, demo, technologies }) => (
+          <ProjectCard
+            {image}
+            {title}
+            {repository}
+            {demo}
+            {technologies}
+          />
       ))
     }
-  </section>
-</section>
+  </div>
+</HomeSection>
 
 <style>
-  section {
-    margin-top: 5rem;
+  .projects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3.4rem 1.4rem;
+    /* margin-top: 5rem; */
   }
+
 </style>

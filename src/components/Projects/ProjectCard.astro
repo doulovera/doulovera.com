@@ -5,26 +5,32 @@ const { image, title, repository, demo, technologies } = Astro.props;
 
 <div class="card">
   <div class="card__header">
-    <img src={image} alt={`${title} project preview`} />
-    <a href={demo}>
-      <span>{title}</span>
-      <i class="ph-arrow-square-out"></i>
-    </a>
+    <img src={image} alt={`${title} project preview`} loading="lazy" />
+    <div class="card__header__links">
+      <a href={repository} target="_blank" rel="noopener noreferrer">
+        <i class="ph-github-logo"></i>
+      </a>
+      <a href={demo} target="_blank" rel="noopener noreferrer">
+        <span>{title}</span>
+        <i class="ph-arrow-square-out"></i>
+      </a>
+    </div>
   </div>
-  <div>
-    <a href={repository}>Repository</a>
-    <a href={demo}>Demo</a>
+
+  <div class="card__body">
+    <div class="card__body__techonologies">
+      {technologies.join(', ')}
+    </div>
   </div>
-  <div>
-    {technologies.map((technology: string) => (
-      <span>{technology}</span>
-    ))}
-  </div>
+  
 </div>
 
 <style>
   .card {
-    width: 300px;
+    height: 240px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
     background-color: var(--bg-secondary);
     border: 6px solid var(--bg-secondary);
     border-radius: 8px;
@@ -34,17 +40,37 @@ const { image, title, repository, demo, technologies } = Astro.props;
   .card__header {
     position: relative;
   }
-
-  .card__header a {
+  
+  .card__header__links {
     position: absolute;
-    bottom: -16px;
+    bottom: -18px;
     left: 0;
     right: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: .6rem;
+    padding: 0 1rem;
+  }
+
+  .card__header__links a:nth-child(1) {
+    font-size: 2rem;
+    background-color: var(--bg-secondary);
+  }
+
+  .card__header__links a:nth-child(2) {
+    flex: 1;
+    width: 80%;
+    background-color: var(--bg-brand);
+  }
+
+  .card__header a {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    width: 80%;
+    height: 4.4rem;
+    min-width: 4.4rem;
+    width: auto;
     margin: auto;
     padding: 8px;
     color: #fff;
@@ -53,9 +79,8 @@ const { image, title, repository, demo, technologies } = Astro.props;
     text-decoration: none;
     font-weight: 800;
     letter-spacing: .1rem;
-    background-color: var(--bg-brand);
-    border-radius: 12px;
-    border: 2px solid transparent;
+    border-radius: 6px;
+    border: 2px solid var(--bg-brand);
     transition: box-shadow 0.2s ease-in-out;
   }
   
@@ -67,5 +92,16 @@ const { image, title, repository, demo, technologies } = Astro.props;
     height: 150px;
     width: 100%;
     object-fit: cover;
+  }
+
+  .card__body {
+    padding: 3rem 0 1.2rem;
+  }
+
+  .card__body__techonologies {
+    padding: 0 1rem;
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    text-align: left;
   }
 </style>
