@@ -1,5 +1,5 @@
 ---
-const { ariaLabel, href, outlined } = Astro.props;
+const { ariaLabel, href, outlined, class: customClass } = Astro.props;
 
 ---
 
@@ -8,7 +8,7 @@ const { ariaLabel, href, outlined } = Astro.props;
   target="_blank"
   rel="noreferrer"
   aria-label={ariaLabel}
-  class={`link--gradient ${outlined ? 'link--gradient-outlined' : 'brand-background'}`}
+  class={`${customClass} link--gradient ${outlined ? 'link--gradient-outlined' : 'brand-background'}`}
 >
   <slot />
 </a>

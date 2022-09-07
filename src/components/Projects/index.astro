@@ -1,0 +1,27 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+---
+
+<section>
+  <h2>Projects</h2>
+  <section>
+    {
+      [''].map(() => (
+        <ProjectCard
+          image="https://res.cloudinary.com/dyonw3lkf/image/upload/v1659116121/portfolio_images/msedge_7XfaNqGY5x_d42o0a.png"
+          title="Chat-App"
+          repository="https://github.com/doulovera/chat-app"
+          demo="https://chat-app-2022.vercel.app/"
+          technologies={['TypeScript', 'React.js', 'Next.js']}
+        />
+      ))
+    }
+  </section>
+</section>
+
+<style>
+  section {
+    margin-top: 5rem;
+  }
+</style>

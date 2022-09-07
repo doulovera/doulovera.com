@@ -1,0 +1,71 @@
+---
+const { image, title, repository, demo, technologies } = Astro.props;
+
+---
+
+<div class="card">
+  <div class="card__header">
+    <img src={image} alt={`${title} project preview`} />
+    <a href={demo}>
+      <span>{title}</span>
+      <i class="ph-arrow-square-out"></i>
+    </a>
+  </div>
+  <div>
+    <a href={repository}>Repository</a>
+    <a href={demo}>Demo</a>
+  </div>
+  <div>
+    {technologies.map((technology: string) => (
+      <span>{technology}</span>
+    ))}
+  </div>
+</div>
+
+<style>
+  .card {
+    width: 300px;
+    background-color: var(--bg-secondary);
+    border: 6px solid var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .card__header {
+    position: relative;
+  }
+
+  .card__header a {
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+    padding: 8px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: .1rem;
+    background-color: var(--bg-brand);
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .card__header a:hover {
+		box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.1);
+  }
+
+  .card img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+</style>
