@@ -3,29 +3,34 @@ const { image, title, repository, demo, technologies } = Astro.props;
 
 ---
 
-<div class="card">
+<article class="card">
+
   <div class="card__header">
     <img src={image} alt={`${title} project preview`} loading="lazy" />
+
     <div class="card__header__links">
-      <a href={repository} target="_blank" rel="noopener noreferrer">
+      <a href={repository} target="_blank" rel="noopener noreferrer" aria-label={`Repository of ${title}`}>
         <i class="ph-github-logo"></i>
       </a>
-      <a href={demo} target="_blank" rel="noopener noreferrer">
+      <a href={demo} target="_blank" rel="noopener noreferrer" aria-label={`Demo of ${title}`}>
         <span class="card__link__title">{title}</span>
         <i class="ph-arrow-square-out"></i>
       </a>
     </div>
+
   </div>
 
   <div class="card__body">
+
     <div class="card__body__techonologies">
       {technologies.map((item: string) => (
         <span class="card__body__technology">{item}</span>
       ))}
     </div>
+
   </div>
   
-</div>
+</article>
 
 <style>
   .card {
@@ -79,7 +84,7 @@ const { image, title, repository, demo, technologies } = Astro.props;
     text-align: center;
     font-size: 1.8rem;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 700;
     border-radius: 6px;
     border: 2px solid var(--bg-brand);
     transition: box-shadow 0.2s ease-in-out;

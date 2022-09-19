@@ -10,11 +10,11 @@ import HomeSection from "../../layouts/HomeSection.astro";
     {
       ProjectList.map(({ image, title, repository, demo, technologies }) => (
           <ProjectCard
-            {image}
-            {title}
-            {repository}
-            {demo}
-            {technologies}
+            image={image}
+            title={title}
+            repository={repository}
+            demo={demo}
+            technologies={technologies}
           />
       ))
     }
