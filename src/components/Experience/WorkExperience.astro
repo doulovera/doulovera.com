@@ -9,7 +9,7 @@ const { from, to, company, role, description } = Astro.props;
   </div>
   <div class="experience__content">
     <h3>{company}</h3>
-    <p>{role}</p>
+    <span class="company-role">{role}</span>
     <p>{description}</p>
   </div>
 </article>
@@ -45,15 +45,27 @@ const { from, to, company, role, description } = Astro.props;
 
   .experience__sidebar {
     min-width: 24%;
+    padding-top: 1.4rem;
   }
 
   .experience__container h3 {
-    margin-bottom: .4rem;
     font-size: 2rem;
+  }
+
+  .experience__container .company-role {
+    display: block;
+    margin-bottom: .8rem;
+    color: var(--font-primary);
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: monospace;
   }
 
   .experience__content {
     flex: 1;
+    background-color: var(--bg-secondary);
+    padding: 1.4rem;
+    border-radius: 8px;
   }
 
   .experience__content ul {
