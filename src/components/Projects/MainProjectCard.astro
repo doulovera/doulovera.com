@@ -1,0 +1,219 @@
+---
+import AnchorButton from '../AnchorButton.astro';
+
+interface Props {
+  image: string;
+  title: string;
+  description: string;
+  repository: string;
+  demo: string;
+  technologies: string[];
+}
+
+const { image, title, description, repository, demo, technologies } = Astro.props;
+
+---
+
+<article>
+  <div class="image-container">
+    <img src={image} alt={title} width="100%" />
+  </div>
+
+  <div class="content-container">
+    <h3>
+      <a href={demo} target="_blank" rel="noopener noreferrer">{title}</a>
+    </h3>
+
+    <p>{description}</p>
+
+    <div class="content-technologies">
+      {technologies.map((item: string) => (
+        <span class="technology-span">{item}</span>
+      ))}
+    </div>
+
+    <div class="content-links">
+      <AnchorButton ariaLabel="GitHub" href={repository} outlined>
+        <span>
+          GitHub
+          <i class="ph-github-logo"></i>
+        </span>
+      </AnchorButton>
+      <AnchorButton ariaLabel="Visit" href={demo}>
+        <span>
+          Visit
+          <i class="ph-arrow-square-out"></i>
+        </span>
+      </AnchorButton>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    --article-height: 250px;
+    position: relative;
+    display: flex;
+    height: var(--article-height);
+    width: 100%;
+  }
+  
+  article:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .image-container {
+    position: relative;
+    z-index: 1;
+    width: 35%;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    height: var(--article-height);
+    width: 320px;
+    border-radius: 10px;
+    border: 4px solid var(--bg-secondary);
+    object-fit: cover;
+  }
+
+  .content-container {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    height: 100%;
+  }
+
+  .content-container h3 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .content-container h3 a {
+    color: var(--font-secondary);
+    text-decoration: none;
+  }
+
+  .content-container h3 a:hover {
+    text-decoration: underline;
+  }
+
+  .content-container p {
+    height: 55%;
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    box-shadow: rgba(49, 49, 49, 0.8) 0px 8px 24px;
+  }
+
+  .content-technologies {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+  }
+  
+  .technology-span {
+    color: var(--font-primary);
+    border-radius: 4px;
+  }
+
+  .content-links {
+    display: flex;
+    gap: 1rem;
+    width: 300px;
+    font-size: 1.5rem;
+  }
+
+  .content-links a span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  article:nth-child(odd) .image-container img {
+    left: 0;
+  }
+
+  article:nth-child(even) .image-container img {
+    right: 0;
+  }
+
+  article:nth-child(odd) .content-container {
+    text-align: end;
+  }
+
+  article:nth-child(odd) .content-technologies {
+    justify-content: end;
+  }
+
+  article:nth-child(odd) .content-links {
+    margin-left: auto;
+  }
+
+  article:nth-child(even) .content-links {
+    margin-right: auto;
+  }
+
+  /* Change card when it's in mobile */
+  @media (max-width: 767px) {
+    article {
+      flex-direction: column;
+      --article-height: 400px;
+    }
+
+    article:nth-child(even) {
+      flex-direction: column;
+    }
+
+    .image-container {
+      width: 100%;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 300px;
+    }
+
+    .content-container {
+      padding: 1rem;
+    }
+
+    .content-container h3 {
+      max-width: 360px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1rem;
+      font-size: 1.8rem;
+      text-align: left;
+      background-color: var(--bg-secondary);
+      /* border: 2px solid var(--font-primary); */
+      border-radius: 8px;
+    }
+
+    .content-container p {
+      visibility: hidden;
+      height: 100%;
+      padding: 0;
+      background-color: #000000aa;
+      /* TODO: Add a toggler in the H3 to show the Paragraph and its content */
+    }
+
+    .content-technologies {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .content-links {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

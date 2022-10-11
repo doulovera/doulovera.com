@@ -1,4 +1,11 @@
 ---
+interface Props {
+  href: string;
+  ariaLabel?: string;
+  outlined?: boolean;
+  customClass?: string;
+}
+
 const { ariaLabel, href, outlined, class: customClass } = Astro.props;
 
 ---

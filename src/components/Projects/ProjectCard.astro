@@ -1,6 +1,13 @@
 ---
-const { image, title, repository, demo, technologies } = Astro.props;
+interface Props {
+  image: string;
+  title: string;
+  repository: string;
+  demo: string;
+  technologies: string[];
+}
 
+const { image, title, repository, demo, technologies } = Astro.props;
 ---
 
 <article class="card">
@@ -66,7 +73,6 @@ const { image, title, repository, demo, technologies } = Astro.props;
 
   .card__header__links a:nth-child(2) {
     flex: 1;
-    width: 80%;
     background-color: var(--bg-brand);
   }
 
@@ -75,8 +81,8 @@ const { image, title, repository, demo, technologies } = Astro.props;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    height: 4.4rem;
-    min-width: 4.4rem;
+    height: 5rem;
+    min-width: 5rem;
     width: auto;
     margin: auto;
     padding: 8px;
@@ -85,7 +91,7 @@ const { image, title, repository, demo, technologies } = Astro.props;
     font-size: 1.8rem;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 2px solid var(--bg-brand);
     transition: box-shadow 0.2s ease-in-out;
   }
