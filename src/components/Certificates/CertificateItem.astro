@@ -1,0 +1,89 @@
+---
+interface Props {
+  name: string;
+  platform: string;
+  platformUrl: string;
+  url: string;
+};
+
+const { name, platform, platformUrl, url } = Astro.props;
+---
+
+<article class="certificate">
+  <div class="certificate-title">
+    <h3>{name}</h3>
+    <p class="certificate-c__platzi">
+      <a
+        href={platformUrl}
+        target="_blank"
+        rel="noreferrer"
+        title="See credential"
+      >
+        {platform}
+      </a>
+    </p>
+  </div>
+  <div class="certificate-buttons">
+    <a
+      href={url}
+      target="_blank"
+      rel="noreferrer noopener"
+      title="See certificate"
+    >
+      <i class="ph-file-pdf"></i>
+    </a>
+  </div>
+</article>
+
+<style>
+  .certificate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    background-color: var(--bg-secondary);
+  }
+
+  .certificate-title h3 {
+    max-width: 19ch;
+    font-size: 1.8rem;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .certificate-title p a {
+    color: var(--font-primary);
+    text-decoration: none;
+  }
+
+  .certificate-title p {
+    font-size: 1.4rem;
+    font-weight: normal;
+    font-family: monospace;
+  }
+
+  .certificate-c__platzi a {
+    color: #98ca3f !important;
+  }
+
+  .certificate-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--bg-primary);
+    color: var(--font-primary);
+    text-decoration: none;
+    font-size: 2.4rem;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+
+  .certificate-buttons a:hover {
+    box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.1);
+  }
+</style>

@@ -1,0 +1,29 @@
+---
+import HomeSection from "../../layouts/HomeSection.astro";
+import CertificateItem from "./CertificateItem.astro";
+
+---
+
+<HomeSection title="Certificates" icon="ph-exam">
+  <div class="certificates-container">
+    {
+      ['','','',''].map((item) => (
+        <CertificateItem
+          name="Next.js"
+          platform="Platzi"
+          platformUrl="https://platzi.com"
+          url="https://platzi.com"
+        />
+      ))
+    }
+  </div>
+</HomeSection>
+
+<style>
+  .certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    justify-content: space-between;
+    gap: 2rem;
+  }
+</style>
