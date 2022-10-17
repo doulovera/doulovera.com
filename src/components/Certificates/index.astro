@@ -1,18 +1,19 @@
 ---
 import HomeSection from "../../layouts/HomeSection.astro";
 import CertificateItem from "./CertificateItem.astro";
+import certificates from './certificates';
 
 ---
 
 <HomeSection title="Certificates" icon="ph-exam">
   <div class="certificates-container">
     {
-      ['','','',''].map((item) => (
+      certificates.map((item) => (
         <CertificateItem
-          name="Next.js"
-          platform="Platzi"
-          platformUrl="https://platzi.com"
-          url="https://platzi.com"
+          name={item.name}
+          platform={item.platform}
+          platformUrl={item.platform}
+          url={item.url}
         />
       ))
     }

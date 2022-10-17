@@ -32,14 +32,22 @@ const handleClick = `${nav}.classList.toggle('show')`;
 
   .header__nav {
     display: flex;
-    gap: 2rem;
+    gap: .8rem;
   }
 
   .header__nav a {
+    padding: 0.5rem 1rem;
     color: var(--font-primary);
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-transform: capitalize;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .header__nav a:hover {
+    background-color: var(--bg-primary);
   }
 
   @media (max-width: 767px) {
