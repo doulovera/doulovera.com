@@ -12,6 +12,12 @@ const certificates = [
     url: 'https://drive.google.com/file/d/1ixUsd_3V1NRPq6Kay7StZUqvz2nSWbaJ/view?usp=sharing',
   },
   {
+    name: 'Next.js',
+    platform: 'Platzi',
+    platformUrl: 'https://platzi.com/p/douglaslovera/curso/1991-next/diploma/detalle/',
+    url: 'https://drive.google.com/file/d/1pXKoZh09COXxnrlavtTqb1jQi6lvqPao/view?usp=sharing',
+  },
+  {
     name: 'Introducción a la Terminal y Línea de Comandos',
     platform: 'Platzi',
     platformUrl: 'https://platzi.com/p/douglaslovera/curso/2292-terminal/diploma/detalle/',
@@ -28,12 +34,6 @@ const certificates = [
     platform: 'Platzi',
     platformUrl: 'https://platzi.com/p/douglaslovera/curso/1098-ingenieria/diploma/detalle/',
     url: 'https://drive.google.com/file/d/1nDFDxYpWqgkU5g7IQ3JdtbwXEyZKUUDm/view?usp=sharing',
-  },
-  {
-    name: 'Next.js',
-    platform: 'Platzi',
-    platformUrl: 'https://platzi.com/p/douglaslovera/curso/1991-next/diploma/detalle/',
-    url: 'https://drive.google.com/file/d/1pXKoZh09COXxnrlavtTqb1jQi6lvqPao/view?usp=sharing',
   },
 ]
 
