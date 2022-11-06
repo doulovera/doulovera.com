@@ -1,0 +1,50 @@
+---
+import AnchorButton from "../AnchorButton.astro"
+import { SOCIAL_LINKS, RESUME as resume } from "./social-links";
+
+---
+
+<div class="main-card__contact">
+  <div class="main-card__contact__resume">
+    <AnchorButton
+      ariaLabel={resume.name}
+      href={resume.url}
+    >
+      {resume.name}
+      <i class={resume.icon} style={{ marginLeft: '.6rem' }}></i>
+    </AnchorButton>
+  </div>
+
+  {
+    SOCIAL_LINKS.map((link) => (
+      <div class="main-card__contact__icon">
+        <AnchorButton
+          ariaLabel={link.name}
+          href={link.url}
+          outlined={true}
+        >
+          <i class={link.icon}></i>
+        </AnchorButton>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .main-card__contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .main-card__contact__resume {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .main-card__contact__icon {
+    margin-left: auto;
+    font-size: 2rem;
+  }
+</style>

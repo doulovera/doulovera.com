@@ -1,0 +1,92 @@
+---
+const nav = `document.getElementById('header_nav')`;
+const handleClick = `${nav}.classList.toggle('show')`;
+---
+
+<button class="header__menu-icon" aria-label="Menu" type="button" onclick={handleClick}>
+  <i class="ph-list"></i>
+</button>
+
+<div class="header__nav-container" id="header_nav">
+  <nav class="header__nav">
+    <a href="#experience">experience</a>
+    <a href="#projects">projects</a>
+    <a href="#about">about</a>
+    <a href="#certificates">certificates</a>
+  </nav>
+</div>
+
+<style>
+  .header__menu-icon {
+    display: grid;
+    place-items: center;
+    height: 42px;
+    width: 42px;
+    color: white;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .header__nav {
+    display: flex;
+    gap: .8rem;
+  }
+
+  .header__nav a {
+    padding: 0.5rem 1rem;
+    color: var(--font-primary);
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .header__nav a:hover {
+    background-color: var(--bg-primary);
+  }
+
+  @media (max-width: 767px) {
+    .header__nav-container {
+      transform: translateX(100%);
+      position: fixed;
+      top: 8rem;
+      right: 0;
+      z-index: 999;
+      height: calc(100vh - 8rem);
+      width: 220px;
+      background-color: var(--bg-blur);
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 200ms;
+    }
+
+    .header__nav-container.show {
+      transform: translateX(0);
+    }
+
+    .header__nav {
+      flex-direction: column;
+      justify-content: center;
+      max-width: 200px;
+      width: 60%;
+      margin: 2rem auto 0;
+      text-align: right;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .header__menu-icon {
+      display: none;
+    }
+
+    .header__nav-container {
+      display: flex;
+    }
+  }
+
+</style>

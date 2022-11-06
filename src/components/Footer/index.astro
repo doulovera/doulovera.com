@@ -1,0 +1,67 @@
+---
+
+const LINKS = [
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/doulovera',
+  },
+  {
+    name: 'GitHub',
+    url: 'https://github.com/doulovera',
+  },
+  {
+    name: 'Source',
+    url: 'https://github.com/doulovera/doulovera.com',
+  },
+  {
+    name: 'Resume',
+    url: 'https://drive.google.com/file/d/1qB362_yhEdcQjsDQy8i6TdSWucj-QrJp/view?usp=sharing',
+  }
+]
+
+---
+
+<footer>
+  <div class="footer-links">
+    {
+      LINKS.map(({ name, url }) => (
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          {name}
+        </a>
+      ))
+    }
+  </div>
+</footer>
+
+<style>
+  footer {
+    position: relative;
+    min-height: 80px;
+    padding: 2rem 3rem;
+    background-color: var(--bg-secondary);
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    font-size: 1.4rem;
+  }
+
+  .footer-links a {
+    padding: 0.5rem 1rem;
+    color: var(--font-primary);
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    background-color: var(--bg-primary);
+  }
+</style>

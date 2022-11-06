@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header/Header.astro';
+import WelcomeCard from '../components/WelcomeCard/index.astro';
+import Experience from '../components/Experience/index.astro';
+import Projects from '../components/Projects/index.astro';
+import About from '../components/About/index.astro';
+import Certificates from '../components/Certificates/index.astro';
+import Footer from '../components/Footer/index.astro';
+---
+
+<Layout>
+	<Header />
+	<main>
+		<WelcomeCard />
+		<!-- Here goes the "About me" -->
+		<div class="section__container">
+			<Experience />
+			<Projects />
+			<About />
+			<Certificates />
+		</div>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1em;
+	}
+
+	.section__container {
+		width: 80%;
+		max-width: 672px;
+		min-width: 300px;
+		margin: 0 auto 8rem;
+	}
+</style>

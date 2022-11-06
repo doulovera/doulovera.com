@@ -1,0 +1,53 @@
+---
+import AnchorButton from "../AnchorButton.astro"
+import { SOCIAL_LINKS, RESUME as resume, RESUME } from "./social-links";
+
+const links = [
+  ...SOCIAL_LINKS,
+  RESUME, 
+];
+
+---
+
+<div class="social-links">
+  {
+    links.map((link) => {
+      const isResume = link.name === 'Resume';
+
+      return (
+        <div class="link-button">
+          <AnchorButton
+            ariaLabel={link.name}
+            href={link.url}
+            outlined={!isResume}
+          >
+            <span>
+              {link.name}
+            </span>
+            <i class={link.icon}></i>
+          </AnchorButton>
+        </div>
+      )
+    })
+  }
+</div>
+
+<style>
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .link-button {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .link-button > a {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+  }
+</style>

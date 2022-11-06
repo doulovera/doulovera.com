@@ -1,0 +1,90 @@
+---
+const { from, to, company, role, description } = Astro.props;
+
+---
+
+<article class="experience__container">
+  <div class="experience__sidebar">
+    <h3 class="company-time">{from} - {to || 'Present'}</h3>
+  </div>
+  <div class="experience__content">
+    <h3>{company}</h3>
+    <span class="company-role">{role}</span>
+    <p>{description}</p>
+  </div>
+</article>
+
+<style>
+  .experience__container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0 4rem;
+    padding-left: 4.2rem;
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
+  }
+
+  .experience__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -8.5px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--font-secondary);
+    border-radius: 50%;
+  }
+
+  h3 {
+    font-weight: 700;
+    color: var(--font-secondary);
+  }
+
+  .experience__sidebar {
+    min-width: 24%;
+    padding-top: 1.4rem;
+  }
+
+  .experience__container h3 {
+    font-size: 2rem;
+  }
+
+  .experience__container .company-role {
+    display: block;
+    margin-bottom: .8rem;
+    color: var(--font-primary);
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: monospace;
+  }
+
+  .experience__content p {
+    font-size: 1.4rem;
+  }
+
+  .experience__content {
+    flex: 1;
+    background-color: var(--bg-secondary);
+    padding: 1.4rem;
+    border-radius: 8px;
+  }
+
+  .experience__content ul {
+    padding-left: 2rem;
+    list-style-type: "» ";
+  }
+
+  .experience__content li {
+    margin-top: 0.8rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    .experience__container {
+      flex-direction: column;
+      gap: 2rem 0;
+    }
+  }
+</style>

@@ -1,0 +1,37 @@
+---
+import HomeSection from "../../layouts/HomeSection.astro";
+import WorkExperience from "./WorkExperience.astro";
+
+const experience = [
+  {
+    from: '2021',
+    to: 'Present',
+    company: 'Rhinolabs',
+    role: 'Fullstack Developer',
+    description: 'Creating useful software for clients to make their products ready to be used for people.',
+  }
+]
+---
+
+<HomeSection title="Experience" icon="ph-note">
+  <div class="experiences__container">
+    {
+      experience.map((el) => (
+        <WorkExperience
+          from={el.from}
+          to={el.to}
+          company={el.company}
+          role={el.role}
+          description={el.description}
+        />
+      ))
+    }
+  </div>
+</HomeSection>
+
+<style>
+  .experiences__container {
+    margin-left: 1rem;
+    border-left: 2px solid var(--font-primary);
+  }
+</style>

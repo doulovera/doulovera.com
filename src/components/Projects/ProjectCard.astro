@@ -1,0 +1,137 @@
+---
+interface Props {
+  image: string;
+  title: string;
+  repository: string;
+  demo: string;
+  technologies: string[];
+}
+
+const { image, title, repository, demo, technologies } = Astro.props;
+---
+
+<article class="card">
+
+  <div class="card__header">
+    <img src={image} alt={`${title} project preview`} loading="lazy" />
+
+    <div class="card__header__links">
+      <a href={repository} target="_blank" rel="noopener noreferrer" aria-label={`Repository of ${title}`}>
+        <i class="ph-github-logo"></i>
+      </a>
+      <a href={demo} target="_blank" rel="noopener noreferrer" aria-label={`Demo of ${title}`}>
+        <span class="card__link__title">{title}</span>
+        <i class="ph-arrow-square-out"></i>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="card__body">
+
+    <div class="card__body__techonologies">
+      {technologies.map((item: string) => (
+        <span class="card__body__technology">{item}</span>
+      ))}
+    </div>
+
+  </div>
+  
+</article>
+
+<style>
+  .card {
+    height: 234px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--bg-secondary);
+    border: 6px solid var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .card__header {
+    position: relative;
+  }
+  
+  .card__header__links {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: .6rem;
+    padding: 0 1rem;
+  }
+
+  .card__header__links a:nth-child(1) {
+    font-size: 2rem;
+    background-color: var(--bg-secondary);
+  }
+
+  .card__header__links a:nth-child(2) {
+    flex: 1;
+    background-color: var(--bg-brand);
+  }
+
+  .card__header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 5rem;
+    min-width: 5rem;
+    width: auto;
+    margin: auto;
+    padding: 8px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    border: 2px solid var(--bg-brand);
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .card__header a:hover {
+		box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.1);
+  }
+
+  .card__link__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+  }
+
+  .card img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card__body {
+    padding: 3rem 0 1.2rem;
+  }
+
+  .card__body__techonologies {
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    text-align: left;
+  }
+
+  .card__body__technology {
+    padding: .2rem .6rem;
+    background-color: var(--bg-primary);
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 1.4rem;
+  }
+</style>

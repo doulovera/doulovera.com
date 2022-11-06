@@ -1,0 +1,69 @@
+---
+import ContactSection from "../SocialMedia/ContactSection.astro";
+
+---
+
+<section class="main-card">
+  <div class="main-card__picture">
+    <img src="/assets/douglas.webp" alt="Douglas Lovera picture" />
+  </div>
+
+  <div class="main-card__content">
+    <div class="main-card__content__text">
+      <h1>Douglas Lovera</h1>
+      <p>
+        Front-end Developer with JavaScript&nbsp;💛. Love creating things and learning about technologies.
+      </p>
+    </div>
+
+    <ContactSection />
+  </div> 
+
+</section>
+
+<style>
+.main-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 4rem;
+  height: 100%;
+  width: 80%;
+  max-width: 672px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  color: #fff;
+  font-size: 1.6rem;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.main-card__picture img {
+  height: 150px;
+  max-height: 150px;
+  min-height: 150px;
+  width: 150px;
+  max-width: 150px;
+  min-width: 150px;
+  background: var(--bg-brand);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.main-card__content {
+  width: 30rem;
+}
+
+.main-card__content__text {
+  margin-bottom: 2.6rem;
+}
+
+.main-card__content__text h1 {
+  margin-bottom: 0.8rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+</style>
