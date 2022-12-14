@@ -16,4 +16,4 @@ $ npm run dev
 
 ---
 
-[🌐 Site](https://doulovera.com/) | [💼 Linkedin](https://www.linkedin.com/in/doulovera/) | [🐦 Twitter](https://twitter.com/doulovera)
+[🌐 Site](https://doulovera.com/) | [💼 Linkedin](https://www.linkedin.com/in/douglaslovera/) | [🐦 Twitter](https://twitter.com/doulovera)
