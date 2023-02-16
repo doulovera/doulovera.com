@@ -1,6 +1,6 @@
 export const RESUME = {
   name: 'Resume',
-  url: 'https://drive.google.com/file/d/1JJa8mEUIi1XpmFf64KtoWlmBvb0ZoHDv/view?usp=sharing',
+  url: 'https://drive.google.com/file/d/1KPvoF7mInAczBWZO1YrNPgSVcq62C2hV/view',
   icon: 'ph-download-simple',
 }
 
