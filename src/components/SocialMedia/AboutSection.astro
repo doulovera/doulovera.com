@@ -1,18 +1,14 @@
 ---
-import AnchorButton from "../AnchorButton.astro"
+import AnchorButton from "../AnchorButton.astro";
 import { SOCIAL_LINKS, RESUME as resume, RESUME } from "./social-links";
 
-const links = [
-  ...SOCIAL_LINKS,
-  RESUME, 
-];
-
+const links = [...SOCIAL_LINKS, RESUME];
 ---
 
 <div class="social-links">
   {
     links.map((link) => {
-      const isResume = link.name === 'Resume';
+      const isResume = link.name === "Resume";
 
       return (
         <div class="link-button">
@@ -21,13 +17,11 @@ const links = [
             href={link.url}
             outlined={!isResume}
           >
-            <span>
-              {link.name}
-            </span>
-            <i class={link.icon}></i>
+            <span>{link.name}</span>
+            <i class={link.icon} />
           </AnchorButton>
         </div>
-      )
+      );
     })
   }
 </div>
@@ -48,6 +42,6 @@ const links = [
   .link-button > a {
     display: flex;
     align-items: center;
-    gap: .4rem;
+    gap: 0.4rem;
   }
 </style>

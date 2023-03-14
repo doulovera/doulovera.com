@@ -3,22 +3,23 @@ import ProjectCard from "./ProjectCard.astro";
 import ProjectList from "./project-list";
 import HomeSection from "../../layouts/HomeSection.astro";
 import MainProjectCard from "./MainProjectCard.astro";
-
 ---
 
 <HomeSection title="Projects" icon="ph-kanban">
   <div class="main-projects__container">
     {
-      ProjectList.slice(0,2).map(({ image, title, description, repository, demo, technologies }) => (
-        <MainProjectCard
-          image={image}
-          title={title}
-          description={description}
-          repository={repository}
-          demo={demo}
-          technologies={technologies}
-        />
-      ))
+      ProjectList.slice(0, 2).map(
+        ({ image, title, description, repository, demo, technologies }) => (
+          <MainProjectCard
+            image={image}
+            title={title}
+            description={description}
+            repository={repository}
+            demo={demo}
+            technologies={technologies}
+          />
+        )
+      )
     }
   </div>
 
@@ -26,15 +27,17 @@ import MainProjectCard from "./MainProjectCard.astro";
 
   <div class="projects__container">
     {
-      ProjectList.slice(2).map(({ image, title, repository, demo, technologies }) => (
-        <ProjectCard
-          image={image}
-          title={title}
-          repository={repository}
-          demo={demo}
-          technologies={technologies}
-        />
-      ))
+      ProjectList.slice(2).map(
+        ({ image, title, repository, demo, technologies }) => (
+          <ProjectCard
+            image={image}
+            title={title}
+            repository={repository}
+            demo={demo}
+            technologies={technologies}
+          />
+        )
+      )
     }
   </div>
 </HomeSection>
@@ -58,5 +61,4 @@ import MainProjectCard from "./MainProjectCard.astro";
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 3.4rem 1.4rem;
   }
-
 </style>

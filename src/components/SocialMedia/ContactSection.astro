@@ -1,29 +1,21 @@
 ---
-import AnchorButton from "../AnchorButton.astro"
+import AnchorButton from "../AnchorButton.astro";
 import { SOCIAL_LINKS, RESUME as resume } from "./social-links";
-
 ---
 
 <div class="main-card__contact">
   <div class="main-card__contact__resume">
-    <AnchorButton
-      ariaLabel={resume.name}
-      href={resume.url}
-    >
+    <AnchorButton ariaLabel={resume.name} href={resume.url}>
       {resume.name}
-      <i class={resume.icon} style={{ marginLeft: '.6rem' }}></i>
+      <i class={resume.icon} style={{ marginLeft: ".6rem" }}></i>
     </AnchorButton>
   </div>
 
   {
     SOCIAL_LINKS.map((link) => (
       <div class="main-card__contact__icon">
-        <AnchorButton
-          ariaLabel={link.name}
-          href={link.url}
-          outlined={true}
-        >
-          <i class={link.icon}></i>
+        <AnchorButton ariaLabel={link.name} href={link.url} outlined={true}>
+          <i class={link.icon} />
         </AnchorButton>
       </div>
     ))

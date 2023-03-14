@@ -1,89 +1,101 @@
 ---
-const title = 'Douglas Lovera - Web Developer';
-const description = 'I am passionate about programming and improving lives through technology. I like learning new things that can help me to improve my skills and knowledge';
-const color = '#5a3fd1';
-
+const title = "Douglas Lovera - Web Developer";
+const description =
+  "I am passionate about programming and improving lives through technology. I like learning new things that can help me to improve my skills and knowledge";
+const color = "#5a3fd1";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{title}</title>
-		<script preload src="https://unpkg.com/phosphor-icons"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <script preload src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-		<link rel="icon" href="/favicon.ico" sizes="image/x-icon">
-		<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-		<link rel="apple-touch-icon" href="data:image/png;base64,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"/>
-		<link rel="manifest" href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiIiwKICAgICJzaG9ydF9uYW1lIjogIiIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogImFuZHJvaWQtY2hyb21lLTE5MngxOTIucG5nIiwKICAgICAgICAgICAgInNpemVzIjogIjE5MngxOTIiLAogICAgICAgICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAgICJzcmMiOiAiYW5kcm9pZC1jaHJvbWUtMjU2eDI1Ni5wbmciLAogICAgICAgICAgICAic2l6ZXMiOiAiMjU2eDI1NiIsCiAgICAgICAgICAgICJ0eXBlIjogImltYWdlL3BuZyIKICAgICAgICB9CiAgICBdLAogICAgInRoZW1lX2NvbG9yIjogIiNmZmZmZmYiLAogICAgImJhY2tncm91bmRfY29sb3IiOiAiI2ZmZmZmZiIsCiAgICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIgp9Cg==" />
-		
-		<meta name="theme-color" content={color} />
-		<meta name="description" content={description}>
+    <link rel="icon" href="/favicon.ico" sizes="image/x-icon" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAAAAAAYplnuAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAB3RJTUUH5gIUAScAcnUZxQAACmJJREFUeNrtndmOG8cVhv+/eiGHs5AaaSRZlrUhWpEgkSEHiWHEQF4gj5kXCBAYBhzf+MbZLiTAkmUpsuRoGY322bh0/bno5pAjdjXZ3RxyjHRdEJpGV9XXp0+dOnXqVIvCz6+YeQNU0Ie5VNAVdAV9CEoFXUFX0IegVNAVdAV9CEoFXUFX0IegVNAVdAV9CEoFXUH//0AfcLRdJdqno64IgeM6JoSxdzkkUqRaUpySnlAQpLvzzCZKMLskLY6BJgARcL8PgU7uvdrFil9QFAJBiBm3ZejOeM0rAt19vm1MlFXR+J7ne17oeXsatl92BNDe2GHKO6P1Wk1v6tCbf30kE5GK5dXvbPCnvJB+4NdX6gut5uJizfcJSGYgXIF8/cUDGlkCgAyUaCOt9/s/mqmrR/f+9xRiBUiFjns3CExQW1heOXZ07dSRmg8N5E0B7Qe3h2rvQYM8X8aiOqB7hqJI7TMOxLCSkrLs2h3AWBM2T545+4u1EDIxtQDRalh7OajtIQqmDm0AwEj7x78w+NtAlkwsCNV+9vS75ukLVy4sBOwTCoTMQNWHWrP0pm89CNKm2MPBlX2WgRK83vrGd9+cv3T1VCO5gyC5V2WoMZFZ9r0odCQhHvf7BZKiierLFIa7T9Zvnf7sxhEjQBQjO2hA2GuNBrIlLHWWesQjfVwLQzeIJtq8/fTm7661jEjLEQuR/B0ZRRYAWchgO9WjkBhEQ73+5w8f/+FMA3ASUXr7KBBMY9XP10EmdASjAtiUKHQ3vr73+adNEdbxbDBbTwOCq6uFNMT9pIUMqWhh2Ovdf9f5bDVzhhessQXdeQe0x2KjhICx8Cw2vnj++dmac9aT8Up47I5HtYUbTKYkbfztz3cky/SnZzzryOZuH8hSj5JF3dtftXoQYUt5dDmgyVIOLwATRf/glYgY55lPD1oCWKo7S7W/vb9Zup0c0DF5mYYJoPPMsmw7acUxEE36Umng8sSe3DicKFvFijogGdYjvUFj+vix5o8pBxKIcEBLTLdUwNAijHs/sy0uh8koZaUuAvQTH1+ylgcwyopD9xcfI9fNsQ/jKjbqtds7Wzt2DqJ2QKfPiIR44pMQiF2j3u67V89evt2JZo3t9Kcd455+ECaLU4QLR05f3Nz474+bEuPnmLTbcoEPp2ua7lFzYOYEAF5j6fjZD+88aUNUQSc8fzHuy2kAoxKyXLz86cU6SIfFmSW08wW+d1kW5sTHlxuypaK304C2+yJL7mJhDI2O3vjlEmhmBe2yHu5hFQ+6ONRCSJEELF19c9fqIDy6HNCe2xQQklk8GcR81tpep93pHLm88cJgRsbP7Zpm9E/Vm8HgEaKot70drm9ul4gpTgPaKmsRYOzwPGjo1xu2ufnTT2ND8VMqjoHoGTgNmIFFIlP134jxW9d/vXjQm0tjoK3c5kMctXsAmjeOzwbZ7Zq6fGXFrr/6cWb2f8nTp/IG94sadpd6wOG9JYuNtN4WLizMVz3cYnBJR6qdW5wNsws6AtPp5HylRHN5vtBO38O5FiXQODJfh4mY0F8aFGGhNTH0ZJ5NTmj3IsrdmWrLufcGi6G7JZ2/+AslNjSnAJ1fCiLQKLHNNgXoOJaXrymiUZur70Hmna8oyJ+zeuQf3gTzuqZFY3ku19TC5B7bDA4sRD8RNPOHu+SaRGcIrZzxFBGyxbZQpgWdPwRElMsAy1OmmpfXjcq3MWto7nYnvVXJmyn2apxxj9SFbab1FtrdOcfyUpVaypontdObCXO+AGTWy5TYeTcjnc4K9Y5czczOENpbMzJ5OQdihqyJztvc42qqW3Imt80l+O7FfCeXAts/jJ5vzX2NmLMIvWdbs2F2Q+dXj+2HO/OVtJU7LJZ+SfbhgxlZvClN44LQ+f75rOLTrlgeHZvjKYsNxgb80a3tWW26OOMe6UqttMsChJ2bP84qPJ17dyvNMaNErN/ayr1+nzK054zlpeut3v79HoT5TuOaLCwmKM5T2/33N9vKscu8l/A+Teik5fF9QxDRu/XlE5mZpX64U9wmIRAAGeze+csPEaFZZaw49xGJSTIhCMG+/NdX/1GhhNrpQltNJDYCbD/5+tuXEZKwwzyhPePMthxKBVcUvVu/c/PelsnvzE74WlJfX65tZhkAkgV7XfY6u1svH9999GrXUvlCf7QCKMpkexHKB22Vlk1Iyb64W7Mwjx9z8+XGi9dbu0XSXwWz8zwQEDE+qyHuO9STBBiC1TB9uspIcRt9SFroyXMAlJGNbCTQFFkvIHqwIVJBmPVorT9dTR/ezrBYmn7IwHa6e1InCub+WnJ7G0bDk5hG/mHXdhwDK9c2s5JOqL1jcvmJkRyToFUcaZUkCEL8r+FjVw5nJiPukabTMNQgkpCZaUURgS+nDbLDPuPgrJIQw0uwFsmE/x6JU9JwpItpeCU25mxn69IyJcdd4xNVGZ8PG63uMnkom6mOyA+unXiRf79pCNoj4rzG95rIyIAsOSsbc+lqx6joOR8ANuqR0KibfHAHGWoXrzfXQRR3srvrDyGao0vvL+OcB85KylmNa79ZSrSssO/3+ilFb3EkucGlHgWZ+y9SS1d/1bRx3k2ppWM87CfT6UmOuqc+bDyGzfErF5fAg8qtdvsehV6qJQEFZ65/EFpb5qRTEejCSydC/srpqycpAx1UHGS61kMQmh+dP9UgIBU8tFYYejLrof4hpzgzVSBqJy6eW44nOyauRHFy11ThVo9J+ooXWJSlZ0F4C0c+OnusnzqbHAArIW3XstN9xnYCU5UovkREZNA6fWK1VbN7p+EpQ5RIT44lMjl0NFlfMohF7QeLxz5YO1YfVLPwxKBUAgiNw193741PZKgF0KvVw9ba0dZSoMTmAYBBFLRqNeSJO01aXKvxwCfEjMxBkDR+WF9oLC8vLjRqvrHWCKafri401tae1EJRBUMLcSglh3osfHJeXsd/uTs6yRACDQNPQaMehn4QenHMJlnQJB80CZePL/vLvz0LY+3rri2i2rUVk/6WHG1F27JEdP/NaJ4/IZCiAY1n9vtwVKzl8hqrq3UwavdAtR++KTQ3msAzsv654++Tu6zHMgD0lnqj647EI4p/31t4KrbY/mJrpe6L9BYBoPOqiyKHHGgVIW1WzTihL6aeNt77HoNAk/JIrDVWmnVv6NbYCOaP9QmOgKJ7GrdUUm30iZB8dWI00GDqjZWVWhwdSOJO7H+NJHf+GZV+dsZ314jjCDZtSovnbMaJ9n2jRi8Ma0uNMDB9xe9buzg06TjBlrndHlfTZP50v47DWPdX+/34Bw1rtVq9HgZ+f/4fXmzbjGMZmekYsWnFhAMxqeSHKdT9k33xjzHGC/wwDMPAc0UF/FAuJ2SoMRfDqKgzx7TdGpOURNAYeh5N1ul4u9UdfE9lnHRH+2jURi5lNDDhimvfF8ZSwVXqvP/ocBizUTRGJv1A1N6rdwSTSm4RjHyPpfr/XCroCnr+pYKuoCvoQ1Aq6Aq6gj4EpYKuoCvoQ1Aq6Aq6gj4EpYKuoCvoQ1Aq6Aq6gj4E5WcJ/T9wCUOf+USJ+wAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wMi0yMFQwMTozOTowMCswMDowMDolrQoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDItMjBUMDE6Mzk6MDArMDA6MDBLeBW2AAAAHnRFWHRpY2M6Y29weXJpZ2h0AEdvb2dsZSBJbmMuIDIwMTasCzM4AAAAFHRFWHRpY2M6ZGVzY3JpcHRpb24Ac1JHQrqQcwcAAAAVdEVYdGljYzptYW51ZmFjdHVyZXIAc1JHQiryKm8AAAAOdEVYdGljYzptb2RlbABzUkdCW2BJQwAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg=="
+    />
+    <link
+      rel="manifest"
+      href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiIiwKICAgICJzaG9ydF9uYW1lIjogIiIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogImFuZHJvaWQtY2hyb21lLTE5MngxOTIucG5nIiwKICAgICAgICAgICAgInNpemVzIjogIjE5MngxOTIiLAogICAgICAgICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAgICJzcmMiOiAiYW5kcm9pZC1jaHJvbWUtMjU2eDI1Ni5wbmciLAogICAgICAgICAgICAic2l6ZXMiOiAiMjU2eDI1NiIsCiAgICAgICAgICAgICJ0eXBlIjogImltYWdlL3BuZyIKICAgICAgICB9CiAgICBdLAogICAgInRoZW1lX2NvbG9yIjogIiNmZmZmZmYiLAogICAgImJhY2tncm91bmRfY29sb3IiOiAiI2ZmZmZmZiIsCiAgICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIgp9Cg=="
+    />
 
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:type" content="website" />
+    <meta name="theme-color" content={color} />
+    <meta name="description" content={description} />
 
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content={description} />
-		<meta name="twitter:creator" content="@doulovera" />
-	</head>
-	<body>
-		<slot />
-	</body>
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:creator" content="@doulovera" />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		--app-min-width: 320px;
+  :root {
+    --app-min-width: 320px;
 
-		--bg-gradient: linear-gradient(90deg, rgba(57,74,153,1) 35%, rgba(90,108,193,1) 100%);
+    --bg-gradient: linear-gradient(
+      90deg,
+      rgba(57, 74, 153, 1) 35%,
+      rgba(90, 108, 193, 1) 100%
+    );
 
-		/* theme */
-		--bg-primary: #292929;
-		--bg-secondary: #171717;
-		--font-primary: #c5cddb;
-		--font-secondary: #ffffff;
-		--bg-brand: #5a3fd1;
+    /* theme */
+    --bg-primary: #292929;
+    --bg-secondary: #171717;
+    --font-primary: #c5cddb;
+    --font-secondary: #ffffff;
+    --bg-brand: #5a3fd1;
 
-		--bg-blur: #171717ee;
-	}
+    --bg-blur: #171717ee;
+  }
 
-	* {
-		margin: 0;
-		padding: 0;
+  * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-	}
+  }
 
-	.brand-background {
+  .brand-background {
     background-color: var(--bg-brand);
-	}
+  }
 </style>
 
 <style>
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Segoe UI",
+      "Helvetica Neue", sans-serif;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
 
-	html {
-		font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', 'Segoe UI', 'Helvetica Neue', sans-serif;
-		font-size: 62.5%;
-		scroll-behavior: smooth;
-	}
+  body {
+    margin-top: 10rem;
+    min-width: var(--app-min-width);
+    background-color: var(--bg-primary);
+    color: var(--font-primary);
+    line-height: 1.5;
+    transition: background-color 0.2s;
+  }
 
-	body {
-		margin-top: 10rem;
-		min-width: var(--app-min-width);
-		background-color: var(--bg-primary);
-		color: var(--font-primary);
-		line-height: 1.5;
-		transition: background-color 0.2s;
-	}
-
-	main {
-		padding: 0 2rem;
-	}
-
+  main {
+    padding: 0 2rem;
+  }
 </style>

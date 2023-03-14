@@ -1,11 +1,10 @@
 ---
 const { from, to, company, role, description } = Astro.props;
-
 ---
 
 <article class="experience__container">
   <div class="experience__sidebar">
-    <h3 class="company-time">{from} - {to || 'Present'}</h3>
+    <h3 class="company-time">{from} - {to || "Present"}</h3>
   </div>
   <div class="experience__content">
     <h3>{company}</h3>
@@ -27,7 +26,7 @@ const { from, to, company, role, description } = Astro.props;
   }
 
   .experience__container::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -8.5px;
@@ -54,7 +53,7 @@ const { from, to, company, role, description } = Astro.props;
 
   .experience__container .company-role {
     display: block;
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
     color: var(--font-primary);
     font-size: 1.4rem;
     font-weight: 400;

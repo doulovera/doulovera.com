@@ -1,5 +1,5 @@
 ---
-import AnchorButton from '../AnchorButton.astro';
+import AnchorButton from "../AnchorButton.astro";
 
 interface Props {
   image: string;
@@ -10,8 +10,8 @@ interface Props {
   technologies: string[];
 }
 
-const { image, title, description, repository, demo, technologies } = Astro.props;
-
+const { image, title, description, repository, demo, technologies } =
+  Astro.props;
 ---
 
 <article>
@@ -27,9 +27,11 @@ const { image, title, description, repository, demo, technologies } = Astro.prop
     <p>{description}</p>
 
     <div class="content-technologies">
-      {technologies.map((item: string) => (
-        <span class="technology-span">{item}</span>
-      ))}
+      {
+        technologies.map((item: string) => (
+          <span class="technology-span">{item}</span>
+        ))
+      }
     </div>
 
     <div class="content-links">
@@ -57,17 +59,17 @@ const { image, title, description, repository, demo, technologies } = Astro.prop
     height: var(--article-height);
     width: 100%;
   }
-  
+
   article:nth-child(even) {
     flex-direction: row-reverse;
   }
-  
+
   .image-container {
     position: relative;
     z-index: 1;
     width: 35%;
   }
-  
+
   .image-container img {
     position: absolute;
     top: 0;
@@ -120,7 +122,7 @@ const { image, title, description, repository, demo, technologies } = Astro.prop
     font-size: 1.4rem;
     font-family: monospace;
   }
-  
+
   .technology-span {
     color: var(--font-primary);
     border-radius: 4px;

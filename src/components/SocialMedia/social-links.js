@@ -1,8 +1,8 @@
 export const RESUME = {
-  name: 'Resume',
-  url: 'https://drive.google.com/file/d/1KPvoF7mInAczBWZO1YrNPgSVcq62C2hV/view',
-  icon: 'ph-download-simple',
-}
+  name: "Resume",
+  url: "https://drive.google.com/file/d/1KPvoF7mInAczBWZO1YrNPgSVcq62C2hV/view",
+  icon: "ph-download-simple",
+};
 
 export const SOCIAL_LINKS = [
   {
@@ -19,5 +19,5 @@ export const SOCIAL_LINKS = [
     name: "Twitter",
     url: "https://twitter.com/doulovera/",
     icon: "ph-twitter-logo",
-  }
-]
+  },
+];
