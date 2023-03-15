@@ -1,0 +1,70 @@
+
+@font-face {
+  font-family: "Iconify Explorer Font";
+  src: url("./iconfont.eot");
+  src: url("./iconfont.eot") format("embedded-opentype"),
+       url("./iconfont.ttf") format("truetype"),
+       url("./iconfont.woff") format("woff"),
+       url("./iconfont.woff2") format("woff2"),
+       url("./iconfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  font-family: "Iconify Explorer Font" !important;
+  font-size: 1em;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+i.ph\:arrow-square-out:before {
+content: "\e001";
+}
+
+i.ph\:download-simple:before {
+content: "\e002";
+}
+
+i.ph\:exam:before {
+content: "\e003";
+}
+
+i.ph\:file-pdf:before {
+content: "\e004";
+}
+
+i.ph\:github-logo:before {
+content: "\e005";
+}
+
+i.ph\:kanban:before {
+content: "\e006";
+}
+
+i.ph\:linkedin-logo:before {
+content: "\e007";
+}
+
+i.ph\:list:before {
+content: "\e008";
+}
+
+i.ph\:note:before {
+content: "\e009";
+}
+
+i.ph\:person:before {
+content: "\e00a";
+}
+
+i.ph\:twitter-logo:before {
+content: "\e00b";
+}
+
+i.ph\:user:before {
+content: "\e00c";
+}
+
