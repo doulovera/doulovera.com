@@ -22,6 +22,10 @@ const experience = [
     isCurrent: true,
   },
 ];
+
+const getDateWithoutMilliseconds = (date: Date) => {
+  return Math.ceil(date.getTime() / 1000);
+}
 ---
 
 <HomeSection title="Experience" icon="ph:note">
@@ -31,7 +35,7 @@ const experience = [
         <WorkExperience
           from={el.from.toLocaleDateString("es-ES", { year: "numeric" })}
           to={
-            new Date(el.to).getTime() === new Date().getTime()
+            getDateWithoutMilliseconds(new Date(el.to)) === getDateWithoutMilliseconds(new Date())
               ? "Present"
               : el.to.toLocaleDateString("es-ES", { year: "numeric" })
           }
