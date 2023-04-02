@@ -4,26 +4,41 @@ import WorkExperience from "./WorkExperience.astro";
 
 const experience = [
   {
-    from: "2021",
-    to: "Present",
+    from: new Date("2023-02-01"),
+    to: new Date(),
+    company: "Rhinolabs",
+    role: "Fullstack Developer",
+    description:
+      `Working with the team of MyAccident.org to add new features and improve the current ones. Adding unit test to backend endpoints and frontend components with Jest and react-testing-library.`,
+    isCurrent: true,
+  },
+  {
+    from: new Date("2021-11-01"),
+    to: new Date(),
     company: "Rhinolabs",
     role: "Fullstack Developer",
     description:
       "Creating useful software for clients to make their products ready to be used for people.",
+    isCurrent: true,
   },
 ];
 ---
 
-<HomeSection title="Experience" icon="ph-note">
-  <div class="experiences__container">
+<HomeSection title="Experience" icon="ph:note">
+  <div class="experiences">
     {
       experience.map((el) => (
         <WorkExperience
-          from={el.from}
-          to={el.to}
+          from={el.from.toLocaleDateString("es-ES", { year: "numeric" })}
+          to={
+            new Date(el.to).getTime() === new Date().getTime()
+              ? "Present"
+              : el.to.toLocaleDateString("es-ES", { year: "numeric" })
+          }
           company={el.company}
           role={el.role}
           description={el.description}
+          isCurrent={el.isCurrent}
         />
       ))
     }
@@ -31,8 +46,9 @@ const experience = [
 </HomeSection>
 
 <style>
-  .experiences__container {
-    margin-left: 1rem;
-    border-left: 2px solid var(--font-primary);
+  .experiences {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
   }
 </style>

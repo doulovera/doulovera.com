@@ -1,40 +1,32 @@
 ---
-const { from, to, company, role, description } = Astro.props;
+const { from, to, company, role, description, isCurrent } = Astro.props;
 ---
 
-<article class="experience__container">
-  <div class="experience__sidebar">
-    <h3 class="company-time">{from} - {to || "Present"}</h3>
+<article class="experience-container">
+  <div class="experience-company">
+    <div>
+      <img src="/assets/rhinolabs.jpg" alt="Rhinolabs Company logo" class={isCurrent ? '' : ' old'}>
+    </div>
+    <div>
+      <h3>{company}</h3>
+      <p class="company-time">{from} - {to || "Present"}</p>
+    </div>
   </div>
-  <div class="experience__content">
-    <h3>{company}</h3>
+  <div class="experience-description">
     <span class="company-role">{role}</span>
     <p>{description}</p>
   </div>
 </article>
 
 <style>
-  .experience__container {
+  .experience-container {
     position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     gap: 0 4rem;
-    padding-left: 4.2rem;
     margin-bottom: 4rem;
     font-size: 1.6rem;
-  }
-
-  .experience__container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -8.5px;
-    display: block;
-    width: 15px;
-    height: 15px;
-    background-color: var(--font-secondary);
-    border-radius: 50%;
   }
 
   h3 {
@@ -42,16 +34,29 @@ const { from, to, company, role, description } = Astro.props;
     color: var(--font-secondary);
   }
 
-  .experience__sidebar {
+  .experience-company {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     min-width: 24%;
-    padding-top: 1.4rem;
   }
 
-  .experience__container h3 {
+  .experience-company img {
+    width: 4rem;
+    height: 4rem;
+    margin-top: .5rem;
+    border-radius: 2px;
+  }
+  
+  .experience-company img.old {
+    filter: grayscale(100%);
+  }
+
+  .experience-container h3 {
     font-size: 2rem;
   }
 
-  .experience__container .company-role {
+  .experience-container .company-role {
     display: block;
     margin-bottom: 0.8rem;
     color: var(--font-primary);
@@ -60,28 +65,19 @@ const { from, to, company, role, description } = Astro.props;
     font-family: monospace;
   }
 
-  .experience__content p {
+  .experience-content p {
     font-size: 1.4rem;
   }
 
-  .experience__content {
+  .experience-content {
     flex: 1;
     background-color: var(--bg-secondary);
     padding: 1.4rem;
     border-radius: 8px;
   }
 
-  .experience__content ul {
-    padding-left: 2rem;
-    list-style-type: "» ";
-  }
-
-  .experience__content li {
-    margin-top: 0.8rem;
-  }
-
   @media screen and (max-width: 767px) {
-    .experience__container {
+    .experience-container {
       flex-direction: column;
       gap: 2rem 0;
     }
