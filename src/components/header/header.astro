@@ -1,0 +1,59 @@
+---
+import Dropdown from "../shared/dropdown.astro";
+
+import { SOCIAL_LINKS } from "../../constants/links";
+
+const navbarItems = [
+  'experience',
+  'projects',
+  'about',
+  'contact'
+]
+
+---
+
+<header class="flex h-14 max-h-[56px] max-w-[768px] mx-auto border-2 border-black bg-gray-50 justify-between">
+  <nav class="flex">
+    {
+      SOCIAL_LINKS.map(({ icon, name, url }, index) => (
+        <a
+          href={url}
+          class={`flex justify-center items-center aspect-square text-2xl text-black ${!!index && 'outline outline-2'}`}
+        >
+          <i class={icon}></i>
+        </a>
+      ))
+    }
+  </nav>
+
+  <nav class="flex flex-1 justify-between">
+    {
+      navbarItems.map((item) => (
+        <a
+          href={`#${item}`}
+          class="flex justify-center items-center w-auto px-5 h-full text-md uppercase font-semibold text-black"
+        >
+          {item}
+        </a>
+      ))
+    }
+  </nav>
+
+  <Dropdown
+    label="English"
+    options={[
+      {
+        label: 'English',
+        value: 'en'
+      },
+      {
+        label: 'Español',
+        value: 'es'
+      },
+    ]}
+  />
+
+  <button class="flex justify-center items-center aspect-square">
+    <i class="ph:sun"></i>
+  </button>
+</header>
