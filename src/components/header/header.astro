@@ -12,7 +12,7 @@ const navbarItems = [
 
 ---
 
-<header class="flex h-14 max-h-[56px] max-w-[768px] mx-auto border-2 border-black bg-gray-50 justify-between">
+<header class="flex h-14 max-h-[56px] max-w-[768px] mx-auto border-x-2 border-black bg-gray-50 justify-between">
   <nav class="flex">
     {
       SOCIAL_LINKS.map(({ icon, name, url }, index) => (
@@ -26,12 +26,12 @@ const navbarItems = [
     }
   </nav>
 
-  <nav class="flex flex-1 justify-between">
+  <nav class="flex flex-1 justify-around">
     {
       navbarItems.map((item) => (
         <a
           href={`#${item}`}
-          class="flex justify-center items-center w-auto px-5 h-full text-md uppercase font-semibold text-black"
+          class="flex justify-center items-center w-auto h-full text-md uppercase font-bold text-black"
         >
           {item}
         </a>
@@ -53,7 +53,7 @@ const navbarItems = [
     ]}
   />
 
-  <button class="flex justify-center items-center aspect-square">
-    <i class="ph:sun"></i>
+  <button class="flex justify-center items-center aspect-square text-2xl">
+    <i class="ph:sun-dim"></i>
   </button>
 </header>

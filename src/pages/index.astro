@@ -11,7 +11,7 @@ import Footer from "../components/Footer/index.astro";
 
 <Layout>
   <Header />
-  <main>
+  <main class="max-w-[768px] mx-auto border-2 border-black">
     <WelcomeCard />
     <!-- Here goes the "About me" -->
     <div class="section__container">
@@ -23,17 +23,3 @@ import Footer from "../components/Footer/index.astro";
   </main>
   <Footer />
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1em;
-  }
-
-  .section__container {
-    width: 80%;
-    max-width: 672px;
-    min-width: 300px;
-    margin: 0 auto 8rem;
-  }
-</style>
