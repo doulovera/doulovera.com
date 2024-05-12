@@ -7,19 +7,20 @@ import Projects from "../components/Projects/index.astro";
 import About from "../components/About/index.astro";
 import Certificates from "../components/Certificates/index.astro";
 import Footer from "../components/Footer/index.astro";
+import Hero from "../components/hero/hero.astro";
+
 ---
 
 <Layout>
   <Header />
-  <main class="max-w-[768px] mx-auto border-2 border-black">
-    <WelcomeCard />
-    <!-- Here goes the "About me" -->
-    <div class="section__container">
+  <main class="max-w-[768px] mx-auto px-2">
+    <Hero /> 
+    <!-- <div>
       <Experience />
       <Projects />
       <About />
-      <Certificates />
-    </div>
+    </div> -->
+    <!-- <Certificates /> -->
   </main>
-  <Footer />
+  <!-- <Footer /> -->
 </Layout>

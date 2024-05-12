@@ -1,7 +1,6 @@
 ---
+import SocialNetwork from "../shared/social-network.astro";
 import Dropdown from "../shared/dropdown.astro";
-
-import { SOCIAL_LINKS } from "../../constants/links";
 
 const navbarItems = [
   'experience',
@@ -12,19 +11,8 @@ const navbarItems = [
 
 ---
 
-<header class="flex h-14 max-h-[56px] max-w-[768px] mx-auto border-x-2 border-black bg-gray-50 justify-between">
-  <nav class="flex">
-    {
-      SOCIAL_LINKS.map(({ icon, name, url }, index) => (
-        <a
-          href={url}
-          class={`flex justify-center items-center aspect-square text-2xl text-black ${!!index && 'outline outline-2'}`}
-        >
-          <i class={icon}></i>
-        </a>
-      ))
-    }
-  </nav>
+<header class="flex justify-between h-14 max-h-[56px] max-w-[768px] mx-auto border-t-0 border-2 border-black bg-gray-50">
+  <SocialNetwork />
 
   <nav class="flex flex-1 justify-around">
     {
