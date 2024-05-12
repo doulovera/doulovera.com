@@ -8,7 +8,7 @@ import { SOCIAL_LINKS } from "../../constants/links";
     SOCIAL_LINKS.map(({ icon, name, url }, index) => (
       <a
         href={url}
-        class={`flex justify-center items-center aspect-square text-2xl text-black ${!!index && 'outline outline-2'}`}
+        class={`flex justify-center items-center h-14 w-14 aspect-square text-2xl text-black ${!!index ? 'shadow-outline' : ''}`}
         aria-label={name}
       >
         <i class={icon}></i>
