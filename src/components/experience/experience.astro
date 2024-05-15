@@ -1,0 +1,29 @@
+---
+import Work from "./work.astro";
+import { experience } from "../../constants/experience";
+
+---
+
+<section class="mt-20 mb-40">
+  <h3 class="flex items-center gap-2 mb-4 uppercase font-bold text-3xl">
+    <i class="ph:suitcase-simple"></i>
+    Experience
+  </h3>
+
+  <div class="flex flex-col gap-10 mt-10">
+    {
+      experience.map((el) => (
+        <Work
+          from={el.from}
+          to={el.to}
+          company={el.company}
+          role={el.role}
+          image={el.image}
+          description={el.description}
+          items={el.items}
+          isCurrent={el.isCurrent}
+        />
+      ))
+    }
+  </div>
+</section>

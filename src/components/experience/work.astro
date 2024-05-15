@@ -1,0 +1,67 @@
+---
+interface Props {
+  from: Date;
+  to: Date;
+  company: string;
+  role: string;
+  description: string;
+  isCurrent: boolean;
+  image: string;
+  items: string[];
+}
+
+const { from, to, company, role, description, isCurrent, image, items } = Astro.props;
+
+const imagePath = `/assets/${image}`
+const fromYear = from.toLocaleDateString("es-ES", { year: "numeric" })
+const toYear = isCurrent
+  ? "Present"
+  : to.toLocaleDateString("es-ES", { year: "numeric" })
+
+const totalMonths = (to.getFullYear() - from.getFullYear()) * 12 + (to.getMonth() - from.getMonth())
+
+---
+
+<article class="grid grid-cols-1 sm:grid-cols-[40%,1fr] gap-4">
+  <div class="flex gap-6">
+    <img
+      src={imagePath}
+      alt={`${company} Company logo`}
+      class="w-14 h-14 border-2 border-gray-200"
+    />
+    
+    <div class="flex flex-col gap-4">
+      <h4 class="uppercase text-lg font-bold max-w-[15ch]">
+        {role}
+      </h4>
+      
+      <div>
+        <p class="font-bold">
+          {company}
+        </p>
+        
+        <p title={`${totalMonths} Months`}>
+          {fromYear}
+          -
+          {toYear}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p>
+      {description}
+    </p>
+
+    <ul class="ml-8 list-disc">
+      {
+        items.map((item) => (
+          <li>
+            {item}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</article>
