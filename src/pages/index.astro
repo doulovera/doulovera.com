@@ -3,8 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/header/header.astro";
 import Experience from "../components/experience/experience.astro";
 import Projects from "../components/projects/projects.astro";
-import About from "../components/About/index.astro";
-import Certificates from "../components/Certificates/index.astro";
+import About from "../components/about/about.astro";
 import Footer from "../components/Footer/index.astro";
 import Hero from "../components/hero/hero.astro";
 
@@ -12,14 +11,11 @@ import Hero from "../components/hero/hero.astro";
 
 <Layout>
   <Header />
-  <main class="max-w-[768px] mx-auto px-2">
+  <main class="max-w-[768px] mx-auto px-2 mb-20">
     <Hero /> 
     <Experience />
     <Projects />
-    <!-- <div>
-      <About />
-    </div> -->
-    <!-- <Certificates /> -->
+    <About />
   </main>
   <!-- <Footer /> -->
 </Layout>
