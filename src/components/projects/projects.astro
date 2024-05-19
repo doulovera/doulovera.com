@@ -1,0 +1,28 @@
+---
+import MainProject from './main-projects.astro'
+
+import { projects } from "../../constants/projects";
+
+---
+
+<section class="mt-20" id="experience">
+  <h3 class="flex items-center gap-2 mb-4 uppercase font-bold text-3xl">
+    <i class="ph:suitcase-simple"></i>
+    Projects
+  </h3>
+
+  <div class="flex flex-col gap-10 mt-10">
+    {
+      projects.slice(0,2).map((el) => (
+        <MainProject
+          title={el.title}
+          description={el.description!}
+          technologies={el.technologies}
+          demo={el.demo}
+          repository={el.repository}
+          image={el.image}
+        />
+      ))
+    }
+  </div>
+</section>

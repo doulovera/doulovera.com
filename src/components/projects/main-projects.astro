@@ -1,0 +1,52 @@
+---
+import AnchorGroup from '../shared/anchor-group.astro';
+
+interface Props {
+  image: string;
+  title: string;
+  description: string;
+  repository: string;
+  demo: string;
+  technologies: string[];
+}
+
+const { image, title, description, repository, demo, technologies } = Astro.props;
+---
+
+<article class="flex flex-col md:flex-row space-x-0 space-y-8 md:space-x-8 md:space-y-0">
+  <div class="bg-black w-full md:w-1/2">
+    <img src={image} alt={title} class="h-56 w-full object-cover object-top shadow-outline_gray" />
+  </div>
+
+  <div class="flex flex-col justify-between w-full md:w-1/2">
+    <div>
+      <h4 class="text-2xl uppercase font-bold">
+        <a href={demo} target="_blank" rel="noopener noreferrer">{title}</a>
+      </h4>
+      
+      <p>
+        {description}
+      </p>
+    </div>
+
+    <!-- <div class="content-technologies">
+      {
+        technologies.map((item: string) => (
+          <span class="technology-span">{item}</span>
+        ))
+      }
+    </div> -->
+
+    <div class="flex mb-1 justify-start">
+      <a href={repository} class="flex items-center gap-1 font-bold uppercase text-lg group">
+        <i class="ph:github-logo"></i>
+        <span class="group-hover:underline">Code</span>
+      </a>
+
+      <a href={demo} class="ml-6 flex items-center gap-1 font-bold uppercase text-lg group">
+        <i class="ph:arrow-square-out"></i>
+        <span class="group-hover:underline">Preview</span>
+      </a>
+    </div>
+  </div>
+</article>

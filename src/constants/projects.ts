@@ -1,40 +1,46 @@
-const languages = {
-  html: "HTML/CSS",
-  javascript: "JavaScript",
-  typescript: "TypeScript",
-  node: "Node.js",
-};
+const TECHNOLOGIES = {
+  languages: {
+    html: "HTML/CSS",
+    javascript: "JavaScript",
+    typescript: "TypeScript",
+    python: "Python",
+  },
+  frameworks: {
+    react: "React.js",
+    next: "Next.js",
+    vue: "Vue.js",
+    astro: "Astro",
+  },
+  css: {
+    tailwind: "Tailwind",
+    bootstrap: "Bootstrap",
+  },
+  services: {
+    twilio: "Twilio",
+    textmagic: "TextMagic",
+    cf_workers: "Cloudflare Workers"
+  },
+  ai: {
+    gemini: "Gemini",
+  }
+}
 
-const frameworks = {
-  react: "React.js",
-  next: "Next.js",
-};
-
-const css = {
-  tailwind: "Tailwind",
-  bootstrap: "Bootstrap",
-};
-
-const services = {
-  twilio: "Twilio",
-};
-
-const ProjectList = [
+export const projects = [
   {
     image:
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1659116121/portfolio_images/msedge_7XfaNqGY5x_d42o0a.png",
     title: "Chat-App",
     description:
-      "Chat app built for a hackathon where we need to use the Twilio Conversations API. You can create or join multiple rooms with many participants and start chatting. Sign in with GitHub with Firebase Auth.",
+      "Chat app built for a hackathon where we need to use the Twilio Conversations API. You can create or join multiple rooms with many participants",
     repository: "https://github.com/doulovera/chat-app",
     demo: "https://chat-app-2022.vercel.app/",
     technologies: [
-      languages.html,
-      languages.typescript,
-      frameworks.react,
-      frameworks.next,
-      css.tailwind,
-      services.twilio,
+      TECHNOLOGIES.languages.html,
+      TECHNOLOGIES.languages.typescript,
+      TECHNOLOGIES.frameworks.react,
+      TECHNOLOGIES.frameworks.next,
+      TECHNOLOGIES.css.tailwind,
+      TECHNOLOGIES.services.twilio,
     ],
   },
   {
@@ -42,10 +48,10 @@ const ProjectList = [
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1645307597/portfolio_images/im-a-gen_compress_oyv10s.jpg",
     title: "Im-a-gen",
     description:
-      "App for generate images with different sizes, blur, and grayscale from Unsplash. Consuming the Lorem Picsum API to get these images with the parameters that you want. Also the style was inspired in GetWaves.io",
+      "App for generate images with different sizes, blur, and grayscale from Unsplash. Consuming the Lorem Picsum API to get these images ",
     repository: "https://github.com/doulovera/im-a-gen",
     demo: "https://im-a-gen.netlify.app/",
-    technologies: [languages.html, languages.typescript, frameworks.react],
+    technologies: [TECHNOLOGIES.languages.html, TECHNOLOGIES.languages.typescript, TECHNOLOGIES.frameworks.react],
   },
   {
     image:
@@ -53,7 +59,7 @@ const ProjectList = [
     title: "One-One Discord Bot",
     repository: "https://github.com/doulovera/oneone-web",
     demo: "https://oneone.netlify.app/",
-    technologies: [languages.html, languages.javascript],
+    technologies: [TECHNOLOGIES.languages.html, TECHNOLOGIES.languages.javascript],
   },
   {
     image:
@@ -61,7 +67,7 @@ const ProjectList = [
     title: "Numrify",
     repository: "https://github.com/doulovera/im-a-gen",
     demo: "https://numrify.netlify.app/",
-    technologies: [languages.html, languages.javascript, frameworks.react],
+    technologies: [TECHNOLOGIES.languages.html, TECHNOLOGIES.languages.javascript, TECHNOLOGIES.frameworks.react],
   },
   {
     image:
@@ -69,7 +75,7 @@ const ProjectList = [
     title: "Publifelix",
     repository: "https://github.com/doulovera/publifelix-demo",
     demo: "https://publifelix-demo.netlify.app/",
-    technologies: [languages.html, css.bootstrap, languages.javascript],
+    technologies: [TECHNOLOGIES.languages.html, TECHNOLOGIES.css.bootstrap, TECHNOLOGIES.languages.javascript],
   },
   {
     image:
@@ -77,8 +83,6 @@ const ProjectList = [
     title: "ToDo App",
     repository: "https://github.com/doulovera/todo-app_react",
     demo: "https://dl-note-taker.vercel.app/",
-    technologies: [languages.html, languages.javascript, frameworks.react],
+    technologies: [TECHNOLOGIES.languages.html, TECHNOLOGIES.languages.javascript, TECHNOLOGIES.frameworks.react],
   },
 ];
-
-export default ProjectList;

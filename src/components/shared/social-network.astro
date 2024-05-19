@@ -1,18 +1,18 @@
 ---
+import AnchorGroup from "../shared/anchor-group.astro";
 import { SOCIAL_LINKS } from "../../constants/links";
+
+const mappedSocialLinks = SOCIAL_LINKS.map(({ url, name, icon }) => ({
+  href: url,
+  ariaLabel: name,
+  icon,
+}))
 
 ---
 
 <nav class="flex h-full">
-  {
-    SOCIAL_LINKS.map(({ icon, name, url }, index) => (
-      <a
-        href={url}
-        class={`flex justify-center items-center h-14 w-14 aspect-square text-2xl text-black ${!!index ? 'shadow-outline' : ''}`}
-        aria-label={name}
-      >
-        <i class={icon}></i>
-      </a>
-    ))
-  }
+  <AnchorGroup
+    className="text-2xl"
+    items={mappedSocialLinks}
+  />
 </nav>

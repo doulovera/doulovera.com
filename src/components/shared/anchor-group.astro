@@ -1,0 +1,41 @@
+---
+
+interface Props {
+  className?: string
+  items: {
+    href: string
+    content?: string
+    icon?: string
+    ariaLabel?: string
+  }[]
+}
+
+const { className = '', items } = Astro.props
+
+---
+
+<div class={`flex h-full ${className}`}>
+  {
+    items.map(({ content = '', href, icon, ariaLabel }, index) => (
+      <a
+        href={href}
+        class={`flex justify-center items-center gap-2 h-14 min-w-14 w-auto text-black ${index > 0 ? 'shadow-outline-no-left' : 'shadow-outline'}`}
+        aria-label={ariaLabel || undefined}
+      
+      >
+        {
+          icon && (
+            <i class={icon}></i>
+          )
+        }
+        {
+          content && (
+            <span>
+              {content}
+            </span>
+          )
+        }
+      </a>
+    ))
+  }
+</div>
