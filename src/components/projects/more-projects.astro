@@ -1,0 +1,44 @@
+---
+interface Props {
+  projects: {
+    image: string;
+    title: string;
+    repository: string;
+    demo: string;
+    description?: string;
+    technologies?: string[];
+  }[]
+}
+
+const { projects } = Astro.props;
+---
+
+{
+  projects.map((el) => (
+    <article class="grid grid-flow-col justify-between">
+      <h4>
+        {el.title}
+      </h4>
+
+      <div>
+        {
+          el.technologies?.map((tech) => (
+            <span>
+              {tech}
+            </span>
+          ))
+        }
+      </div>
+
+      <a href={el.repository} class="flex items-center gap-1 font-bold uppercase text-lg group">
+        <i class="ph:github-logo"></i>
+        <span class="group-hover:underline">Code</span>
+      </a>
+
+      <a href={el.demo} class="ml-6 flex items-center gap-1 font-bold uppercase text-lg group">
+        <i class="ph:arrow-square-out"></i>
+        <span class="group-hover:underline">Preview</span>
+      </a>
+    </article>
+  ))
+}
