@@ -4,23 +4,28 @@ interface Props {
     image: string;
     title: string;
     repository: string;
-    demo: string;
+    demo?: string;
     description?: string;
     technologies?: string[];
   }[]
 }
 
 const { projects } = Astro.props;
+
+const isLastElement = (index: number) => index === projects.length - 1;
 ---
 
+<p class="mb-4 uppercase text-lg font-bold">
+  More projects...
+</p>
 {
-  projects.map((el) => (
-    <article class="grid grid-flow-col justify-between">
-      <h4>
+  projects.map((el, index) => (
+    <article class={`grid grid-cols-3 justify-between items-center min-h-16 px-4 ${isLastElement(index) ? 'shadow-outline' : 'shadow-outline-no-bottom'}`}>
+      <h4 class="text-lg uppercase font-bold">
         {el.title}
       </h4>
 
-      <div>
+      <div class="flex gap-2 text-xs">
         {
           el.technologies?.map((tech) => (
             <span>
@@ -30,15 +35,21 @@ const { projects } = Astro.props;
         }
       </div>
 
-      <a href={el.repository} class="flex items-center gap-1 font-bold uppercase text-lg group">
-        <i class="ph:github-logo"></i>
-        <span class="group-hover:underline">Code</span>
-      </a>
-
-      <a href={el.demo} class="ml-6 flex items-center gap-1 font-bold uppercase text-lg group">
-        <i class="ph:arrow-square-out"></i>
-        <span class="group-hover:underline">Preview</span>
-      </a>
+      <div class="flex items-center justify-end text-base h-full">
+        <a href={el.repository} class="flex items-center gap-1 font-bold uppercase group h-full">
+          <i class="ph:github-logo"></i>
+          <span class="group-hover:underline">Code</span>
+        </a>
+        
+        {
+          el.demo && (
+            <a href={el.demo} class="ml-6 flex items-center gap-1 font-bold uppercase group h-full">
+              <i class="ph:arrow-square-out"></i>
+              <span class="group-hover:underline">Preview</span>
+            </a>
+          )
+        }
+      </div>
     </article>
   ))
 }
