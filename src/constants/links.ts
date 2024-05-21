@@ -13,7 +13,7 @@ export const RESUME: LinkObject = {
 export const SOCIAL_LINKS: LinkObject[] = [
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/douglaslovera/",
+    url: "https://www.linkedin.com/in/douglaslovera/",
     icon: "ph:linkedin-logo",
   },
   {

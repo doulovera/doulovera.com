@@ -3,16 +3,23 @@ interface Props {
   anchor?: boolean;
   href?: string;
   className?: string;
+  target?: string;
+  rel?: string;
 }
 
-const { anchor, href, className } = Astro.props;
+const { anchor, href, className, target, rel } = Astro.props;
 
 ---
 
 {
   anchor
     ? (
-      <a href={href} class={`flex items-center justify-center w-full h-full bg-blue-100 shadow-outline ${className || ''}`}>
+      <a
+        href={href}
+        class={`flex items-center justify-center w-full h-full shadow-outline ${className || ''}`}
+        target={target}
+        rel={rel}
+      >
         <slot />
       </a>
     )

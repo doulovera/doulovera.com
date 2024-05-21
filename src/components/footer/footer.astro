@@ -1,0 +1,43 @@
+---
+import Button from '../shared/button.astro'
+import { RESUME, SOCIAL_LINKS } from '../../constants/links'
+
+---
+
+<footer class="h-32">
+  <div class="flex gap-4 justify-center max-w-80 h-16 mx-auto uppercase text-xl">
+    <Button
+      anchor
+      href={RESUME.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex place-items-center gap-4 px-12 flex-1"
+    >
+      <span class="font-bold text-lg">
+        {RESUME.name}
+      </span>
+      <span>
+        <i class={RESUME.icon}></i>
+      </span>
+    </Button>
+
+    {
+      SOCIAL_LINKS.map(({ name, url, icon }) => (
+        <Button
+          anchor
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex place-items-center gap-4 px-4"
+        >
+          <span class="font-bold text-lg">
+            {name}
+          </span>
+          <span>
+            <i class={icon}></i>
+          </span>
+        </Button>
+      ))
+    }
+  </div>
+</footer>

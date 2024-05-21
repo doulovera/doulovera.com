@@ -36,16 +36,16 @@ const isLastElement = (index: number) => index === projects.length - 1;
       </div>
 
       <div class="flex items-center justify-end text-base h-full">
-        <a href={el.repository} class="flex items-center gap-1 font-bold uppercase group h-full">
-          <i class="ph:github-logo"></i>
-          <span class="group-hover:underline">Code</span>
+        <a href={el.repository} class="flex items-center gap-1 uppercase group h-full">
+          <i class="ph:github-logo-bold"></i>
+          <span class="group-hover:underline font-bold">Code</span>
         </a>
         
         {
           el.demo && (
-            <a href={el.demo} class="ml-6 flex items-center gap-1 font-bold uppercase group h-full">
-              <i class="ph:arrow-square-out"></i>
-              <span class="group-hover:underline">Preview</span>
+            <a href={el.demo} class="ml-6 flex items-center gap-1 uppercase group h-full">
+              <i class="ph:arrow-square-out-bold"></i>
+              <span class="group-hover:underline font-bold">Preview</span>
             </a>
           )
         }
