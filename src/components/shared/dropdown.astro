@@ -15,9 +15,10 @@ const { label, options, anchors } = Astro.props;
 ---
 
 <div>
-  <p class="flex items-center justify-center gap-2 w-full h-full uppercase text-black text-md font-bold shadow-outline px-4">
-    <span>{label}</span>
-    <i class="ph:caret-down"></i>
+  <p class="flex items-center justify-center gap-0 md:gap-2 min-w-14 w-full h-full uppercase text-black text-md font-bold shadow-outline px-4">
+    <span class="hidden md:inline-block">{label}</span>
+    <i class="ph:caret-down hidden md:inline-block"></i>
+    <span class="inline-block md:hidden">🌎</span>
   </p>
   <!-- <ul>
     {options.map((option) => (

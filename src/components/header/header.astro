@@ -14,7 +14,7 @@ const navbarItems = [
 <header class="flex justify-between h-14 max-h-[56px] max-w-[768px] mx-auto border-t-0 shadow-outline bg-gray-50">
   <SocialNetwork />
 
-  <nav class="flex flex-1 justify-around">
+  <nav class="hidden sm:flex flex-1 justify-around">
     {
       navbarItems.map((item) => (
         <a
@@ -26,6 +26,8 @@ const navbarItems = [
       ))
     }
   </nav>
+
+  <div class="block sm:hidden flex-1"></div>
 
   <Dropdown
     label="English"
@@ -41,7 +43,7 @@ const navbarItems = [
     ]}
   />
 
-  <button class="flex justify-center items-center aspect-square text-2xl shadow-outline-no-left">
+  <button class="flex justify-center items-center aspect-square w-14 text-2xl shadow-outline-no-left">
     <i class="ph:sun-dim"></i>
   </button>
 </header>
