@@ -1,21 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/header/header.astro";
+import Name from "../components/hero/name.astro";
+import Hero from "../components/hero/hero.astro";
 import Experience from "../components/experience/experience.astro";
 import Projects from "../components/projects/projects.astro";
 import About from "../components/about/about.astro";
 import Footer from "../components/footer/footer.astro";
-import Hero from "../components/hero/hero.astro";
 
 ---
 
 <Layout>
   <Header />
-  <main class="max-w-[768px] mx-auto px-2 mb-20">
-    <Hero /> 
-    <Experience />
-    <Projects />
-    <About />
+  <main class="max-w-[768px] mx-auto mb-20">
+    <Name />
+    <div class="px-4 sm:px-8 lg:px-0">
+      <Hero />
+      <Experience />
+      <Projects />
+      <About />
+    </div>
   </main>
   <Footer />
 </Layout>
