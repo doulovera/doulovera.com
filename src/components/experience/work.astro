@@ -23,33 +23,36 @@ const totalMonths = (to.getFullYear() - from.getFullYear()) * 12 + (to.getMonth(
 ---
 
 <article class="grid grid-cols-1 sm:grid-cols-[40%,1fr] gap-4">
-  <div class="flex gap-6">
-    <img
-      src={imagePath}
-      alt={`${company} Company logo`}
-      class="w-16 h-16 shadow-outline"
-    />
-    
-    <div class="flex flex-col gap-4">
-      <h4 class="uppercase text-2xl font-bold max-w-[15ch]">
-        {role}
-      </h4>
+  <div>
+    <div class="flex gap-6 items-center">
+      <img
+        src={imagePath}
+        alt={`${company} Company logo`}
+        class="w-16 h-16 shadow-outline"
+      />
       
       <div>
-        <p class="font-bold">
+        <h4 class="font-bold text-2xl uppercase">
           {company}
-        </p>
-        
+        </h4>
+
         <p title={`${totalMonths} Months`}>
           {fromYear}
           -
           {toYear}
         </p>
       </div>
+
     </div>
   </div>
 
   <div>
+    <h4 class="uppercase text-2xl font-bold mb-5">
+      <span class="bg-blue-100">
+        {role}
+      </span>
+    </h4>
+
     <p>
       {description}
     </p>
