@@ -1,12 +1,11 @@
 const TECHNOLOGIES = {
   languages: {
-    html: "HTML/CSS",
     javascript: "JavaScript",
     typescript: "TypeScript",
     python: "Python",
   },
   frameworks: {
-    react: "React.js",
+    react: "React",
     next: "Next.js",
     vue: "Vue.js",
     astro: "Astro",
@@ -35,7 +34,6 @@ export const projects = [
     repository: "https://github.com/doulovera/chat-app",
     demo: "https://chat-app-2022.vercel.app/",
     technologies: [
-      TECHNOLOGIES.languages.html,
       TECHNOLOGIES.languages.typescript,
       TECHNOLOGIES.frameworks.react,
       TECHNOLOGIES.frameworks.next,
@@ -51,7 +49,7 @@ export const projects = [
       "App for generate images with different sizes, blur, and grayscale from Unsplash. Consuming the Lorem Picsum API to get these images ",
     repository: "https://github.com/doulovera/im-a-gen",
     demo: "https://im-a-gen.netlify.app/",
-    technologies: [TECHNOLOGIES.languages.html, TECHNOLOGIES.languages.typescript, TECHNOLOGIES.frameworks.react],
+    technologies: [TECHNOLOGIES.languages.typescript, TECHNOLOGIES.frameworks.react],
   },
   {
     image:
@@ -59,7 +57,7 @@ export const projects = [
     title: "One-One Discord Bot",
     repository: "https://github.com/doulovera/oneone-web",
     demo: "https://oneone.netlify.app/",
-    technologies: [TECHNOLOGIES.languages.html, TECHNOLOGIES.languages.javascript],
+    technologies: [TECHNOLOGIES.languages.javascript],
   },
   {
     image:
@@ -67,7 +65,7 @@ export const projects = [
     title: "Numrify",
     repository: "https://github.com/doulovera/im-a-gen",
     demo: "https://numrify.netlify.app/",
-    technologies: [TECHNOLOGIES.languages.html, TECHNOLOGIES.languages.javascript, TECHNOLOGIES.frameworks.react],
+    technologies: [TECHNOLOGIES.languages.javascript, TECHNOLOGIES.frameworks.react],
   },
   {
     image:
@@ -75,7 +73,7 @@ export const projects = [
     title: "Publifelix",
     repository: "https://github.com/doulovera/publifelix-demo",
     demo: "https://publifelix-demo.netlify.app/",
-    technologies: [TECHNOLOGIES.languages.html, TECHNOLOGIES.css.bootstrap, TECHNOLOGIES.languages.javascript],
+    technologies: [TECHNOLOGIES.css.bootstrap, TECHNOLOGIES.languages.javascript],
   },
   {
     image:
@@ -83,6 +81,6 @@ export const projects = [
     title: "ToDo App",
     repository: "https://github.com/doulovera/todo-app_react",
     demo: "https://dl-note-taker.vercel.app/",
-    technologies: [TECHNOLOGIES.languages.html, TECHNOLOGIES.languages.javascript, TECHNOLOGIES.frameworks.react],
+    technologies: [TECHNOLOGIES.languages.javascript, TECHNOLOGIES.frameworks.react],
   },
 ];

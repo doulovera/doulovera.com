@@ -9,6 +9,11 @@ export default {
 				'outline-no-left': '1px 1px 0 1px black, 1px -1px 0 1px black',
 				'outline-no-bottom': '-1px -1px 0 1px black, 1px -1px 0 1px black',
 				'outline_gray-no-bottom': '-1px -1px 0 1px #e5e7eb, 1px -1px 0 1px #e5e7eb',
+			},
+			colors: {
+				brand: {
+					DEFAULT: '#dbeafe'
+				}
 			}
 		},
 	},

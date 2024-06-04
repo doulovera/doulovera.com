@@ -19,23 +19,25 @@ const { image, title, description, repository, demo, technologies } = Astro.prop
   </div>
 
   <div class="flex flex-col justify-between w-full md:w-1/2">
-    <div>
-      <h4 class="text-2xl uppercase font-bold">
-        <a href={demo} target="_blank" rel="noopener noreferrer">{title}</a>
-      </h4>
-      
-      <p>
-        {description}
-      </p>
-    </div>
 
-    <!-- <div class="content-technologies">
-      {
-        technologies.map((item: string) => (
-          <span class="technology-span">{item}</span>
-        ))
-      }
-    </div> -->
+   <div class="mb-4 sm:mb-0">
+     <h4 class="text-2xl uppercase font-bold">
+       <a href={demo} target="_blank" rel="noopener noreferrer">{title}</a>
+     </h4>
+    
+     <div class="flex gap-2 text-xs">
+       {
+         technologies.map((item: string) => (
+           <span class="">{item}</span>
+         ))
+       }
+     </div>
+
+     <p class="mt-4">
+       {description}
+     </p>
+   </div>
+    
 
     <div class="flex mb-1 justify-start">
       <a href={repository} class="flex items-center gap-1 uppercase text-lg group">
