@@ -4,14 +4,14 @@ import { RESUME, SOCIAL_LINKS } from '../../constants/links'
 
 ---
 
-<footer class="h-32">
-  <div class="flex flex-wrap gap-4 justify-center max-w-80 h-16 mx-auto uppercase text-xl">
+<footer class="h-40 max-w-[768px] mx-auto px-4 sm:px-0">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-center h-40 mx-auto uppercase text-xl">
     <Button
       anchor
       href={RESUME.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex place-items-center gap-4 px-12 flex-1"
+      className="flex place-items-center gap-4 px-12 h-16 hover:bg-brand"
     >
       <span class="font-bold text-lg">
         {RESUME.name}
@@ -28,7 +28,7 @@ import { RESUME, SOCIAL_LINKS } from '../../constants/links'
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex place-items-center gap-4 px-4"
+          className="flex place-items-center gap-4 px-4 h-16 hover:bg-brand"
         >
           <span class="font-bold text-lg">
             {name}
