@@ -48,59 +48,75 @@ i.ph\:download-simple-bold:before {
 content: "\e007";
 }
 
-i.ph\:github-logo:before {
+i.ph\:file-pdf:before {
 content: "\e008";
 }
 
-i.ph\:github-logo-bold:before {
+i.ph\:file-pdf-bold:before {
 content: "\e009";
 }
 
-i.ph\:link:before {
+i.ph\:github-logo:before {
 content: "\e00a";
 }
 
-i.ph\:link-bold:before {
+i.ph\:github-logo-bold:before {
 content: "\e00b";
 }
 
-i.ph\:linkedin-logo:before {
+i.ph\:globe-simple:before {
 content: "\e00c";
 }
 
-i.ph\:linkedin-logo-bold:before {
+i.ph\:globe-simple-bold:before {
 content: "\e00d";
 }
 
-i.ph\:moon:before {
+i.ph\:link:before {
 content: "\e00e";
 }
 
-i.ph\:suitcase-simple:before {
+i.ph\:link-bold:before {
 content: "\e00f";
 }
 
-i.ph\:suitcase-simple-bold:before {
+i.ph\:linkedin-logo:before {
 content: "\e010";
 }
 
-i.ph\:sun-dim:before {
+i.ph\:linkedin-logo-bold:before {
 content: "\e011";
 }
 
-i.ph\:user:before {
+i.ph\:moon:before {
 content: "\e012";
 }
 
-i.ph\:user-bold:before {
+i.ph\:suitcase-simple:before {
 content: "\e013";
 }
 
-i.ph\:user-check:before {
+i.ph\:suitcase-simple-bold:before {
 content: "\e014";
 }
 
-i.ph\:user-check-bold:before {
+i.ph\:sun-dim:before {
 content: "\e015";
+}
+
+i.ph\:user:before {
+content: "\e016";
+}
+
+i.ph\:user-bold:before {
+content: "\e017";
+}
+
+i.ph\:user-check:before {
+content: "\e018";
+}
+
+i.ph\:user-check-bold:before {
+content: "\e019";
 }
 

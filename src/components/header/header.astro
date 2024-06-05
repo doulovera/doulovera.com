@@ -1,6 +1,7 @@
 ---
 import SocialNetwork from "../shared/social-network.astro";
 import Dropdown from "../shared/dropdown.astro";
+import { RESUME } from "../../constants/links";
 
 const navbarItems = [
   'experience',
@@ -19,7 +20,7 @@ const navbarItems = [
       navbarItems.map((item) => (
         <a
           href={`#${item}`}
-          class="flex justify-center items-center w-auto h-full text-md uppercase font-bold text-black"
+          class="flex justify-center items-center w-auto h-full text-md uppercase font-bold text-black hover:underline"
         >
           {item}
         </a>
@@ -27,7 +28,17 @@ const navbarItems = [
     }
   </nav>
 
-  <div class="block sm:hidden flex-1"></div>
+  <div class="flex place-content-center sm:hidden flex-1">
+    <a href={RESUME.url} class="flex justify-center items-center gap-2 w-full h-full uppercase hover:underline">
+      <span class="hidden min-[380px]:inline text-md font-bold">
+        {RESUME.name}
+      </span>
+
+      <span class="text-2xl min-[380px]:text-xl">
+        <i class="ph:file-pdf-bold"></i>
+      </span>
+    </a>
+  </div>
 
   <Dropdown
     label="English"
