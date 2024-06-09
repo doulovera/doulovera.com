@@ -42,7 +42,7 @@ const color = "#5a3fd1";
     <meta name="twitter:description" content={description} />
     <meta name="twitter:creator" content="@doulovera" />
   </head>
-  <body class="relative">
+  <body class="relative bg-light dark:bg-dark dark:text-white">
     <Header />
     <slot />
   </body>
@@ -51,21 +51,6 @@ const color = "#5a3fd1";
 <style is:global>
   :root {
     --app-min-width: 320px;
-
-    --bg-gradient: linear-gradient(
-      90deg,
-      rgba(57, 74, 153, 1) 35%,
-      rgba(90, 108, 193, 1) 100%
-    );
-
-    /* theme */
-    --bg-primary: #292929;
-    --bg-secondary: #171717;
-    --font-primary: #000;
-    --font-secondary: #000;
-    --bg-brand: #5a3fd1;
-
-    --bg-blur: #171717ee;
   }
 
   * {
