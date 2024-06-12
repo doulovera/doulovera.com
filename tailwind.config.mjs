@@ -26,7 +26,7 @@ export default {
 					DEFAULT: '#fcfcfc'
 				},
 				dark: {
-					DEFAULT: '#101101'
+					DEFAULT: '#0e100c'
 				},
 			}
 		},
