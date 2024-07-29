@@ -6,11 +6,8 @@ export const experience = [
     company: "Rhinolabs",
     role: "Fullstack Developer",
     image: 'rhinolabs.jpg',
-    description: `Working with the team of MyAccident.org to add new features and improve the current ones. Adding unit test to backend endpoints and frontend components with Jest and react-testing-library.`,
-    items: [
-      "Developed new features for the MyAccident.org platform",
-      "Improved the current features",
-      "Added unit tests to the backend and frontend codebase"
-    ],
+    description: `Migrating, refactoring, fixing bugs and adding new features for every workflow for myaccident.org and its team.
+    \nI migrate the API from basic JavaScript and Express to TypeScript and Fastify, refactoring the endpoints to use best practices and improving performance, replacing Jest with Vitest and covering endpoints use cases with tests. Also, I helped with the migration of the admin dashboard to an improved design and processes using Vite and React.
+    \nI’ve helped different clients to build their products together with my team, with constant communication and development with web technologies`
   },
 ];

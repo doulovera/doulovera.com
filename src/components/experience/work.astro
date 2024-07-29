@@ -7,7 +7,7 @@ interface Props {
   description: string;
   isCurrent: boolean;
   image: string;
-  items: string[];
+  items?: string[];
 }
 
 const { from, to, company, role, description, isCurrent, image, items } = Astro.props;
@@ -53,18 +53,26 @@ const totalMonths = (to.getFullYear() - from.getFullYear()) * 12 + (to.getMonth(
       </span>
     </h4>
 
-    <p>
-      {description}
-    </p>
-
-    <ul class="ml-8 list-disc">
+    <div class="">
       {
-        items.map((item) => (
-          <li>
-            {item}
-          </li>
+        description.split('\n').map((paragraph) => (
+          <p>{paragraph}</p>
         ))
       }
-    </ul>
+    </div>
+
+    {
+      items && (
+        <ul class="ml-8 list-disc">
+          {
+            items.map((item) => (
+              <li>
+                {item}
+              </li>
+            ))
+          }
+        </ul>
+      )
+    }
   </div>
 </article>
