@@ -6,8 +6,10 @@ export const experience = [
     company: "Rhinolabs",
     role: "Fullstack Developer",
     image: 'rhinolabs.jpg',
-    description: `Migrating, refactoring, fixing bugs and adding new features for every workflow for myaccident.org and its team.
-    \nI migrate the API from basic JavaScript and Express to TypeScript and Fastify, refactoring the endpoints to use best practices and improving performance, replacing Jest with Vitest and covering endpoints use cases with tests. Also, I helped with the migration of the admin dashboard to an improved design and processes using Vite and React.
-    \nI’ve helped different clients to build their products together with my team, with constant communication and development with web technologies`
+    description: `I've work with different clients, helping them with the development of their products. I've worked with different technologies like React, Node.js, Express, MongoDB, and others, both in the frontend and backend. One of the biggest companies I've worked with is myaccident.org.`,
+    items: [
+      'With MyAccident, I worked on migrating, refactoring, fixing bugs and adding new features for every workflow of the app and its team',
+      'Also, I\'ve helped with the development of the new product for our clients',
+    ]
   },
 ];
