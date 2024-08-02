@@ -1,0 +1,26 @@
+{
+  "TITLES": {
+    "EXPERIENCE": "Experience",
+    "PROJECTS": "Projects",
+    "ABOUT": "About",
+    "CONTACT": "Contact",
+    "FULLSTACK_DEV": "Fullstack Developer"
+  },
+  "MISC": {
+    "RESUME": "Resume",
+    "PRESENT": "Present",
+    "CODE": "Code",
+    "PREVIEW": "Preview",
+    "MORE_PROJECTS": "More Projects..."
+  },
+  "DESCRIPTIONS": {
+    "LITTLE_BIO": "I love creating new things and be part of the change contributing to it. Passionate to programming and development.",
+    "ABOUT": {
+      "MY_NAME_IS": "My name is",
+      "ALSO_CALLED": "...",
+      "PARAGRAPH_1": "I've been working professionally in programming since 2021, but my passion began when I was 14 years old, creating Discord bots and websites for my friends and myself.",
+      "PARAGRAPH_2": "My motivation is to create products that creates value and keep up with the advancement of new technologies. I enjoy contributing to projects that improve people's lives.",
+      "PARAGRAPH_3": "Regarding my personal and professional interests, I read books on various topics; my favorite author is Julio Ramón Ribeyro. I also like to attend cultural and tech events in my city. Professionally, I spend a significant part of my day integrating and improving features at work and developing my personal projects."
+    }
+  }
+}

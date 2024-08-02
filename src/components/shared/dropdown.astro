@@ -16,7 +16,7 @@ const { label, options, anchors } = Astro.props;
 
 <div class="relative">
   <p
-    class="dropdown flex items-center justify-center gap-0 md:gap-2 min-w-14 sm:min-w-32 w-full h-full uppercase text-black dark:text-white text-md font-bold shadow-outline shadow-dark dark:shadow-white px-4"
+    class="dropdown flex items-center justify-center gap-0 md:gap-2 min-w-14 sm:w-32 w-full h-full uppercase text-black dark:text-white text-md font-bold shadow-outline shadow-dark dark:shadow-white px-4"
   >
     <span class="hidden md:inline-block">{label}</span>
     <i class="ph:caret-down hidden md:inline-block"></i>
@@ -24,12 +24,15 @@ const { label, options, anchors } = Astro.props;
       <i class="ph:globe-simple"></i>
     </span>
   </p>
-  <div class="hidden absolute bg-light dark:bg-dark bottom-[-82px]">
+  <div class="hidden absolute bg-light dark:bg-dark bottom-[-82px] right-0">
     <ul class="flex flex-col min-w-32 w-full shadow-outline">
       {options.map((option) => (
-        <li class="flex justify-center items-center w-full h-10 hover:bg-brand dark:hover:bg-brand-darklight">
+        <li class="w-full h-10 hover:bg-brand dark:hover:bg-brand-darklight">
           {anchors ? (
-            <a href={option.value}>
+            <a
+              href={option.value}
+              class="flex justify-center items-center h-full w-full"
+            >
               {option.label}
             </a>
           ) : (

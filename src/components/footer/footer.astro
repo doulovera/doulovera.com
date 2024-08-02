@@ -2,6 +2,10 @@
 import Button from '../shared/button.astro'
 import { RESUME, SOCIAL_LINKS } from '../../constants/links'
 
+import { getI18N } from '../../i18n';
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale });
+
 ---
 
 <footer class="my-12 max-w-[768px] mx-auto px-4 sm:px-0">
@@ -14,7 +18,7 @@ import { RESUME, SOCIAL_LINKS } from '../../constants/links'
       className="flex place-items-center gap-4 px-12 h-16 hover:bg-brand dark:hover:bg-brand-dark"
     >
       <span class="font-bold text-lg">
-        {RESUME.name}
+        {i18n.MISC.RESUME}
       </span>
       <span>
         <i class={RESUME.icon}></i>

@@ -3,11 +3,15 @@ import SocialNetwork from "../shared/social-network.astro";
 import Dropdown from "../shared/dropdown.astro";
 import { RESUME } from "../../constants/links";
 
+import { getI18N } from '../../i18n';
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale });
+
 const navbarItems = [
-  'experience',
-  'projects',
-  'about',
-  'contact'
+  i18n.TITLES.EXPERIENCE,
+  i18n.TITLES.PROJECTS,
+  i18n.TITLES.ABOUT,
+  i18n.TITLES.CONTACT,
 ]
 
 ---
@@ -41,7 +45,8 @@ const navbarItems = [
   </div>
 
   <Dropdown
-    label="English"
+    anchors
+    label={currentLocale === 'en' ? 'English' : 'Español'}
     options={[
       {
         label: 'English',
