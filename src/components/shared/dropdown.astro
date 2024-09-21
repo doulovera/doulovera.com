@@ -14,8 +14,8 @@ const { label, options, anchors } = Astro.props;
 
 ---
 
-<div class="relative">
-  <p
+<div class="relative cursor-pointer hover:bg-brand dark:hover:bg-brand-darklight">
+  <div
     class="dropdown flex items-center justify-center gap-0 md:gap-2 min-w-14 sm:w-32 w-full h-full uppercase text-black dark:text-white text-md font-bold shadow-outline shadow-dark dark:shadow-white px-4"
   >
     <span class="hidden md:inline-block">{label}</span>
@@ -23,7 +23,7 @@ const { label, options, anchors } = Astro.props;
     <span class="inline-block md:hidden text-2xl font-normal">
       <i class="ph:globe-simple"></i>
     </span>
-  </p>
+  </div>
   <div class="hidden absolute bg-light dark:bg-dark bottom-[-82px] right-0">
     <ul class="flex flex-col min-w-32 w-full shadow-outline">
       {options.map((option) => (
