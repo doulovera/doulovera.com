@@ -6,7 +6,7 @@ type LinkObject = {
 
 export const RESUME: LinkObject = {
   name: "Resume",
-  url: "https://drive.google.com/file/d/1KPvoF7mInAczBWZO1YrNPgSVcq62C2hV/view",
+  url: "https://drive.google.com/file/d/1iiSZcfrbAfsxVZQRz7VAvkya2BZGpA1q/view",
   icon: "ph:download-simple",
 } as const
 

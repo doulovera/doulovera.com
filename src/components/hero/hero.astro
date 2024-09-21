@@ -5,6 +5,7 @@ import Button from "../shared/button.astro";
 import SocialNetwork from "../shared/social-network.astro";
 
 import { getI18N } from '../../i18n';
+import { RESUME } from '../../constants/links';
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale });
 
@@ -25,7 +26,11 @@ const i18n = getI18N({ currentLocale });
       
       <div class="order-2 sm:order-3 flex justify-center sm:justify-start gap-0 min-[360px]:gap-4 text-xl">
         <div>
-          <Button className="h-full px-10 bg-brand dark:bg-brand-dark hover:bg-brand-light dark:hover:bg-brand-darklight" anchor href="https://doulovera.com">
+          <Button
+            className="h-full px-10 bg-brand dark:bg-brand-dark hover:bg-brand-light dark:hover:bg-brand-darklight"
+            href={RESUME.url}
+            anchor
+          >
             <span class="uppercase font-bold text-lg pr-2">
               {i18n.MISC.RESUME}
             </span>
