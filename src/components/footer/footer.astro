@@ -1,0 +1,47 @@
+---
+import Button from '../shared/button.astro'
+import { RESUME, SOCIAL_LINKS } from '../../constants/links'
+
+import { getI18N } from '../../i18n';
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale });
+
+---
+
+<footer class="my-12 max-w-[768px] mx-auto px-4 sm:px-0">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-center mx-auto uppercase text-xl">
+    <Button
+      anchor
+      href={RESUME.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex place-items-center gap-4 px-12 h-16 hover:bg-brand dark:hover:bg-brand-dark"
+    >
+      <span class="font-bold text-lg">
+        {i18n.MISC.RESUME}
+      </span>
+      <span>
+        <i class={RESUME.icon}></i>
+      </span>
+    </Button>
+
+    {
+      SOCIAL_LINKS.map(({ name, url, icon }) => (
+        <Button
+          anchor
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex place-items-center gap-4 px-4 h-16 hover:bg-brand dark:hover:bg-brand-dark"
+        >
+          <span class="font-bold text-lg">
+            {name}
+          </span>
+          <span>
+            <i class={icon}></i>
+          </span>
+        </Button>
+      ))
+    }
+  </div>
+</footer>

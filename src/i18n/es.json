@@ -1,0 +1,26 @@
+{
+  "TITLES": {
+    "EXPERIENCE": "Experiencia",
+    "PROJECTS": "Proyectos",
+    "ABOUT": "Sobre mí",
+    "CONTACT": "Contacto",
+    "FULLSTACK_DEV": "Desarrollador Fullstack"
+  },
+  "MISC": {
+    "RESUME": "CV",
+    "PRESENT": "Presente",
+    "CODE": "Código",
+    "PREVIEW": "Preview",
+    "MORE_PROJECTS": "Más proyectos..."
+  },
+  "DESCRIPTIONS": {
+    "LITTLE_BIO": "Me encanta crear cosas nuevas y contribuir al cambio. Apasionado a la programación y al desarrollo.",
+    "ABOUT": {
+      "MY_NAME_IS": "Soy",
+      "ALSO_CALLED": ", pero también me llaman Alexander.",
+      "PARAGRAPH_1": "Trabajo profesionalmente en programación desde 2021, pero empecé apasionadamente a mis 14 años desarrollando bots de Discord y páginas web para mis amigos y para mí.",
+      "PARAGRAPH_2": "Mi motivación es crear productos que generen valor y el avance de nuevas tecnologías. Disfruto contribuir en los proyectos que mejoran la vida de las personas.",
+      "PARAGRAPH_3": "Sobre mis intereses personales y profesionales, leo libros de diversos temas; mi autor favorito es Julio Ramón Ribeyro. También me gusta asistir a eventos culturales y de tecnología en mi ciudad. Profesionalmente, paso gran parte del día integrando y mejorando features en el trabajo y desarrollando mis proyectos personales."
+    }
+  }
+}

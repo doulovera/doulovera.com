@@ -1,0 +1,74 @@
+---
+type Options = {
+  label: string;
+  value: string;
+}
+
+interface Props {
+  label: string;
+  options: Options[];
+  anchors?: boolean;
+}
+
+const { label, options, anchors } = Astro.props;
+
+---
+
+<div class="relative cursor-pointer hover:bg-brand dark:hover:bg-brand-darklight">
+  <div
+    class="dropdown flex items-center justify-center gap-0 md:gap-2 min-w-14 sm:w-32 w-full h-full uppercase text-black dark:text-white text-md font-bold shadow-outline shadow-dark dark:shadow-white px-4"
+  >
+    <span class="hidden md:inline-block">{label}</span>
+    <i class="ph:caret-down hidden md:inline-block"></i>
+    <span class="inline-block md:hidden text-2xl font-normal">
+      <i class="ph:globe-simple"></i>
+    </span>
+  </div>
+  <div class="hidden absolute bg-light dark:bg-dark bottom-[-82px] right-0">
+    <ul class="flex flex-col min-w-32 w-full shadow-outline">
+      {options.map((option) => (
+        <li class="w-full h-10 hover:bg-brand dark:hover:bg-brand-darklight">
+          {anchors ? (
+            <a
+              href={option.value}
+              class="flex justify-center items-center h-full w-full"
+            >
+              {option.label}
+            </a>
+          ) : (
+            <span>{option.label}</span>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<script>
+  const dropdown = document.querySelector(".dropdown");
+
+  if (!dropdown) {
+    throw new Error("Dropdown element not found");
+  }
+
+  const dropdownList = dropdown.nextElementSibling;
+
+  if (!dropdownList) {
+    throw new Error("Dropdown list element not found");
+  }
+
+  dropdown.addEventListener('click', (event) => {
+    dropdownList.classList.toggle('hidden');
+  });
+
+  dropdownList.addEventListener('click', () => {
+    dropdownList.classList.add('hidden');
+  });
+
+  // Handle click outside
+  document.addEventListener('click', (event) => {
+    if (!dropdown.contains(event.target as Node)) {
+      dropdownList.classList.add('hidden');
+    }
+  });
+</script>

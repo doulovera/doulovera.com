@@ -1,0 +1,65 @@
+---
+interface Props {
+  projects: {
+    image: string;
+    title: string;
+    repository: string;
+    demo?: string;
+    description?: string;
+    technologies?: string[];
+  }[]
+}
+
+const { projects } = Astro.props;
+
+import { getI18N } from '../../i18n';
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale });
+
+const isLastElement = (index: number) => index === projects.length - 1;
+---
+
+<h4 class="mb-4 uppercase text-lg font-bold ">
+  <span class="bg-brand dark:bg-brand-dark">
+    {i18n.MISC.MORE_PROJECTS}
+  </span>
+</h4>
+{
+  projects.map((el, index) => (
+    <article class={`grid grid-cols-2 sm:grid-cols-3 justify-between items-center min-h-16 px-4 ${isLastElement(index) ? 'shadow-outline' : 'shadow-outline-no-bottom'}`}>
+      <h4 class="text-lg uppercase font-bold">
+        {el.title}
+      </h4>
+
+      <div class="hidden sm:flex gap-2 text-xs">
+        {
+          el.technologies?.map((tech) => (
+            <span>
+              {tech}
+            </span>
+          ))
+        }
+      </div>
+
+      <div class="flex items-center justify-end text-2xl sm:text-base h-full">
+        <a href={el.repository} class="flex items-center gap-1 uppercase group h-full">
+          <i class="ph:github-logo-bold"></i>
+          <span class="group-hover:underline hidden sm:inline font-bold">
+            {i18n.MISC.CODE}
+          </span>
+        </a>
+        
+        {
+          el.demo && (
+            <a href={el.demo} class="ml-6 flex items-center gap-1 uppercase group h-full">
+              <i class="ph:arrow-square-out-bold"></i>
+              <span class="group-hover:underline hidden sm:inline font-bold">
+                {i18n.MISC.PREVIEW}
+              </span>
+            </a>
+          )
+        }
+      </div>
+    </article>
+  ))
+}

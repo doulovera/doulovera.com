@@ -4,6 +4,10 @@ My personal site, where I show my projects and things about me.
 
 The site was built using [🚀 Astro](https://astro.build/), using my own styles.
 
+## Tools
+
+😀 [Icônes](https://icones.js.org/) for the icons
+
 ## 📦 Deployment
 
 The deploy is in [Vercel](https://vercel.com/), at [doulovera.com](https://doulovera.com).

@@ -1,0 +1,31 @@
+---
+interface Props {
+  anchor?: boolean;
+  href?: string;
+  className?: string;
+  target?: string;
+  rel?: string;
+}
+
+const { anchor, href, className, target, rel } = Astro.props;
+
+---
+
+{
+  anchor
+    ? (
+      <a
+        href={href}
+        class={`flex items-center justify-center w-full shadow-outline ${className || ''}`}
+        target={target}
+        rel={rel}
+      >
+        <slot />
+      </a>
+    )
+    : (
+      <button>
+        <slot />
+      </button>
+    )
+}

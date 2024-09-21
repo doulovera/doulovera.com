@@ -1,0 +1,33 @@
+---
+import Work from "./work.astro";
+import { experience } from "../../constants/experience";
+
+import { getI18N } from '../../i18n';
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale });
+
+---
+
+<section class="mt-20" id="experience">
+  <h3 class="flex items-center gap-2 mb-4 uppercase font-bold text-3xl">
+    <i class="ph:suitcase-simple"></i>
+    {i18n.TITLES.EXPERIENCE}
+  </h3>
+
+  <div class="flex flex-col gap-10 mt-10">
+    {
+      experience.map((el) => (
+        <Work
+          from={el.from}
+          to={el.to}
+          company={el.company}
+          role={el.role}
+          image={el.image}
+          description={el.description}
+          isCurrent={el.isCurrent}
+          items={el.items}
+        />
+      ))
+    }
+  </div>
+</section>

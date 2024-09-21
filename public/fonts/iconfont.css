@@ -24,47 +24,99 @@ i.ph\:arrow-square-out:before {
 content: "\e001";
 }
 
-i.ph\:download-simple:before {
+i.ph\:arrow-square-out-bold:before {
 content: "\e002";
 }
 
-i.ph\:exam:before {
+i.ph\:caret-down:before {
 content: "\e003";
 }
 
-i.ph\:file-pdf:before {
+i.ph\:code:before {
 content: "\e004";
 }
 
-i.ph\:github-logo:before {
+i.ph\:code-bold:before {
 content: "\e005";
 }
 
-i.ph\:kanban:before {
+i.ph\:download-simple:before {
 content: "\e006";
 }
 
-i.ph\:linkedin-logo:before {
+i.ph\:download-simple-bold:before {
 content: "\e007";
 }
 
-i.ph\:list:before {
+i.ph\:file-pdf:before {
 content: "\e008";
 }
 
-i.ph\:note:before {
+i.ph\:file-pdf-bold:before {
 content: "\e009";
 }
 
-i.ph\:person:before {
+i.ph\:github-logo:before {
 content: "\e00a";
 }
 
-i.ph\:twitter-logo:before {
+i.ph\:github-logo-bold:before {
 content: "\e00b";
 }
 
-i.ph\:user:before {
+i.ph\:globe-simple:before {
 content: "\e00c";
+}
+
+i.ph\:globe-simple-bold:before {
+content: "\e00d";
+}
+
+i.ph\:link:before {
+content: "\e00e";
+}
+
+i.ph\:link-bold:before {
+content: "\e00f";
+}
+
+i.ph\:linkedin-logo:before {
+content: "\e010";
+}
+
+i.ph\:linkedin-logo-bold:before {
+content: "\e011";
+}
+
+i.ph\:moon:before {
+content: "\e012";
+}
+
+i.ph\:suitcase-simple:before {
+content: "\e013";
+}
+
+i.ph\:suitcase-simple-bold:before {
+content: "\e014";
+}
+
+i.ph\:sun-dim:before {
+content: "\e015";
+}
+
+i.ph\:user:before {
+content: "\e016";
+}
+
+i.ph\:user-bold:before {
+content: "\e017";
+}
+
+i.ph\:user-check:before {
+content: "\e018";
+}
+
+i.ph\:user-check-bold:before {
+content: "\e019";
 }
 

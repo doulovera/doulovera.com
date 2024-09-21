@@ -1,0 +1,46 @@
+---
+
+import { getI18N } from '../../i18n';
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale });
+
+---
+
+<section class="mt-20" id="about">
+  <h3 class="flex items-center gap-2 mb-4 uppercase font-bold text-3xl">
+    <i class="ph:user-check"></i>
+    {i18n.TITLES.ABOUT}
+  </h3>
+
+  <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+
+    <div class="order-2 md:order-1 text-base text-pretty [&>p]:mb-4">
+      <p>
+        👋 {i18n.DESCRIPTIONS.ABOUT.MY_NAME_IS}
+        <span class="bg-brand dark:bg-brand-dark font-semibold">Douglas Lovera</span>{i18n.DESCRIPTIONS.ABOUT.ALSO_CALLED}
+      </p>
+
+      <p>
+        {i18n.DESCRIPTIONS.ABOUT.PARAGRAPH_1}
+      </p>
+
+      <p>
+        {i18n.DESCRIPTIONS.ABOUT.PARAGRAPH_2}
+      </p>
+      
+      <p>
+        {i18n.DESCRIPTIONS.ABOUT.PARAGRAPH_3}
+      </p>
+      
+    </div>
+
+    <img
+      src="/assets/douglas-bg.jpg"
+      alt="Douglas Lovera smiling"
+      loading="lazy"
+      width="200"
+      height="200"
+      class="order-1 md:order-2 w-64 h-full object-cover bg-brand shadow-outline"
+    >
+  </div>
+</section>

@@ -1,0 +1,87 @@
+---
+import SocialNetwork from "../shared/social-network.astro";
+import Dropdown from "../shared/dropdown.astro";
+import { RESUME } from "../../constants/links";
+
+import { getI18N } from '../../i18n';
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale });
+
+const navbarItems = [
+  i18n.TITLES.EXPERIENCE,
+  i18n.TITLES.PROJECTS,
+  i18n.TITLES.ABOUT,
+  i18n.TITLES.CONTACT,
+]
+
+---
+
+<header class="fixed z-50 top-0 right-0 left-0 flex justify-between h-14 max-h-[56px] max-w-[768px] w-full mx-auto border-t-0 shadow-outline bg-light dark:bg-dark">
+  <SocialNetwork />
+
+  <nav class="hidden sm:flex flex-1 justify-around">
+    {
+      navbarItems.map((item) => (
+        <a
+          href={`#${item}`}
+          class="flex justify-center items-center w-auto h-full text-md uppercase font-bold text-black dark:text-white hover:underline"
+        >
+          {item}
+        </a>
+      ))
+    }
+  </nav>
+
+  <div class="flex place-content-center sm:hidden flex-1">
+    <a href={RESUME.url} class="flex justify-center items-center gap-2 w-full h-full uppercase hover:underline text-black dark:text-white">
+      <span class="hidden min-[380px]:inline text-md font-bold">
+        {RESUME.name}
+      </span>
+
+      <span class="text-2xl min-[380px]:text-xl">
+        <i class="ph:file-pdf"></i>
+      </span>
+    </a>
+  </div>
+
+  <Dropdown
+    anchors
+    label={currentLocale === 'en' ? 'English' : 'Español'}
+    options={[
+      {
+        label: 'English',
+        value: '/'
+      },
+      {
+        label: 'Español',
+        value: 'es'
+      },
+    ]}
+  />
+
+  <button
+    class="flex justify-center items-center aspect-square w-14 text-2xl text-black dark:text-white bg-light dark:bg-dark hover:bg-brand dark:hover:bg-brand-darklight"
+    id="theme-toggle"
+  >
+    <i class="ph:sun-dim"></i>
+  </button>
+</header>
+
+<script>
+  const isDefaultDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  
+  document.documentElement.setAttribute(
+    'scheme',
+    isDefaultDarkMode ? 'dark' : 'light'
+  )
+
+  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+    const scheme = document.documentElement.getAttribute('scheme')
+    const isSchemaDarkMode = scheme === 'dark'
+
+    document.documentElement.setAttribute(
+      'scheme',
+      isSchemaDarkMode ? 'light' : 'dark'
+    )
+  });
+</script>

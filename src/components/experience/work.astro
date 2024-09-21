@@ -1,0 +1,82 @@
+---
+interface Props {
+  from: Date;
+  to: Date;
+  company: string;
+  role: string;
+  description: string;
+  isCurrent: boolean;
+  image: string;
+  items?: string[];
+}
+
+import { getI18N } from '../../i18n';
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale });
+
+const { from, to, company, role, description, isCurrent, image, items } = Astro.props;
+
+const imagePath = `/assets/${image}`
+const fromYear = from.toLocaleDateString("es-ES", { year: "numeric" })
+const toYear = isCurrent
+  ? i18n.MISC.PRESENT
+  : to.toLocaleDateString("es-ES", { year: "numeric" })
+
+const totalMonths = (to.getFullYear() - from.getFullYear()) * 12 + (to.getMonth() - from.getMonth())
+
+---
+
+<article class="grid grid-cols-1 sm:grid-cols-[40%,1fr] gap-8 sm:gap-4">
+  <div>
+    <div class="flex gap-6 items-center">
+      <img
+        src={imagePath}
+        alt={`${company} Company logo`}
+        class="w-16 h-16 shadow-outline"
+      />
+      
+      <div>
+        <h4 class="font-bold text-2xl uppercase">
+          {company}
+        </h4>
+
+        <p title={`${totalMonths} Months`}>
+          {fromYear}
+          -
+          {toYear}
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div>
+    <h4 class="uppercase text-xl sm:text-2xl font-bold mb-5">
+      <span class="bg-brand dark:bg-brand-dark">
+        {role}
+      </span>
+    </h4>
+
+    <div class="mb-6">
+      {
+        description.split('\n').map((paragraph) => (
+          <p>{paragraph}</p>
+        ))
+      }
+    </div>
+
+    {
+      items && (
+        <ul class="ml-8 list-disc">
+          {
+            items.map((item) => (
+              <li>
+                {item}
+              </li>
+            ))
+          }
+        </ul>
+      )
+    }
+  </div>
+</article>
