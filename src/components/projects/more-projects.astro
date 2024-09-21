@@ -19,9 +19,11 @@ const i18n = getI18N({ currentLocale });
 const isLastElement = (index: number) => index === projects.length - 1;
 ---
 
-<p class="mb-4 uppercase text-lg font-bold">
-  {i18n.MISC.MORE_PROJECTS}
-</p>
+<h4 class="mb-4 uppercase text-lg font-bold ">
+  <span class="bg-brand dark:bg-brand-dark">
+    {i18n.MISC.MORE_PROJECTS}
+  </span>
+</h4>
 {
   projects.map((el, index) => (
     <article class={`grid grid-cols-2 sm:grid-cols-3 justify-between items-center min-h-16 px-4 ${isLastElement(index) ? 'shadow-outline' : 'shadow-outline-no-bottom'}`}>

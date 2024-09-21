@@ -13,3 +13,11 @@ export const experience = [
     ]
   },
 ];
+
+/*
+"RHINOLABS": {
+        "MAIN": "I've work with different clients, helping them with the development of their products. I've worked with different technologies like React, Node.js, Express, MongoDB, and others, both in the frontend and backend. One of the biggest companies I've worked with is myaccident.org.",
+        "ITEM_MYACCIDENT": "With MyAccident, I worked on migrating, refactoring, fixing bugs and adding new features for every workflow of the app and its team",
+        "ITEM_CLIENTS": "Also, I've helped with the development of the new product for our clients"
+      }
+*/
