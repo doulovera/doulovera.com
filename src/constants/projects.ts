@@ -27,6 +27,21 @@ const TECHNOLOGIES = {
 export const projects = [
   {
     image:
+      "https://res.cloudinary.com/dyonw3lkf/image/upload/v1743266796/portfolio_images/tkqtj6jyfg14ncqgewl9.png",
+    title: "QeepeR",
+    description:
+      "Quickly generate static or dynamic QR codes, personalize their design, and update their destinations at any time.",
+    repository: "https://github.com/doulovera/qeeper",
+    demo: "https://qeeper.doulovera.com/",
+    technologies: [
+      TECHNOLOGIES.languages.typescript,
+      TECHNOLOGIES.frameworks.react,
+      TECHNOLOGIES.frameworks.next,
+      TECHNOLOGIES.css.tailwind,
+    ],
+  },
+  {
+    image:
       "https://res.cloudinary.com/dyonw3lkf/image/upload/v1659116121/portfolio_images/msedge_7XfaNqGY5x_d42o0a.png",
     title: "Chat-App",
     description:

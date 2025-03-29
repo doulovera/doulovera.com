@@ -14,9 +14,9 @@ const { image, title, description, repository, demo, technologies } = Astro.prop
 ---
 
 <article class="flex flex-col md:flex-row space-x-0 space-y-8 md:space-x-8 md:space-y-0">
-  <div class="bg-black w-full md:w-1/2">
+  <a class="block bg-black w-full md:w-1/2" href={demo || repository} target="_blank" rel="noopener noreferrer">
     <img src={image} alt={title} class="h-56 w-full object-cover object-top border-[3px] border-brand dark:border-brand-dark" />
-  </div>
+  </a>
 
   <div class="flex flex-col justify-between w-full md:w-1/2">
 
