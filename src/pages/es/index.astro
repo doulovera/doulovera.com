@@ -1,5 +1,11 @@
 ---
-import App from '../../components/pages/index.astro'
+import PortfolioPage from "../../components/PortfolioPage.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getTranslations } from "../../i18n/translations";
+
+const t = getTranslations("es");
 ---
 
-<App />
+<BaseLayout lang="es" title={t.meta.title} description={t.meta.description}>
+  <PortfolioPage t={t} />
+</BaseLayout>

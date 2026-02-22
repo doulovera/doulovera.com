@@ -1,0 +1,41 @@
+---
+import TechPill from "../ui/TechPill.astro";
+import ProjectLinks from "../ui/ProjectLinks.astro";
+import type { FeaturedProject } from "../../i18n/types";
+
+type Props = {
+  project: FeaturedProject;
+  githubLabel: string;
+  previewLabel: string;
+};
+
+const { project, githubLabel, previewLabel } = Astro.props;
+---
+
+<article class="reveal grid gap-5 border-2 border-[var(--line)] bg-[var(--paper)] p-4 shadow-[8px_8px_0_var(--line)] md:grid-cols-[38%,1fr]">
+  <div class="group relative overflow-hidden border-2 border-[var(--line)] bg-[var(--paper-2)]">
+    <img
+      src={project.image}
+      alt={project.imageAlt}
+      loading="lazy"
+      class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+    />
+  </div>
+
+  <div class="flex flex-col justify-between">
+    <div>
+      <h3 class="text-xl font-black uppercase tracking-wide">{project.title}</h3>
+      <p class="mt-3 text-sm leading-relaxed text-[var(--muted)]">{project.description}</p>
+      <ul class="mt-4 flex flex-wrap gap-2">
+        {project.technologies.map((tech) => <TechPill label={tech} />)}
+      </ul>
+    </div>
+
+    <ProjectLinks
+      github={project.github}
+      preview={project.preview}
+      githubLabel={githubLabel}
+      previewLabel={previewLabel}
+    />
+  </div>
+</article>

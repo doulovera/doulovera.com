@@ -1,0 +1,26 @@
+---
+type Props = {
+  href: string;
+  label: string;
+  variant?: "solid" | "outline";
+  className?: string;
+};
+
+const { href, label, variant = "solid", className = "" } = Astro.props;
+const isExternal = href.startsWith("http");
+const baseClass =
+  "inline-flex items-center justify-center border-2 border-[var(--line)] px-4 py-2 text-sm font-bold uppercase tracking-wide transition duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]";
+const variantClass =
+  variant === "solid"
+    ? "bg-[var(--accent)] text-[var(--line)] shadow-[4px_4px_0_var(--line)] hover:-translate-y-0.5 hover:translate-x-0.5 hover:shadow-[2px_2px_0_var(--line)]"
+    : "bg-[var(--paper)] text-[var(--text)] shadow-[4px_4px_0_var(--line)] hover:bg-[var(--paper-2)] hover:-translate-y-0.5 hover:translate-x-0.5 hover:shadow-[2px_2px_0_var(--line)]";
+---
+
+<a
+  href={href}
+  class:list={[baseClass, variantClass, className]}
+  target={isExternal ? "_blank" : undefined}
+  rel={isExternal ? "noopener noreferrer" : undefined}
+>
+  {label}
+</a>

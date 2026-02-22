@@ -1,0 +1,27 @@
+---
+import SectionTitle from "../ui/SectionTitle.astro";
+import CompactProjectCard from "../projects/CompactProjectCard.astro";
+import type { CompactProject, CtaLabels } from "../../i18n/types";
+
+type Props = {
+  title: string;
+  projects: CompactProject[];
+  labels: CtaLabels;
+};
+
+const { title, projects, labels } = Astro.props;
+---
+
+<section class="mt-24" aria-labelledby="more-projects">
+  <SectionTitle id="more-projects" title={title} />
+
+  <div class="mt-7 grid gap-5 md:grid-cols-2">
+    {projects.map((project) => (
+      <CompactProjectCard
+        project={project}
+        githubLabel={labels.github}
+        previewLabel={labels.preview}
+      />
+    ))}
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import SectionTitle from "../ui/SectionTitle.astro";
+import type { ExperienceItem } from "../../i18n/types";
+
+type Props = {
+  title: string;
+  items: ExperienceItem[];
+};
+
+const { title, items } = Astro.props;
+---
+
+<section class="mt-24" aria-labelledby="experience">
+  <SectionTitle id="experience" title={title} />
+
+  <div class="mt-7 space-y-6">
+    {items.map((item) => (
+      <article class="reveal grid gap-5 border-2 border-[var(--line)] bg-[var(--paper)] p-5 shadow-[8px_8px_0_var(--line)] md:grid-cols-[34%,1fr]">
+        <div class="border-2 border-[var(--line)] bg-[var(--paper-2)] p-4">
+          <p class="text-xs font-black uppercase tracking-[0.2em] text-[var(--accent)]">{item.company}</p>
+          <h3 class="mt-2 text-lg font-black uppercase leading-tight">{item.role}</h3>
+          <p class="mt-2 text-xs uppercase tracking-[0.16em] text-[var(--muted)]">{item.time}</p>
+        </div>
+
+        <p class="text-sm leading-relaxed text-[var(--muted)] sm:text-base">{item.description}</p>
+      </article>
+    ))}
+  </div>
+</section>

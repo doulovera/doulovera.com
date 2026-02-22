@@ -1,0 +1,42 @@
+---
+import NeoButton from "../ui/NeoButton.astro";
+import type { CtaLabels, MainContent, SocialLinks } from "../../i18n/types";
+
+type Props = {
+  content: MainContent;
+  labels: CtaLabels;
+  links: SocialLinks;
+};
+
+const { content, labels, links } = Astro.props;
+---
+
+<section id="main" class="grid gap-8 pt-10 sm:grid-cols-[1.15fr,0.85fr] sm:items-center sm:pt-16">
+  <div class="reveal order-2 sm:order-1">
+    <p class="mb-4 inline-block border-2 border-[var(--line)] bg-[var(--paper)] px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-[var(--accent)] shadow-[4px_4px_0_var(--line)]">
+      {content.eyebrow}
+    </p>
+    <h1 class="font-display text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-6xl">
+      {content.name}
+    </h1>
+    <p class="mt-5 max-w-xl text-base leading-relaxed text-[var(--muted)] sm:text-lg">
+      {content.description}
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <NeoButton href={links.resume} label={labels.resume} variant="solid" />
+      <NeoButton href={links.github} label={labels.github} variant="outline" />
+      <NeoButton href={links.linkedin} label={labels.linkedin} variant="outline" />
+    </div>
+  </div>
+
+  <div class="reveal order-1 sm:order-2">
+    <div class="relative mx-auto w-full max-w-sm rotate-2 border-2 border-[var(--line)] bg-[var(--paper)] p-2 shadow-[10px_10px_0_var(--line)] sm:mx-0">
+      <img
+        src={content.image}
+        alt={content.imageAlt}
+        class="aspect-[4/5] w-full -rotate-2 border-2 border-[var(--line)] object-cover"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+---
+import NeoButton from "../ui/NeoButton.astro";
+import type { CtaLabels, SocialLinks } from "../../i18n/types";
+
+type Props = {
+  links: SocialLinks;
+  labels: CtaLabels;
+  note: string;
+};
+
+const { links, labels, note } = Astro.props;
+---
+
+<footer class="mt-24 border-t-2 border-[var(--line)] py-8">
+  <div class="reveal flex flex-wrap items-center justify-center gap-3">
+    <NeoButton href={links.resume} label={labels.resume} variant="outline" />
+    <NeoButton href={links.github} label={labels.github} variant="outline" />
+    <NeoButton href={links.linkedin} label={labels.linkedin} variant="outline" />
+  </div>
+  <p class="mt-4 text-center text-xs uppercase tracking-[0.2em] text-[var(--muted)]">{note}</p>
+</footer>

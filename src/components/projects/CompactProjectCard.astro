@@ -1,0 +1,26 @@
+---
+import TechPill from "../ui/TechPill.astro";
+import ProjectLinks from "../ui/ProjectLinks.astro";
+import type { CompactProject } from "../../i18n/types";
+
+type Props = {
+  project: CompactProject;
+  githubLabel: string;
+  previewLabel: string;
+};
+
+const { project, githubLabel, previewLabel } = Astro.props;
+---
+
+<article class="reveal border-2 border-[var(--line)] bg-[var(--paper)] p-4 shadow-[6px_6px_0_var(--line)]">
+  <h3 class="text-base font-black uppercase tracking-wide">{project.title}</h3>
+  <ul class="mt-3 flex flex-wrap gap-2">
+    {project.technologies.map((tech) => <TechPill label={tech} />)}
+  </ul>
+  <ProjectLinks
+    github={project.github}
+    preview={project.preview}
+    githubLabel={githubLabel}
+    previewLabel={previewLabel}
+  />
+</article>

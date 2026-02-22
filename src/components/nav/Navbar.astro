@@ -1,0 +1,28 @@
+---
+import type { Locale, NavLabels } from "../../i18n/types";
+
+type Props = {
+  locale: Locale;
+  labels: NavLabels;
+};
+
+const { locale, labels } = Astro.props;
+const isEnglish = locale === "en";
+---
+
+<header class="sticky top-0 z-50 border-y-2 border-[var(--line)] bg-[color:rgb(11_13_15_/_0.88)] backdrop-blur">
+  <div class="mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-5 px-4 sm:px-6">
+    <nav aria-label="In-page navigation" class="flex items-center gap-3 overflow-x-auto text-xs font-bold uppercase tracking-[0.12em] sm:text-sm">
+      <a href="#main" class="nav-link">{labels.main}</a>
+      <a href="#experience" class="nav-link">{labels.experience}</a>
+      <a href="#projects" class="nav-link">{labels.projects}</a>
+      <a href="#more-projects" class="nav-link">{labels.moreProjects}</a>
+      <a href="#about" class="nav-link">{labels.about}</a>
+    </nav>
+
+    <div class="flex items-center gap-2 border-2 border-[var(--line)] bg-[var(--paper)] p-1 text-xs font-bold uppercase shadow-[3px_3px_0_var(--line)]">
+      <a href="/" class:list={["px-2 py-1", isEnglish && "bg-[var(--accent)] text-[var(--line)]"]}>EN</a>
+      <a href="/es" class:list={["px-2 py-1", !isEnglish && "bg-[var(--accent)] text-[var(--line)]"]}>ES</a>
+    </div>
+  </div>
+</header>

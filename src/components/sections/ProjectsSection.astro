@@ -1,0 +1,28 @@
+---
+import SectionTitle from "../ui/SectionTitle.astro";
+import FeaturedProjectCard from "../projects/FeaturedProjectCard.astro";
+import type { CtaLabels, FeaturedProject } from "../../i18n/types";
+
+type Props = {
+  title: string;
+  projects: FeaturedProject[];
+  labels: CtaLabels;
+};
+
+const { title, projects, labels } = Astro.props;
+const featured = projects.slice(0, 2);
+---
+
+<section class="mt-24" aria-labelledby="projects">
+  <SectionTitle id="projects" title={title} />
+
+  <div class="mt-7 space-y-6">
+    {featured.map((project) => (
+      <FeaturedProjectCard
+        project={project}
+        githubLabel={labels.github}
+        previewLabel={labels.preview}
+      />
+    ))}
+  </div>
+</section>

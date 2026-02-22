@@ -1,0 +1,17 @@
+---
+import NeoButton from "./NeoButton.astro";
+
+type Props = {
+  github?: string;
+  preview?: string;
+  githubLabel: string;
+  previewLabel: string;
+};
+
+const { github, preview, githubLabel, previewLabel } = Astro.props;
+---
+
+<div class="mt-4 flex flex-wrap gap-3">
+  {github && <NeoButton href={github} label={githubLabel} variant="outline" className="text-xs" />}
+  {preview && <NeoButton href={preview} label={previewLabel} variant="solid" className="text-xs" />}
+</div>

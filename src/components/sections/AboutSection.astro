@@ -1,0 +1,33 @@
+---
+import SectionTitle from "../ui/SectionTitle.astro";
+import type { AboutContent } from "../../i18n/types";
+
+type Props = {
+  content: AboutContent;
+};
+
+const { content } = Astro.props;
+---
+
+<section class="mt-24" aria-labelledby="about">
+  <SectionTitle id="about" title={content.title} />
+
+  <div class="mt-7 grid gap-7 border-2 border-[var(--line)] bg-[var(--paper)] p-5 shadow-[8px_8px_0_var(--line)] md:grid-cols-[1.2fr,0.8fr] md:items-stretch">
+    <div class="reveal order-2 space-y-4 md:order-1">
+      {content.paragraphs.map((paragraph) => (
+        <p class="text-sm leading-relaxed text-[var(--muted)] sm:text-base">{paragraph}</p>
+      ))}
+    </div>
+
+    <div class="reveal order-1 md:order-2">
+      <div class="h-full rotate-1 border-2 border-[var(--line)] bg-[var(--paper-2)] p-2 shadow-[6px_6px_0_var(--line)]">
+        <img
+          src={content.image}
+          alt={content.imageAlt}
+          class="h-full max-h-[28rem] w-full -rotate-1 border-2 border-[var(--line)] object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>

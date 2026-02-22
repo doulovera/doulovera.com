@@ -1,0 +1,14 @@
+---
+type Props = {
+  id: string;
+  title: string;
+};
+
+const { id, title } = Astro.props;
+---
+
+<h2 id={id} class="section-anchor reveal text-2xl font-black uppercase tracking-wide sm:text-3xl">
+  <span class="inline-block border-2 border-[var(--line)] bg-[var(--paper-2)] px-4 py-2 shadow-[5px_5px_0_var(--line)]">
+    {title}
+  </span>
+</h2>
