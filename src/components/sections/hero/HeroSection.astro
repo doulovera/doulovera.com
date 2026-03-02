@@ -1,0 +1,46 @@
+---
+import type { HeroData } from "../../../data/portfolio";
+import ButtonLink from "../../ui/ButtonLink.astro";
+import SurfaceCard from "../../ui/SurfaceCard.astro";
+
+const { badge, name, title, description, portrait, actions } = Astro.props as HeroData;
+---
+
+<section id="home" class="grid lg:min-h-150 gap-8 lg:grid-cols-[1.20fr_0.80fr]">
+  <SurfaceCard
+    as="article"
+    strong={true}
+    className="flex min-h-120 flex-col justify-center p-6 md:p-10"
+  >
+    {badge && (
+      <p class="relative z-10 inline-flex w-fit items-center gap-3 rounded-[0.8rem] border border-[rgba(152,255,218,0.2)] bg-[rgba(152,255,218,0.05)] px-3 py-2 font-(--accent-font) text-[0.7rem] uppercase tracking-[0.06em] text-(--mint)">
+        <span class="h-2 w-2 rounded-full bg-(--ember) shadow-[0_0_12px_rgba(255,141,107,0.35)]"></span>
+        {badge}
+      </p>
+    )}
+    <div class="relative z-10 mt-6 grid gap-3">
+      <p class="font-(--accent-font) text-[0.78rem] uppercase tracking-[0.08em] text-(--muted)">
+        {title}
+      </p>
+      <h1 class="max-w-[10ch] text-[clamp(4rem,10vw,7.6rem)] leading-[0.88] font-bold uppercase text-(--chrome)">
+        {name}
+      </h1>
+    </div>
+    <p class="relative z-10 mt-4 max-w-148 text-[1.08rem] text-(--muted)">
+      {description}
+    </p>
+    <div class="relative z-10 mt-8 flex flex-wrap gap-3">
+      {actions.map((action, index) => (
+        <ButtonLink
+          href={action.href}
+          label={action.label}
+          variant={index === 0 ? "primary" : "ghost"}
+        />
+      ))}
+    </div>
+  </SurfaceCard>
+
+  <SurfaceCard as="article" className="min-h-120 p-0">
+    <img class="relative z-10 h-full w-full object-cover" src={portrait} alt="Portrait placeholder" loading="eager" />
+  </SurfaceCard>
+</section>

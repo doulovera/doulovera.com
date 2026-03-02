@@ -1,0 +1,28 @@
+---
+import type { ExperienceEntry } from "../../../data/portfolio";
+import SurfaceCard from "../../ui/SurfaceCard.astro";
+
+interface Props {
+  item: ExperienceEntry;
+}
+
+const { item } = Astro.props;
+---
+
+<SurfaceCard
+  as="article"
+  className="grid gap-6 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-[rgba(152,255,218,0.2)] hover:bg-[linear-gradient(180deg,rgba(152,255,218,0.05),transparent_30%),var(--panel)] md:grid-cols-[minmax(220px,0.9fr)_minmax(0,1.3fr)] md:p-8"
+>
+  <div class="relative z-10">
+    <p class="text-2xl font-bold uppercase tracking-[0.02em] text-(--chrome) md:text-[1.5rem]">
+      {item.company}
+    </p>
+    <p class="mt-1 text-base font-semibold text-(--text)">{item.role}</p>
+    <p class="mt-2 font-(--accent-font) text-[0.72rem] uppercase tracking-[0.08em] text-(--mint)">
+      {item.period}
+    </p>
+  </div>
+  <div class="relative z-10">
+    <p class="text-(--muted)">{item.description}</p>
+  </div>
+</SurfaceCard>

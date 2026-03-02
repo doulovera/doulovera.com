@@ -1,0 +1,30 @@
+---
+import type { NavItem } from "../../data/portfolio";
+
+interface Props {
+  items: NavItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<header class="sticky top-4 z-30 mx-auto mt-4 flex w-fit max-w-[calc(100vw-2rem)] items-center justify-between gap-4 rounded-full border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.015)),rgba(10,16,16,0.72)] px-4 py-3 shadow-[var(--shadow)] backdrop-blur-[20px] before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:content-[''] after:pointer-events-none after:absolute after:inset-0 after:rounded-full after:border after:border-transparent after:bg-[linear-gradient(90deg,rgba(152,255,218,0.2),rgba(255,141,107,0.12),rgba(152,255,218,0.2))] after:[mask-composite:exclude] after:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] after:p-px">
+  <a class="relative z-10 inline-flex items-center gap-3 font-[var(--display-font)] text-base font-bold uppercase tracking-[0.12em] text-[var(--chrome)]" href="#home" aria-label="Go to top">
+    <span class="h-3 w-3 rounded-full bg-linear-to-br from-[var(--mint)] to-[var(--ember)] shadow-[0_0_0_5px_rgba(152,255,218,0.08),0_0_24px_rgba(152,255,218,0.24)]"></span>
+    <span>/doulovera</span>
+  </a>
+  <nav class="relative z-10" aria-label="Section navigation">
+    <ul class="flex flex-wrap items-center justify-center gap-1">
+      {items.map((item) => (
+        <li>
+          <a
+            class="inline-flex min-h-10 items-center justify-center rounded-full px-4 py-2 font-[var(--accent-font)] text-[0.72rem] uppercase tracking-[0.08em] text-[var(--muted)] transition hover:bg-[rgba(152,255,218,0.07)] hover:text-[var(--text)]"
+            href={item.href}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>

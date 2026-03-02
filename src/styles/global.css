@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Rajdhani:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg: #09100f;
+  --bg-deep: #050909;
+  --panel: rgba(14, 23, 22, 0.78);
+  --panel-strong: rgba(19, 30, 29, 0.9);
+  --line: rgba(152, 255, 218, 0.14);
+  --line-strong: rgba(152, 255, 218, 0.38);
+  --text: #edf4f2;
+  --muted: #93a59f;
+  --mint: #98ffda;
+  --mint-deep: #5dd7b0;
+  --ember: #ff8d6b;
+  --chrome: #dce4e2;
+  --shadow: 0 32px 80px rgba(0, 0, 0, 0.35);
+  --body-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display-font: "Rajdhani", sans-serif;
+  --accent-font: "DM Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(152, 255, 218, 0.12), transparent 22%),
+    radial-gradient(circle at 88% 10%, rgba(255, 141, 107, 0.1), transparent 20%),
+    linear-gradient(180deg, rgba(152, 255, 218, 0.04), transparent 18%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+  color: var(--text);
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 88px 88px;
+  mask-image: radial-gradient(circle at center, black 42%, transparent 86%);
+  opacity: 0.28;
+}
+
+body::after {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(152, 255, 218, 0.08), transparent 30%),
+    radial-gradient(circle at 80% 12%, rgba(255, 141, 107, 0.07), transparent 28%);
+  filter: blur(60px);
+  animation: atmosphere-drift 18s ease-in-out infinite alternate;
+}
+
+::selection {
+  background: var(--mint);
+  color: var(--bg);
+}
+
+.site-shell {
+  position: relative;
+  overflow: clip;
+}
+
+.site-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(152, 255, 218, 0.05), transparent 34%),
+    linear-gradient(90deg, transparent 0, rgba(152, 255, 218, 0.025) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+@keyframes atmosphere-drift {
+  from {
+    transform: translate3d(-1%, -1%, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(1.5%, 1%, 0) scale(1.04);
+  }
+}
+
+@keyframes panel-scan {
+  from {
+    transform: translateX(-8%);
+    opacity: 0;
+  }
+
+  18%,
+  82% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(8%);
+    opacity: 0;
+  }
+}
+
+@keyframes sheen-drift {
+  from {
+    background-position: 0% 0%, 0 0;
+  }
+
+  to {
+    background-position: 100% 100%, 0 0;
+  }
+}

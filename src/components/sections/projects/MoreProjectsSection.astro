@@ -1,0 +1,16 @@
+---
+import type { MoreProjectsSectionData } from "../../../data/portfolio";
+import SectionHeading from "../../ui/SectionHeading.astro";
+import MoreProjectCard from "./MoreProjectCard.astro";
+
+const { title, intro, items } = Astro.props as MoreProjectsSectionData;
+---
+
+<section id="more-projects" class="grid gap-8">
+  <SectionHeading title={title} intro={intro} />
+  <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    {items.map((project) => (
+      <MoreProjectCard project={project} />
+    ))}
+  </div>
+</section>

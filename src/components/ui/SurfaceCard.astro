@@ -1,0 +1,25 @@
+---
+interface Props {
+  as?: "div" | "article" | "section";
+  className?: string;
+  strong?: boolean;
+}
+
+const { as: Tag = "div", className = "", strong = false } = Astro.props;
+
+const surfaceClass = [
+  "relative overflow-hidden rounded-[2rem] border border-white/10 shadow-[var(--shadow)] backdrop-blur-[18px]",
+  "before:pointer-events-none before:absolute before:inset-4 before:rounded-[1.45rem] before:content-['']",
+  "after:pointer-events-none after:absolute after:inset-x-[-15%] after:bottom-0 after:h-px after:bg-[linear-gradient(90deg,transparent,rgba(152,255,218,0.2),transparent)] after:content-[''] after:[animation:panel-scan_9s_linear_infinite]",
+  strong
+    ? "bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02)),linear-gradient(135deg,rgba(152,255,218,0.04),transparent_38%),var(--panel-strong)]"
+    : "bg-[linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.015)),linear-gradient(135deg,rgba(152,255,218,0.035),transparent_38%),var(--panel)]",
+  className
+]
+  .filter(Boolean)
+  .join(" ");
+---
+
+<Tag class={surfaceClass}>
+  <slot />
+</Tag>

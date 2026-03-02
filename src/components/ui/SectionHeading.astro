@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  intro?: string;
+  className?: string;
+}
+
+const { title, intro, className = "" } = Astro.props;
+---
+
+<div class={`grid max-w-[40rem] gap-2 ${className}`.trim()}>
+  <h2 class="font-[var(--display-font)] text-[clamp(1.9rem,3.8vw,2.8rem)] leading-[0.96] font-bold uppercase tracking-[0.02em] text-[var(--chrome)]">
+    {title}
+  </h2>
+  {intro && <p class="text-[var(--muted)]">{intro}</p>}
+</div>

@@ -1,0 +1,30 @@
+---
+import type { AboutSectionData } from "../../../data/portfolio";
+import MediaCard from "../../ui/MediaCard.astro";
+import SectionHeading from "../../ui/SectionHeading.astro";
+import SurfaceCard from "../../ui/SurfaceCard.astro";
+
+const { title, description, detail, portrait } = Astro.props as AboutSectionData;
+---
+
+<section id="about" class="grid gap-8">
+  <SectionHeading title={title} />
+  <SurfaceCard strong={true} className="p-0">
+    <div class="relative z-10 grid items-stretch lg:grid-cols-[minmax(0,1.05fr)_minmax(300px,0.85fr)]">
+      <div class="grid gap-4 p-6 md:p-12">
+        <p class="text-[var(--muted)]">{description}</p>
+        <p class="text-[var(--muted)]">{detail}</p>
+      </div>
+      <div class="border-t border-white/10 lg:border-t-0 lg:border-l">
+        <MediaCard
+          src={portrait}
+          alt="Secondary portrait placeholder"
+          label="Secondary portrait"
+          ratio="portrait"
+          className="h-full rounded-none border-0 shadow-none"
+          imageClassName="grayscale brightness-90"
+        />
+      </div>
+    </div>
+  </SurfaceCard>
+</section>

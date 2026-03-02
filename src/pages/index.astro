@@ -1,5 +1,23 @@
 ---
-import App from '../components/pages/index.astro'
+import Footer from "../components/layout/Footer.astro";
+import Navbar from "../components/layout/Navbar.astro";
+import AboutSection from "../components/sections/about/AboutSection.astro";
+import ExperienceSection from "../components/sections/experience/ExperienceSection.astro";
+import HeroSection from "../components/sections/hero/HeroSection.astro";
+import FeaturedProjectsSection from "../components/sections/projects/FeaturedProjectsSection.astro";
+import MoreProjectsSection from "../components/sections/projects/MoreProjectsSection.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { portfolioData } from "../data/portfolio";
 ---
 
-<App />
+<BaseLayout title={portfolioData.meta.title} description={portfolioData.meta.description}>
+  <Navbar items={portfolioData.navigation} />
+  <main class="mx-auto grid w-full max-w-290 gap-12 px-4 py-4 pb-16">
+    <HeroSection {...portfolioData.hero} />
+    <ExperienceSection {...portfolioData.experience} />
+    <FeaturedProjectsSection {...portfolioData.featuredProjects} />
+    <MoreProjectsSection {...portfolioData.moreProjects} />
+    <AboutSection {...portfolioData.about} />
+  </main>
+  <Footer {...portfolioData.footer} />
+</BaseLayout>
