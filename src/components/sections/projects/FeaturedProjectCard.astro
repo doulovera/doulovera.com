@@ -10,16 +10,35 @@ interface Props {
 }
 
 const { project, reverse = false } = Astro.props;
+const mediaHref = project.previewUrl ?? project.githubUrl;
+const isExternalMediaLink = mediaHref?.startsWith("http") ?? false;
 ---
 
 <article class="grid items-center gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)]">
   <div class={reverse ? "lg:order-2" : ""}>
-    <MediaCard
-      src={project.image}
-      alt={`${project.title} preview`}
-      ratio="landscape"
-      className="rounded-[2rem]"
-    />
+    {mediaHref ? (
+      <a
+        aria-label={`Open ${project.title}`}
+        class="group block rounded-[2rem] focus:outline-none"
+        href={mediaHref}
+        target={isExternalMediaLink ? "_blank" : undefined}
+        rel={isExternalMediaLink ? "noreferrer" : undefined}
+      >
+        <MediaCard
+          src={project.image}
+          alt={`${project.title} preview`}
+          ratio="landscape"
+          className="rounded-[2rem] transition duration-200 group-hover:-translate-y-0.5 group-hover:border-[color:rgba(152,255,218,0.22)] group-focus-visible:-translate-y-0.5 group-focus-visible:border-[color:rgba(152,255,218,0.22)]"
+        />
+      </a>
+    ) : (
+      <MediaCard
+        src={project.image}
+        alt={`${project.title} preview`}
+        ratio="landscape"
+        className="rounded-[2rem]"
+      />
+    )}
   </div>
 
   <div class={`grid gap-5 ${reverse ? "lg:order-1" : ""}`}>
