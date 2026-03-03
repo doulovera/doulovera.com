@@ -7,11 +7,13 @@ import HeroSection from "../components/sections/hero/HeroSection.astro";
 import FeaturedProjectsSection from "../components/sections/projects/FeaturedProjectsSection.astro";
 import MoreProjectsSection from "../components/sections/projects/MoreProjectsSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { portfolioData } from "../data/portfolio";
+import { getPortfolioData } from "../data/portfolio";
+
+const portfolioData = getPortfolioData("en");
 ---
 
-<BaseLayout title={portfolioData.meta.title} description={portfolioData.meta.description}>
-  <Navbar items={portfolioData.navigation} />
+<BaseLayout title={portfolioData.meta.title} description={portfolioData.meta.description} lang="en">
+  <Navbar items={portfolioData.navigation} localeLink={{ label: "ES", href: "/es" }} />
   <main class="mx-auto grid w-full max-w-290 gap-12 px-4 py-4 pb-16">
     <HeroSection {...portfolioData.hero} />
     <ExperienceSection {...portfolioData.experience} />

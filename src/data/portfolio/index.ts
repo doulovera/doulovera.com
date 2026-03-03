@@ -1,4 +1,5 @@
 export { about } from "./about";
+export { portfolioDataEs } from "./es";
 export { experience } from "./experience";
 export { footer } from "./footer";
 export { hero } from "./hero";
@@ -17,12 +18,14 @@ export type {
   HeroData,
   MoreProjectsSectionData,
   NavItem,
+  PortfolioData,
   PortfolioMeta,
   ProjectEntry,
   RedirectLink
 } from "./types";
 
 import { about } from "./about";
+import { portfolioDataEs } from "./es";
 import { experience } from "./experience";
 import { footer } from "./footer";
 import { hero } from "./hero";
@@ -30,6 +33,7 @@ import { meta } from "./meta";
 import { navigation } from "./navigation";
 import { featuredProjects, moreProjects } from "./projects";
 import { redirects } from "./redirects";
+import type { PortfolioData } from "./types";
 
 export const portfolioData = {
   meta,
@@ -41,4 +45,14 @@ export const portfolioData = {
   about,
   footer,
   redirects
-} as const;
+} as const satisfies PortfolioData;
+
+export type SupportedLocale = "en" | "es";
+
+export function getPortfolioData(locale: SupportedLocale = "en"): PortfolioData {
+  if (locale === "es") {
+    return portfolioDataEs;
+  }
+
+  return portfolioData;
+}

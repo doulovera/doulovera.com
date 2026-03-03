@@ -70,6 +70,7 @@ export interface AboutSectionData {
 }
 
 export interface FooterData {
+  heading: string;
   note: string;
   actions: ActionLink[];
 }
@@ -77,4 +78,16 @@ export interface FooterData {
 export interface PortfolioMeta {
   title: string;
   description: string;
+}
+
+export interface PortfolioData {
+  meta: PortfolioMeta;
+  navigation: NavItem[];
+  hero: HeroData;
+  experience: ExperienceSectionData;
+  featuredProjects: FeaturedProjectsSectionData;
+  moreProjects: MoreProjectsSectionData;
+  about: AboutSectionData;
+  footer: FooterData;
+  redirects: RedirectLink[];
 }
