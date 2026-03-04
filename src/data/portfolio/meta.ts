@@ -1,7 +1,9 @@
 import type { PortfolioMeta } from "./types";
+import type { SupportedLocale } from "./texts";
+import { portfolioTexts } from "./texts";
 
-export const meta: PortfolioMeta = {
-  title: "Douglas Lovera - Developer",
-  description:
-    "Developer passionate about programming and improving lives through technology. I like learning new things that can help me to improve my skills and knowledge"
-};
+export function getMeta(locale: SupportedLocale): PortfolioMeta {
+  return { ...portfolioTexts[locale].meta };
+}
+
+export const meta: PortfolioMeta = getMeta("en");

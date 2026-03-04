@@ -1,14 +1,16 @@
 import type { AboutSectionData } from "./types";
+import { profileAssets } from "./shared";
+import type { SupportedLocale } from "./texts";
+import { portfolioTexts } from "./texts";
 
-export const about: AboutSectionData = {
-  title: "About Me",
-  description:
-    `👋 My name is Douglas Lovera...
+export function getAbout(locale: SupportedLocale): AboutSectionData {
+  const texts = portfolioTexts[locale].about;
 
-I've been working professionally in programming since 2021, but my passion began when I was 14 years old, creating Discord bots and websites for my friends and myself.
+  return {
+    title: texts.title,
+    description: texts.description,
+    portrait: profileAssets.aboutPortrait
+  };
+}
 
-My motivation is to create products that creates value and keep up with the advancement of new technologies. I enjoy contributing to projects that improve people's lives.
-
-Regarding my personal and professional interests, I read books on various topics; my favorite author is Julio Ramón Ribeyro. I also like to attend cultural and tech events in my city. Professionally, I spend a significant part of my day integrating and improving features at work and developing my personal projects.`,
-  portrait: "/assets/about-portrait.jpg"
-};
+export const about: AboutSectionData = getAbout("en");

@@ -7,6 +7,7 @@ export { meta } from "./meta";
 export { navigation } from "./navigation";
 export { featuredProjects, moreProjects } from "./projects";
 export { redirects } from "./redirects";
+export type { SupportedLocale } from "./texts";
 export type {
   AboutSectionData,
   ActionLink,
@@ -33,6 +34,7 @@ import { meta } from "./meta";
 import { navigation } from "./navigation";
 import { featuredProjects, moreProjects } from "./projects";
 import { redirects } from "./redirects";
+import type { SupportedLocale } from "./texts";
 import type { PortfolioData } from "./types";
 
 export const portfolioData = {
@@ -46,8 +48,6 @@ export const portfolioData = {
   footer,
   redirects
 } as const satisfies PortfolioData;
-
-export type SupportedLocale = "en" | "es";
 
 export function getPortfolioData(locale: SupportedLocale = "en"): PortfolioData {
   if (locale === "es") {

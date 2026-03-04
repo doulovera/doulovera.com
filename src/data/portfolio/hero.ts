@@ -1,14 +1,22 @@
 import type { HeroData } from "./types";
+import { profileAssets, profileIdentity, profileLinks } from "./shared";
+import type { SupportedLocale } from "./texts";
+import { portfolioTexts } from "./texts";
 
-export const hero: HeroData = {
-  name: "Douglas Lovera",
-  title: "Full Stack Developer & Notion Campus Leader",
-  description:
-    "I love creating new things and be part of the change contributing to it. Passionate to programming and development.",
-  portrait: "/assets/portrait.jpg",
-  actions: [
-    { label: "Resume", href: "/resume" },
-    { label: "GitHub", href: "https://github.com/doulovera" },
-    { label: "LinkedIn", href: "https://linkedin.com/in/douglaslovera" }
-  ]
-};
+export function getHero(locale: SupportedLocale): HeroData {
+  const texts = portfolioTexts[locale].hero;
+
+  return {
+    name: profileIdentity.name,
+    title: texts.title,
+    description: texts.description,
+    portrait: profileAssets.heroPortrait,
+    actions: [
+      { label: texts.actions.resume, href: profileLinks.resume },
+      { label: texts.actions.github, href: profileLinks.github },
+      { label: texts.actions.linkedin, href: profileLinks.linkedin }
+    ]
+  };
+}
+
+export const hero: HeroData = getHero("en");
