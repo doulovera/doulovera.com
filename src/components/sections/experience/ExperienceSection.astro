@@ -1,0 +1,16 @@
+---
+import type { ExperienceSectionData } from "../../../data/portfolio";
+import SectionHeading from "../../ui/SectionHeading.astro";
+import ExperienceItem from "./ExperienceItem.astro";
+
+const { title, intro, items } = Astro.props as ExperienceSectionData;
+---
+
+<section id="experience" class="grid gap-8">
+  <SectionHeading title={title} intro={intro} />
+  <div class="grid gap-4">
+    {items.map((item) => (
+      <ExperienceItem item={item} />
+    ))}
+  </div>
+</section>

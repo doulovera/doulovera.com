@@ -1,0 +1,33 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  label?: string;
+  ratio?: "portrait" | "landscape";
+  className?: string;
+  imageClassName?: string;
+}
+
+const {
+  src,
+  alt,
+  label,
+  ratio = "portrait",
+  className = "",
+  imageClassName = ""
+} = Astro.props;
+
+const ratioClass = ratio === "portrait" ? "aspect-[4/5]" : "aspect-[16/10]";
+---
+
+<figure
+  class={`relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),transparent_22%),linear-gradient(135deg,rgba(152,255,218,0.04),transparent_40%),var(--panel-strong)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.03)] ${ratioClass} ${className}`.trim()}
+>
+  <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,transparent_0_35%,rgba(152,255,218,0.08)_50%,transparent_65%),linear-gradient(180deg,rgba(255,255,255,0.03),transparent_20%)] bg-[length:220%_220%,100%_100%] [animation:sheen-drift_14s_ease-in-out_infinite]"></div>
+  <img class={`h-full w-full object-cover ${imageClassName}`.trim()} src={src} alt={alt} loading="lazy" />
+  {label && (
+    <figcaption class="absolute bottom-4 left-4 rounded-full border border-white/10 bg-[rgba(8,14,14,0.78)] px-3 py-2 font-[var(--accent-font)] text-[0.66rem] uppercase tracking-[0.06em] text-[var(--mint)]">
+      {label}
+    </figcaption>
+  )}
+</figure>

@@ -1,0 +1,33 @@
+---
+import { redirects } from "../data/portfolio/redirects";
+
+export function getStaticPaths() {
+  return redirects.map((redirect) => ({
+    params: { slug: redirect.slug },
+    props: redirect
+  }));
+}
+
+const { slug, to } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Redirecting...</title>
+    <link rel="canonical" href={to} />
+    <meta http-equiv="refresh" content={`0;url=${to}`} />
+  </head>
+  <body>
+    <p>
+      Redirecting from <code>/{slug}</code> to <a href={to}>{to}</a>.
+    </p>
+
+    <script is:inline define:vars={{ to }}>
+      window.location.replace(to);
+    </script>
+  </body>
+</html>

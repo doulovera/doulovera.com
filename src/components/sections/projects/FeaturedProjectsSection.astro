@@ -1,0 +1,16 @@
+---
+import type { FeaturedProjectsSectionData } from "../../../data/portfolio";
+import SectionHeading from "../../ui/SectionHeading.astro";
+import FeaturedProjectCard from "./FeaturedProjectCard.astro";
+
+const { title, intro, items } = Astro.props as FeaturedProjectsSectionData;
+---
+
+<section id="projects" class="grid gap-8">
+  <SectionHeading title={title} intro={intro} />
+  <div class="grid gap-16">
+    {items.slice(0, 2).map((project, index) => (
+      <FeaturedProjectCard project={project} reverse={index % 2 === 1} />
+    ))}
+  </div>
+</section>
