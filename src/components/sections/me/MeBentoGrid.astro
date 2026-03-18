@@ -1,0 +1,109 @@
+---
+import type { MeLinkCard, MePageData } from "../../../data/portfolio";
+import PlatformIcon from "../../ui/PlatformIcon.astro";
+import MeBentoCard from "./MeBentoCard.astro";
+
+const { title, subtitle, portrait, links } = Astro.props as MePageData;
+
+function getDelay(index: number) {
+  return `animation-delay:${120 + index * 80}ms;`;
+}
+
+interface LinkCardView {
+  data: MeLinkCard;
+  className: string;
+  tone: string;
+  eyebrow: string;
+}
+
+const linkCards: LinkCardView[] = [
+  {
+    data: links.github,
+    className: "col-start-1 row-start-2 md:col-start-3 md:row-start-1",
+    tone: "text-(--chrome)",
+    eyebrow: "@doulovera"
+  },
+  {
+    data: links.linkedin,
+    className: "col-start-2 row-start-2 md:col-start-4 md:row-start-1",
+    tone: "text-sky-200",
+    eyebrow: "/in/douglaslovera"
+  },
+  {
+    data: links.site,
+    className: "col-start-1 row-start-3 md:col-start-3 md:row-start-2",
+    tone: "text-(--mint)",
+    eyebrow: "Home"
+  },
+  {
+    data: links.instagram,
+    className: "col-start-2 row-start-3 md:col-start-4 md:row-start-2",
+    tone: "text-(--ember)",
+    eyebrow: "@doulovera"
+  }
+];
+---
+
+<section
+  aria-label="Douglas Lovera bento profile"
+  class="grid w-full min-h-[calc(100svh-2rem)] grid-cols-2 grid-rows-[minmax(0,1.55fr)_repeat(2,minmax(0,1fr))] gap-4 md:min-h-[min(42rem,calc(100vh-3rem))] md:grid-cols-4 md:grid-rows-2"
+>
+  <MeBentoCard className="col-span-2 row-span-1 p-5 md:col-span-2 md:row-span-2 md:p-8" style={getDelay(0)}>
+    <div class="flex h-full flex-col justify-between gap-5">
+      <!-- <div class="flex items-center gap-2 font-(--accent-font) text-[0.68rem] uppercase tracking-[0.14em] text-(--mint)">
+        <span class="h-2 w-2 rounded-full bg-(--ember) shadow-[0_0_12px_rgba(255,141,107,0.36)]"></span>
+        /me
+      </div> -->
+
+      <div class="flex flex-1 flex-col justify-center gap-5 md:gap-7">
+        <div class="relative flex h-28 w-28 shrink-0 items-center justify-center rounded-[2rem] md:h-68 md:w-68 md:rounded-[2.9rem]">
+          <div class="absolute inset-3 rounded-[1.5rem] border border-[rgba(255,255,255,0.05)] md:rounded-[2rem]"></div>
+          <img
+            class="relative h-full w-full rounded-[1.45rem] object-cover object-center md:rounded-[1.85rem]"
+            src={portrait}
+            alt="Portrait of Douglas Lovera"
+            loading="eager"
+          />
+        </div>
+
+        <div class="space-y-2 md:space-y-3">
+          <h1 class="max-w-[10ch] text-[clamp(2rem,7vw,4.7rem)] leading-[0.9] font-bold uppercase text-(--chrome)">
+            {title}
+          </h1>
+          <p class="font-(--accent-font) text-[0.78rem] uppercase tracking-[0.12em] text-(--muted)">
+            {subtitle}
+          </p>
+        </div>
+      </div>
+    </div>
+  </MeBentoCard>
+
+  {linkCards.map((card, index) => (
+    <MeBentoCard
+      href={card.data.href}
+      external={card.data.external}
+      ariaLabel={`Open ${card.data.label}`}
+      className={`min-h-0 p-4 md:p-6 ${card.className}`}
+      style={getDelay(index + 1)}
+    >
+      <div class="flex h-full flex-col justify-between gap-4">
+        <div class={`inline-flex h-11 w-11 items-center justify-center rounded-[1rem] border border-white/10 bg-[rgba(255,255,255,0.04)] ${card.tone} md:h-14 md:w-14 md:rounded-[1.2rem]`}>
+          {card.data.icon === "globe" ? (
+            <span aria-hidden="true" class="text-[1.55rem] leading-none md:text-[1.75rem]">🌐</span>
+          ) : (
+            <PlatformIcon icon={card.data.icon} className="h-6 w-6 md:h-8 md:w-8" />
+          )}
+        </div>
+
+        <div class="space-y-1.5">
+          <p class="font-(--accent-font) text-[0.64rem] uppercase tracking-[0.12em] text-(--muted) md:text-[0.68rem]">
+            {card.eyebrow}
+          </p>
+          <p class="text-[1.1rem] leading-none font-bold uppercase text-(--chrome) md:text-[1.55rem]">
+            {card.data.label}
+          </p>
+        </div>
+      </div>
+    </MeBentoCard>
+  ))}
+</section>

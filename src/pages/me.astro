@@ -1,0 +1,15 @@
+---
+import MeBentoGrid from "../components/sections/me/MeBentoGrid.astro";
+import { mePageData } from "../data/portfolio/me";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Douglas Lovera | Me"
+  description="A dark bento profile page for Douglas Lovera."
+  lang="en"
+>
+  <main class="mx-auto flex min-h-screen w-full max-w-none items-center px-4 py-4 md:max-w-250 md:px-6 md:py-6">
+    <MeBentoGrid {...mePageData} />
+  </main>
+</BaseLayout>

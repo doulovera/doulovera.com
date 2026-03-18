@@ -7,7 +7,8 @@ export const profileLinks = {
   resume: "/resume",
   github: "https://github.com/doulovera",
   linkedin: "https://linkedin.com/in/douglaslovera",
-  instagram: "https://instagram.com/doulovera"
+  instagram: "https://instagram.com/doulovera",
+  site: "/"
 } as const;
 
 export const profileIdentity = {

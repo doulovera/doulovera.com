@@ -3,6 +3,7 @@ export { portfolioDataEs } from "./es";
 export { experience } from "./experience";
 export { footer } from "./footer";
 export { hero } from "./hero";
+export { getMePageData, mePageData } from "./me";
 export { meta } from "./meta";
 export { navigation } from "./navigation";
 export { featuredProjects, moreProjects } from "./projects";
@@ -17,6 +18,8 @@ export type {
   FeaturedProjectsSectionData,
   FooterData,
   HeroData,
+  MeLinkCard,
+  MePageData,
   MoreProjectsSectionData,
   NavItem,
   PortfolioData,
@@ -47,7 +50,7 @@ export const portfolioData = {
   about,
   footer,
   redirects
-} as const satisfies PortfolioData;
+} as const;
 
 export function getPortfolioData(locale: SupportedLocale = "en"): PortfolioData {
   if (locale === "es") {

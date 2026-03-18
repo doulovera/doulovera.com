@@ -1,0 +1,41 @@
+---
+interface Props {
+  href?: string;
+  external?: boolean;
+  ariaLabel?: string;
+  className?: string;
+  style?: string;
+}
+
+const { href, external, ariaLabel, className = "", style } = Astro.props;
+const Tag = href ? "a" : "article";
+const isExternal = external ?? href?.startsWith("http");
+
+const classes = [
+  "group relative isolate overflow-hidden rounded-[1.9rem] border border-white/10",
+  "bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.015)),linear-gradient(135deg,rgba(152,255,218,0.04),transparent_42%),var(--panel-strong)]",
+  "shadow-(--shadow) backdrop-blur-[18px]",
+  "before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_top_right,rgba(255,141,107,0.12),transparent_34%),linear-gradient(160deg,rgba(152,255,218,0.07),transparent_48%)] before:opacity-80 before:content-['']",
+  "after:pointer-events-none after:absolute after:inset-x-[-15%] after:bottom-0 after:h-px after:bg-[linear-gradient(90deg,transparent,rgba(152,255,218,0.24),transparent)] after:content-[''] after:[animation:panel-scan_9s_linear_infinite]",
+  "opacity-0 [animation:card-rise_680ms_cubic-bezier(0.22,1,0.36,1)_forwards]",
+  href
+    ? "transition duration-300 hover:-translate-y-1 hover:border-[color:rgba(152,255,218,0.28)] hover:[box-shadow:0_0_0_1px_rgba(152,255,218,0.12),0_36px_88px_rgba(0,0,0,0.42)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--mint)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]"
+    : "",
+  className
+]
+  .filter(Boolean)
+  .join(" ");
+---
+
+<Tag
+  class={classes}
+  href={href}
+  style={style}
+  aria-label={ariaLabel}
+  target={isExternal ? "_blank" : undefined}
+  rel={isExternal ? "noreferrer" : undefined}
+>
+  <div class="relative z-10 h-full">
+    <slot />
+  </div>
+</Tag>

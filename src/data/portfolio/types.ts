@@ -75,6 +75,25 @@ export interface FooterData {
   actions: ActionLink[];
 }
 
+export interface MeLinkCard {
+  label: string;
+  href: string;
+  icon: "github" | "instagram" | "linkedin" | "notion" | "globe";
+  external?: boolean;
+}
+
+export interface MePageData {
+  title: string;
+  subtitle: string;
+  portrait: string;
+  links: {
+    github: MeLinkCard;
+    instagram: MeLinkCard;
+    linkedin: MeLinkCard;
+    site: MeLinkCard;
+  };
+}
+
 export interface PortfolioMeta {
   title: string;
   description: string;
