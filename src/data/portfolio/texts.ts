@@ -79,7 +79,7 @@ export const portfolioTexts = {
     meta: {
       title: "Douglas Lovera - Desarrollador",
       description:
-        "Desarrollador apasionado por la programacion y por mejorar vidas a traves de la tecnologia. Me gusta aprender cosas nuevas para mejorar mis habilidades y conocimientos"
+        "Desarrollador apasionado por la programación y por mejorar vidas a traves de la tecnología. Me gusta aprender cosas nuevas para mejorar mis habilidades y conocimientos"
     },
     navigation: {
       experience: "Experiencia",
@@ -89,9 +89,9 @@ export const portfolioTexts = {
     hero: {
       title: "Desarrollador Full Stack y Notion Campus Leader",
       description:
-        "Me encanta crear cosas nuevas y ser parte del cambio contribuyendo a el. Apasionado por la programacion y el desarrollo.",
+        "Me encanta crear cosas nuevas y ser parte del cambio contribuyendo a él. Apasionado por la programación y el desarrollo.",
       actions: {
-        resume: "CV",
+        resume: "Mi CV",
         github: "GitHub",
         linkedin: "LinkedIn"
       }
@@ -104,13 +104,13 @@ export const portfolioTexts = {
           role: "Desarrollador Full Stack Semi Senior",
           period: "2021 - Presente",
           description:
-            "He trabajado con diferentes clientes, ayudandolos en el desarrollo de sus productos. He trabajado con tecnologias como React, Node.js, Express, MongoDB y otras, tanto en frontend como en backend. Una de las empresas mas grandes con las que trabaje fue myaccident.org.\nCon MyAccident, trabaje en migraciones, refactorizacion, correccion de bugs y desarrollo de nuevas funcionalidades para cada flujo de la aplicacion y su equipo.\nTambien he ayudado en el desarrollo de nuevos productos para nuestros clientes."
+            "He trabajado con diferentes clientes, ayudándolos en el desarrollo de sus productos. He trabajado con tecnologías como React, Node.js, Express, MongoDB y otras, tanto en frontend como en backend. Una de las empresas mas grandes con las que he trabajado es MyAccident.org.\nCon MyAccident, trabajé en migraciones, refactorización, corrección de bugs y desarrollo de nuevas funcionalidades para cada flujo de la aplicación y su equipo.\nTambién he ayudado en el desarrollo de nuevos productos para nuestros clientes."
         },
         notion: {
           role: "Consultor de Notion",
           period: "2025 - Presente",
           description:
-            "Como Consultor de Notion, ayudo a personas y empresas a optimizar sus flujos de trabajo y productividad usando Notion. Brindo servicios de consultoria personalizada, incluyendo configuracion de espacios de trabajo, creacion de plantillas y sesiones de capacitacion para que los clientes aprovechen al maximo las funciones de Notion. Trabajo de cerca con cada cliente para entender sus necesidades y objetivos, y adapto mis servicios para cubrirlos de manera efectiva."
+            "Como Consultor de Notion, ayudo a personas y empresas a optimizar sus flujos de trabajo y productividad usando Notion. Brindo servicios de consultoría personalizada, incluyendo configuración de espacios de trabajo, creación de plantillas y sesiones de capacitación para que los clientes aprovechen al máximo las funciones de Notion. Trabajo de cerca con cada cliente para entender sus necesidades y objetivos, y adapto mis servicios para cubrirlos de manera efectiva."
         }
       }
     },
@@ -121,17 +121,17 @@ export const portfolioTexts = {
         schemaNotion: {
           title: "schema.notion",
           description:
-            "Crea y disena tus bases de datos de Notion visualmente y exportalas a tu espacio de trabajo con un solo clic. Relaciones, propiedades, rollups y asistencia con IA en una interfaz bonita e intuitiva."
+            "Crea y diseña tus bases de datos de Notion visualmente y expórtalas a tu espacio de trabajo con un solo clic. Relaciones, propiedades, rollups y asistencia con IA en una interfaz bonita e intuitiva."
         },
         qeeper: {
           title: "QeepeR",
           description:
-            "Genera codigos QR estaticos o dinamicos rapidamente, personaliza su diseno y actualiza sus destinos en cualquier momento."
+            "Genera códigos QR estáticos o dinámicos rápidamente, personaliza su diseño y actualiza sus destinos en cualquier momento."
         }
       }
     },
     moreProjects: {
-      title: "Mas proyectos",
+      title: "Más proyectos",
       intro: "",
       items: {
         utilities: "utilities",
@@ -142,7 +142,7 @@ export const portfolioTexts = {
     about: {
       title: "Sobre mi",
       description:
-        "Mi nombre es Douglas Lovera...\n\nTrabajo profesionalmente en programacion desde 2021, pero mi pasion comenzo cuando tenia 14 anos, creando bots de Discord y sitios web para mis amigos y para mi.\n\nMi motivacion es crear productos que generen valor y mantenerme al dia con el avance de nuevas tecnologias. Disfruto contribuir a proyectos que mejoran la vida de las personas.\n\nEn cuanto a mis intereses personales y profesionales, leo libros de distintos temas; mi autor favorito es Julio Ramon Ribeyro. Tambien me gusta asistir a eventos culturales y tecnologicos en mi ciudad. Profesionalmente, dedico gran parte de mi dia a integrar y mejorar funcionalidades en el trabajo y a desarrollar mis proyectos personales."
+        "Mi nombre es Douglas Lovera...\n\nTrabajo profesionalmente en programación desde 2021, pero mi pasión comenzó cuando tenía 14 años, creando bots de Discord y sitios web para mis amigos y para mí.\n\nMi motivación es crear productos que generen valor y mantenerme al día con el avance de nuevas tecnologías. Disfruto contribuir a proyectos que mejoran la vida de las personas.\n\nEn cuanto a mis intereses personales y profesionales, leo libros de distintos temas; mi autor favorito es Julio Ramón Ribeyro. También me gusta asistir a eventos culturales y tecnológicos en mi ciudad. Profesionalmente, dedico gran parte de mi día a integrar y mejorar funcionalidades en el trabajo y a desarrollar mis proyectos personales."
     },
     footer: {
       heading: "Abierto a colaboraciones seleccionadas.",

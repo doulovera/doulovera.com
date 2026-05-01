@@ -11,6 +11,7 @@ const { badge, name, title, description, portrait, actions } = Astro.props as He
     as="article"
     strong={true}
     className="flex min-h-120 flex-col justify-center p-6 md:p-10"
+    disableBorder={true}
   >
     {badge && (
       <p class="relative z-10 inline-flex w-fit items-center gap-3 rounded-[0.8rem] border border-[rgba(152,255,218,0.2)] bg-[rgba(152,255,218,0.05)] px-3 py-2 font-(--accent-font) text-[0.7rem] uppercase tracking-[0.06em] text-(--mint)">
