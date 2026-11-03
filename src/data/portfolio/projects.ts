@@ -26,7 +26,7 @@ export function getProjects(locale: SupportedLocale): {
           description: featuredTexts.items.qeeper.description,
           technologies: ["Next.js", "Tailwind", "TypeScript", "Cloudflare Workers KV"],
           image: "https://res.cloudinary.com/dyonw3lkf/image/upload/v1783882554/portfolio_images/qeeper-2026.png",
-          githubUrl: "https://github.com/douglaslovera/qeeper",
+          githubUrl: "https://github.com/doulovera/qeeper",
           previewUrl: "https://qeeper.doulovera.com/"
         }
       ]
@@ -38,12 +38,12 @@ export function getProjects(locale: SupportedLocale): {
         {
           title: moreTexts.items.atuCli,
           technologies: ["CLI", "API", "Hono.js", "Cheerio"],
-          githubUrl: "https://github.com/douglaslovera/atu-cli",
+          githubUrl: "https://github.com/doulovera/atu-cli",
         },
         {
           title: moreTexts.items.utilities,
           technologies: ["HTML", "CSS", "JavaScript"],
-          githubUrl: "https://github.com/douglaslovera/utilities",
+          githubUrl: "https://github.com/doulovera/utilities",
           previewUrl: "https://utilities.doulovera.com/"
         },
         {
